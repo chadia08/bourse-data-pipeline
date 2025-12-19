@@ -46,7 +46,7 @@ pip install -r requirements.txt
 ### 5. Lancer l'application avec Docker
 Pour démarrer tous les services (base de données, application, etc.) via Docker Compose :
 ```
-docker-compose up --build
+docker compose up -d
 ```
 
 ### 💡 Commandes utiles
