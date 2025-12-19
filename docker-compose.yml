@@ -63,7 +63,14 @@ services:
       - NIFI_WEB_PROXY_HOST=192.168.10.129:8443
     restart: on-failure
     volumes:
-      - nifi_data:/opt/nifi/nifi-current
+      - ./data/raw:/data
+      - ./nifi/database_repository:/opt/nifi/nifi-current/database_repository
+      - ./nifi/flowfile_repository:/opt/nifi/nifi-current/flowfile_repository
+      - ./nifi/content_repository:/opt/nifi/nifi-current/content_repository
+      - ./nifi/provenance_repository:/opt/nifi/nifi-current/provenance_repository
+      - ./nifi/state:/opt/nifi/nifi-current/state
+      - ./nifi/logs:/opt/nifi/nifi-current/logs
+      # - ./nifi/conf:/opt/nifi/nifi-current/conf
 
   clickhouse:
     image: clickhouse/clickhouse-server:24.3
