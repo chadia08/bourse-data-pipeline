@@ -123,3 +123,37 @@ Mode : Insert
 --------------------------------------------------------------------------
 #### vérifier nifi ----> kafka 
 ``docker exec -it kafka kafka-console-consumer --bootstrap-server kafka:29092 --topic send_clickhouse --from-beginning --timeout-ms 10000``
+
+
+---
+## Connecter ClickHouse à powerBi
+### 1. Installer le Driver ODBC ClickHouse
+Power BI ne possède pas de connecteur "natif" pré-installé pour ClickHouse. Tu dois installer le driver officiel sur ton ordinateur (Windows) :
+- Va sur le GitHub officiel des drivers ClickHouse [https://github.com/ClickHouse/clickhouse-odbc/releases].
+- Télécharge et installe la version Windows MSI (prends la version x64 pour Power BI Desktop).
+
+### 2. Configurer la source de données (DSN) sur Windows
+Avant d'ouvrir Power BI, tu dois déclarer ta base Docker à Windows :
+- Dans la barre de recherche Windows, tape "Sources de données ODBC (64 bits)".
+- Va dans l'onglet DSN Système et clique sur Ajouter.
+- Choisis ClickHouse Unicode.
+- Remplis les informations : <br>
+    ```
+    Name : ClickHouse_Bourse 
+    Host : localhost (ou l'adresse IP de ta machine Docker)
+    Port : 8123 (C'est le port HTTP que nous avons ouvert dans le docker-compose)
+    Database : bourse
+    User : default
+    Password : admin
+    ```
+### 3. Connexion dans Power BI
+- Ouvre Power BI Desktop.
+- Clique sur Obtenir les données > Plus...
+- Cherche ODBC et clique sur Se connecter.
+- Dans le menu déroulant "Nom de la source de données (DSN)", choisis ClickHouse_Bourse.
+- Si Power BI demande des identifiants, choisis "Par défaut ou Personnalisé" (puisque tu les as déjà mis dans le DSN).
+
+### 4. DirectQuery vs Import
+Une fois connecté, Power BI va te demander comment traiter les données :
+- Import : Power BI télécharge les données. C'est plus rapide pour les calculs complexes, mais il faut rafraîchir manuellement.
+- DirectQuery : Power BI interroge ClickHouse à chaque clic. C'est l'idéal pour voir tes données boursières bouger presque en "temps réel" dès que NiFi pousse un message.
