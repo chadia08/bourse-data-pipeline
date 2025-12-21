@@ -74,6 +74,26 @@ services:
       - ./nifi/state:/opt/nifi/nifi-current/state
       - ./nifi/logs:/opt/nifi/nifi-current/logs
       # - ./nifi/conf:/opt/nifi/nifi-current/conf
+    
+  clickhouse:
+    image: clickhouse/clickhouse-server:latest
+    container_name: clickhouse
+    hostname: clickhouse
+    networks:
+      - bourse_network
+    ports:
+      - "8123:8123" # Port HTTP (Le plus stable pour NiFi)
+      - "9000:9000" # Port Natif (Pour les clients CLI)
+    environment:
+      - CLICKHOUSE_USER=default
+      - CLICKHOUSE_PASSWORD=admin
+      - CLICKHOUSE_DB=bourse
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
+    ulimits:
+      nofile:
+        soft: 262144
+        hard: 262144
 
   # clickhouse:
   #   image: clickhouse/clickhouse-server:24.3
