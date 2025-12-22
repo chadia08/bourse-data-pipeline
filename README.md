@@ -1,4 +1,4 @@
-# README.md
+# Analyse de la bourse de NewYork 
 ---
 
 ## 🚀 Installation et Lancement du Projet
@@ -57,6 +57,8 @@ Quitter l'environnement virtuel : ```deactivate```
 Vérifier l'état de la branche : ```git status```
 
 
+## Etape Kafka
+à faire 
 
 ## Etape Nifi
 ### 🏁 FLOW 1 — securities (Kafka) étape par étape
@@ -126,10 +128,14 @@ Mode : Insert
 
 
 ---
-## Connecter ClickHouse à powerBi
+
+## Etape Kafka à ClickHouse
+à faire 
+
+## Etape Connecter ClickHouse à powerBi
 ### 1. Installer le Driver ODBC ClickHouse
 Power BI ne possède pas de connecteur "natif" pré-installé pour ClickHouse. Tu dois installer le driver officiel sur ton ordinateur (Windows) :
-- Va sur le GitHub officiel des drivers ClickHouse [https://github.com/ClickHouse/clickhouse-odbc/releases].
+- Va sur le GitHub officiel des drivers ClickHouse[https://github.com/ClickHouse/clickhouse-odbc/releases].
 - Télécharge et installe la version Windows MSI (prends la version x64 pour Power BI Desktop).
 
 ### 2. Configurer la source de données (DSN) sur Windows

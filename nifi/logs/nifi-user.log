@@ -1,6 +1,12 @@
-2025-12-21 11:15:12,417 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
-2025-12-21 11:15:12,799 INFO [main] o.a.n.a.FileUserGroupProvider Creating new users file at /opt/nifi/nifi-current/./conf/users.xml
-2025-12-21 11:15:12,855 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Sun Dec 21 11:15:12 UTC 2025
-2025-12-21 11:15:12,857 INFO [main] o.a.n.a.FileAccessPolicyProvider Creating new authorizations file at /opt/nifi/nifi-current/./conf/authorizations.xml
-2025-12-21 11:15:12,915 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Sun Dec 21 11:15:12 UTC 2025
-2025-12-21 11:15:12,959 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
+2025-12-22 08:35:09,076 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
+2025-12-22 08:35:11,190 INFO [main] o.a.n.a.FileUserGroupProvider Creating new users file at /opt/nifi/nifi-current/./conf/users.xml
+2025-12-22 08:35:11,282 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Mon Dec 22 08:35:11 UTC 2025
+2025-12-22 08:35:11,286 INFO [main] o.a.n.a.FileAccessPolicyProvider Creating new authorizations file at /opt/nifi/nifi-current/./conf/authorizations.xml
+2025-12-22 08:35:11,380 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Mon Dec 22 08:35:11 UTC 2025
+2025-12-22 08:35:11,399 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
+2025-12-22 08:39:50,028 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
+2025-12-22 08:39:50,138 INFO [main] o.a.n.a.FileUserGroupProvider Creating new users file at /opt/nifi/nifi-current/./conf/users.xml
+2025-12-22 08:39:50,181 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Mon Dec 22 08:39:50 UTC 2025
+2025-12-22 08:39:50,182 INFO [main] o.a.n.a.FileAccessPolicyProvider Creating new authorizations file at /opt/nifi/nifi-current/./conf/authorizations.xml
+2025-12-22 08:39:50,225 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Mon Dec 22 08:39:50 UTC 2025
+2025-12-22 08:39:50,232 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
