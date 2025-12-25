@@ -7,10 +7,15 @@ networks:
 volumes:
   zookeeper_data:
   kafka_data:
-  nifi_data:
+  nifi_database:
+  nifi_flowfile:
+  nifi_content:
+  nifi_provenance:
+  nifi_state:
   clickhouse_data:
 
 services:
+
   zookeeper:
     image: confluentinc/cp-zookeeper:7.6.1
     container_name: zookeeper
@@ -45,32 +50,31 @@ services:
       - kafka_data:/var/lib/kafka/data
 
   nifi:
-    image: 'apache/nifi:1.20.0'
+    image: apache/nifi:1.20.0
     container_name: nifi
     hostname: nifi
     depends_on:
       - kafka
-
     networks:
       - bourse_network
     ports:
       - "8443:8443"
     environment:
+      # --- CORRECTION MÉMOIRE POUR ÉVITER JAVA HEAP SPACE ---
+      - NIFI_JVM_HEAP_INIT=2g
+      - NIFI_JVM_HEAP_MAX=4g
+      # -----------------------------------------------------
       - SINGLE_USER_CREDENTIALS_USERNAME=admin
-      - SINGLE_USER_CREDENTIALS_PASSWORD=Admin123456!
+      - SINGLE_USER_CREDE NTIALS_PASSWORD=Admin123456!
       - NIFI_WEB_HTTPS_PORT=8443
       - NIFI_WEB_HTTPS_HOST=0.0.0.0
-      - NIFI_WEB_PROXY_HOST=192.168.10.129:8443
-    restart: on-failure
     volumes:
-      - ./data/raw:/data
-      - ./nifi/database_repository:/opt/nifi/nifi-current/database_repository
-      - ./nifi/flowfile_repository:/opt/nifi/nifi-current/flowfile_repository
-      - ./nifi/content_repository:/opt/nifi/nifi-current/content_repository
-      - ./nifi/provenance_repository:/opt/nifi/nifi-current/provenance_repository
-      - ./nifi/state:/opt/nifi/nifi-current/state
-      - ./nifi/logs:/opt/nifi/nifi-current/logs
-      # - ./nifi/conf:/opt/nifi/nifi-current/conf
+      - ./data/raw:/opt/nifi/data/raw
+      - nifi_database:/opt/nifi/nifi-current/database_repository
+      - nifi_flowfile:/opt/nifi/nifi-current/flowfile_repository
+      - nifi_content:/opt/nifi/nifi-current/content_repository
+      - nifi_provenance:/opt/nifi/nifi-current/provenance_repository
+      - nifi_state:/opt/nifi/nifi-current/state
 
   clickhouse:
     image: clickhouse/clickhouse-server:24.3
@@ -81,5 +85,8 @@ services:
     ports:
       - "8123:8123"
       - "9000:9000"
+    environment:
+      - CLICKHOUSE_USER=admin
+      - CLICKHOUSE_PASSWORD=admin
     volumes:
       - clickhouse_data:/var/lib/clickhouse
