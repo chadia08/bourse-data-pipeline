@@ -1,64 +1,45 @@
-from kafka import KafkaProducer
 import csv
 import json
-import time
+from kafka import KafkaProducer
 
-# Configuration du producteur
 producer = KafkaProducer(
-    bootstrap_servers='localhost:9092',
+    bootstrap_servers=['localhost:9092'],
     value_serializer=lambda v: json.dumps(v).encode('utf-8')
 )
 
-# def stream_csv(file_path, topic_name, delay=0.01):
-#     print(f"--- Envoi de {file_path} vers le topic {topic_name} ---")
-#     try:
-#         with open(file_path, newline='', encoding='utf-8') as csvfile:
-#             reader = csv.DictReader(csvfile)
-#             count = 0
-#             for row in reader:
-#                 producer.send(topic_name, row)
-#                 count += 1
-                
-#                 # Simulation streaming : petite pause toutes les 100 lignes
-#                 if count % 100 == 0:
-#                     time.sleep(delay)
+def send_csv_to_kafka(file_path, topic_name, delimiter=';'):
+    """
+    Envoie un CSV vers Kafka avec gestion du délimiteur et ajout d'un ID.
+    """
+    try:
+        with open(file_path, mode='r', encoding='utf-8') as csvfile:
+            # On détecte automatiquement les colonnes et on applique le délimiteur
+            reader = csv.DictReader(csvfile, delimiter=delimiter)
             
-#             producer.flush()
-#             print(f"Terminé : {count} lignes envoyées.\n")
-#     except FileNotFoundError:
-#         print(f"Erreur : Le fichier {file_path} est introuvable.\n")
-
-
-def stream_csv(file_path, topic_name, delay=0.01):
-    print(f"--- Envoi de {file_path} vers le topic {topic_name} ---")
-    with open(file_path, newline='', encoding='utf-8') as csvfile:
-        # On force le reader à bien ignorer les espaces autour des noms de colonnes
-        reader = csv.DictReader(csvfile, skipinitialspace=True)
-            
-        count = 0
-        for row in reader:
-            # NETTOYAGE : Supprimer les clés 'None' ou 'null' si elles existent
-            clean_row = {str(k): v for k, v in row.items() if k is not None}
+            count = 0
+            for row in reader:
+                count += 1
                 
-            producer.send(topic_name, clean_row)
-            count += 1
+                # --- AJOUT DE L'ID (Auto-incrémenté) ---
+                row['id'] = count
                 
-            if count % 100 == 0:
-                time.sleep(delay)
+                # Envoi vers Kafka
+                producer.send(topic_name, value=row)
+                
+                if count % 1000 == 0:
+                    print(f"🚀 {count} lignes envoyées vers {topic_name}...")
             
-    producer.flush()
-    print(f"Terminé : {count} lignes envoyées.\n")
+            producer.flush()
+            print(f"✅ Terminé : {count} lignes envoyées au topic {topic_name}.")
+            
+    except Exception as e:
+        print(f"❌ Erreur lors de la lecture du CSV : {e}")
 
-    
-# --- LANCEMENT DES FLUX ---
+# --- EXEMPLES D'UTILISATION ---
 
-# Flux 1 : Securities
-stream_csv('./data/raw/securities.csv', 'securities_topic')
 
-# Flux 2 : Prices
-# stream_csv('./data/raw/prices.csv', 'prices_topic')
+# send_csv_to_kafka('data/raw/securities.csv', 'securities_topic', delimiter=',')
 
-# Flux 3 : Fundamentals
-# stream_csv('./data/raw/fundamentals.csv', 'fundamentals_topic')
+send_csv_to_kafka('data/raw/prices_test.csv', 'prices_topic', delimiter=',')
 
-print("Tous les messages sont dans Kafka !")
+# send_csv_to_kafka('data/raw/fundamentals.csv', 'fundamentals_topic', delimiter=',')
