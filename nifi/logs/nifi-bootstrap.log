@@ -1,6 +1,0 @@
-2025-12-24 08:19:32,519 INFO [main] o.a.n.b.NotificationServiceManager Successfully loaded the following 0 services: []
-2025-12-24 08:19:32,582 INFO [main] org.apache.nifi.bootstrap.RunNiFi Registered no Notification Services for Notification Type NIFI_STARTED
-2025-12-24 08:19:32,584 INFO [main] org.apache.nifi.bootstrap.RunNiFi Registered no Notification Services for Notification Type NIFI_STOPPED
-2025-12-24 08:19:32,585 INFO [main] org.apache.nifi.bootstrap.RunNiFi Registered no Notification Services for Notification Type NIFI_DIED
-2025-12-24 08:19:32,604 INFO [main] org.apache.nifi.bootstrap.RunNiFi Runtime Java version: 11.0.18
-2025-12-24 08:19:32,649 INFO [main] org.apache.nifi.bootstrap.Command Generating Self-Signed Certificate: Expires on 2026-02-22
