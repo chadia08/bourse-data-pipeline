@@ -66,7 +66,7 @@ services:
       - NIFI_WEB_PROXY_HOST=192.168.10.129:8443
     restart: on-failure
     volumes:
-      - ./data/raw:/data
+      - ./Data/Raw:/data
       - ./nifi/database_repository:/opt/nifi/nifi-current/database_repository
       - ./nifi/flowfile_repository:/opt/nifi/nifi-current/flowfile_repository
       - ./nifi/content_repository:/opt/nifi/nifi-current/content_repository
