@@ -1,2 +1,26 @@
 python-dotenv
 requests
+se connecter a  la base de donnees :
+: Accéder via l'interface Web "Play" (Port 8123)
+ClickHouse possède une petite interface graphique intégrée très pratique 
+pour tester des requêtes rapidement.Ouvrez votre navigateur.
+Allez à l'adresse : http://localhost:8123/playUne 
+fenêtre s'ouvre : vous n'avez qu'à saisir vos identifiants (admin / Admin123456)
+ pour commencer à créer vos tables.Méthode 
+ 3 : Utiliser DBeaver (Recommandé pour un projet)Si vous voulez gérer vos tables 
+ de bourse confortablement :Créez une nouvelle connexion ClickHouse.
+ Host : localhostPort : 8123
+ Database : bourseUsername : adminPassword : Admin123456
+ Résumé de vos accèsOutilPortProtocoleTerminal
+  (Interne)9000TCP (Natif)DBeaver / Python8123HTTPNavigateur Web 8123HTTP
+
+  ----------------------------------------------------
+  C'est tout à fait normal ClickHouse utilise deux ports principaux 
+  pour communiquer, et selon l'outil que vous utilisez, vous devez choisir 
+  le bon :
+
+Port 9000 (TCP/Natif) : Utilisé par le terminal (clickhouse-client)
+et certains drivers haute performance (Java/Python).
+
+Port 8123 (HTTP) : Utilisé par les interfaces web (Tabix, Play),
+ DBeaver, et les requêtes via curl.
