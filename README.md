@@ -163,3 +163,4 @@ Avant d'ouvrir Power BI, tu dois déclarer ta base Docker à Windows :
 Une fois connecté, Power BI va te demander comment traiter les données :
 - Import : Power BI télécharge les données. C'est plus rapide pour les calculs complexes, mais il faut rafraîchir manuellement.
 - DirectQuery : Power BI interroge ClickHouse à chaque clic. C'est l'idéal pour voir tes données boursières bouger presque en "temps réel" dès que NiFi pousse un message.
+--
