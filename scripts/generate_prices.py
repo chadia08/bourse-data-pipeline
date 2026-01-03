@@ -61,7 +61,7 @@ try:
                 low_price = min(open_price, close_price) * (1 - abs(random.gauss(0, 0.002)))
 
                 record = {
-                    "id": int(time.time() * 1000) + random.randint(0, 1000),
+                    # "id": int(time.time() * 1000) + random.randint(0, 1000),
                     "date": current_sim_date.strftime("%Y-%m-%d"),
                     "symbol": s,
                     "open": round(open_price, 2),
