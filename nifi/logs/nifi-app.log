@@ -1,0 +1,73 @@
+2026-01-05 09:00:08,210 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-05 09:00:10,299 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 676 Records and 0 Swap Files in 1815 milliseconds (Stop-the-world time = 332 milliseconds), max Transaction ID 72748
+2026-01-05 09:00:10,313 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 676 records in 1828 milliseconds
+2026-01-05 09:00:11,063 INFO [FileSystemRepository Workers Thread-4] o.a.n.c.repository.FileSystemRepository Successfully archived 15 Resource Claims for Container default in 1520 millis
+2026-01-05 09:00:31,208 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-05 09:00:31,664 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 685 Records and 0 Swap Files in 449 milliseconds (Stop-the-world time = 122 milliseconds), max Transaction ID 72791
+2026-01-05 09:00:31,667 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 685 records in 452 milliseconds
+2026-01-05 09:00:33,038 INFO [FileSystemRepository Workers Thread-4] o.a.n.c.repository.FileSystemRepository Successfully archived 14 Resource Claims for Container default in 724 millis
+2026-01-05 09:00:43,822 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Deleted 8 files from archive for Container default; oldest Archive Date is now Fri Jan 02 21:24:54 UTC 2026; container cleanup took 1201 millis
+2026-01-05 09:00:43,917 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 27.58 GB, bytes free = 29.97 GB, capacity = 57.55 GB
+2026-01-05 09:00:52,619 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-05 09:00:53,193 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 694 Records and 0 Swap Files in 563 milliseconds (Stop-the-world time = 74 milliseconds), max Transaction ID 72824
+2026-01-05 09:00:53,197 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 694 records in 567 milliseconds
+2026-01-05 09:00:54,798 INFO [FileSystemRepository Workers Thread-1] o.a.n.c.repository.FileSystemRepository Successfully archived 11 Resource Claims for Container default in 623 millis
+2026-01-05 09:01:13,219 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-05 09:01:13,646 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 705 Records and 0 Swap Files in 413 milliseconds (Stop-the-world time = 86 milliseconds), max Transaction ID 72882
+2026-01-05 09:01:13,650 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 705 records in 416 milliseconds
+2026-01-05 09:01:14,909 INFO [FileSystemRepository Workers Thread-4] o.a.n.c.repository.FileSystemRepository Successfully archived 22 Resource Claims for Container default in 856 millis
+2026-01-05 09:01:15,757 INFO [Write-Ahead Local State Provider Maintenance] org.wali.MinimalLockingWriteAheadLog org.wali.MinimalLockingWriteAheadLog@dd26290 checkpointed with 137 Records and 0 Swap Files in 1738 milliseconds (Stop-the-world time = 405 milliseconds, Clear Edit Logs time = 1216 millis), max Transaction ID 1082
+2026-01-05 09:01:40,045 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-05 09:01:40,964 INFO [kafka-coordinator-heartbeat-thread | 3c1fc77e-019b-1000-d313-2bb91645ebde] o.a.k.c.c.internals.AbstractCoordinator [Consumer clientId=consumer-2, groupId=3c1fc77e-019b-1000-d313-2bb91645ebde] Group coordinator kafka:29092 (id: 2147483646 rack: null) is unavailable or invalid, will attempt rediscovery
+2026-01-05 09:01:41,400 INFO [FileSystemRepository Workers Thread-1] o.a.n.c.repository.FileSystemRepository Successfully archived 14 Resource Claims for Container default in 329 millis
+2026-01-05 09:01:42,483 INFO [Timer-Driven Process Thread-9] o.a.k.c.c.internals.AbstractCoordinator [Consumer clientId=consumer-2, groupId=3c1fc77e-019b-1000-d313-2bb91645ebde] Discovered group coordinator kafka:29092 (id: 2147483646 rack: null)
+2026-01-05 09:01:42,968 INFO [Timer-Driven Process Thread-1] o.a.k.c.c.internals.ConsumerCoordinator [Consumer clientId=consumer-1, groupId=3c1fc77e-019b-1000-d313-2bb91645ebde] Revoking previously assigned partitions [securities_topic-0]
+2026-01-05 09:01:42,998 INFO [Timer-Driven Process Thread-1] o.a.k.c.c.internals.AbstractCoordinator [Consumer clientId=consumer-1, groupId=3c1fc77e-019b-1000-d313-2bb91645ebde] (Re-)joining group
+2026-01-05 09:01:44,368 ERROR [Timer-Driven Process Thread-9] o.a.k.c.c.internals.ConsumerCoordinator [Consumer clientId=consumer-2, groupId=3c1fc77e-019b-1000-d313-2bb91645ebde] Offset commit failed on partition prices_topic-0 at offset 4208937: The coordinator is not aware of this member.
+2026-01-05 09:01:44,876 ERROR [Timer-Driven Process Thread-9] o.a.n.c.r.StandardProcessSession Successfully committed session StandardProcessSession[id=2903] for ConsumeKafkaRecord_1_0[id=f9e4cb1e-6944-389f-07cf-b6c3bdec8583] but failed to trigger success callback
+org.apache.kafka.clients.consumer.CommitFailedException: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator$OffsetCommitResponseHandler.handle(ConsumerCoordinator.java:787)
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator$OffsetCommitResponseHandler.handle(ConsumerCoordinator.java:735)
+	at org.apache.kafka.clients.consumer.internals.AbstractCoordinator$CoordinatorResponseHandler.onSuccess(AbstractCoordinator.java:822)
+	at org.apache.kafka.clients.consumer.internals.AbstractCoordinator$CoordinatorResponseHandler.onSuccess(AbstractCoordinator.java:802)
+	at org.apache.kafka.clients.consumer.internals.RequestFuture$1.onSuccess(RequestFuture.java:204)
+	at org.apache.kafka.clients.consumer.internals.RequestFuture.fireSuccess(RequestFuture.java:167)
+	at org.apache.kafka.clients.consumer.internals.RequestFuture.complete(RequestFuture.java:127)
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient$RequestFutureCompletionHandler.fireCompletion(ConsumerNetworkClient.java:560)
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.firePendingCompletedRequests(ConsumerNetworkClient.java:387)
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:290)
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:230)
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:206)
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.commitOffsetsSync(ConsumerCoordinator.java:601)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.commitSync(KafkaConsumer.java:1250)
+	at org.apache.nifi.processors.kafka.pubsub.ConsumerLease.lambda$commit$0(ConsumerLease.java:217)
+	at org.apache.nifi.controller.repository.StandardProcessSession.commitAsync(StandardProcessSession.java:546)
+	at org.apache.nifi.processor.ProcessSession.commitAsync(ProcessSession.java:185)
+	at org.apache.nifi.processors.kafka.pubsub.ConsumerLease.commit(ConsumerLease.java:215)
+	at org.apache.nifi.processors.kafka.pubsub.ConsumeKafkaRecord_1_0.onTrigger(ConsumeKafkaRecord_1_0.java:391)
+	at org.apache.nifi.processor.AbstractProcessor.onTrigger(AbstractProcessor.java:27)
+	at org.apache.nifi.controller.StandardProcessorNode.onTrigger(StandardProcessorNode.java:1357)
+	at org.apache.nifi.controller.tasks.ConnectableTask.invoke(ConnectableTask.java:246)
+	at org.apache.nifi.controller.scheduling.TimerDrivenSchedulingAgent$1.run(TimerDrivenSchedulingAgent.java:102)
+	at org.apache.nifi.engine.FlowEngine$2.run(FlowEngine.java:110)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-01-05 09:01:45,081 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 710 Records and 0 Swap Files in 5033 milliseconds (Stop-the-world time = 1037 milliseconds), max Transaction ID 72920
+2026-01-05 09:01:45,260 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 710 records in 5212 milliseconds
+2026-01-05 09:01:45,316 INFO [Timer-Driven Process Thread-6] o.a.k.c.c.internals.ConsumerCoordinator [Consumer clientId=consumer-2, groupId=3c1fc77e-019b-1000-d313-2bb91645ebde] Revoking previously assigned partitions [prices_topic-0]
+2026-01-05 09:01:46,297 INFO [Timer-Driven Process Thread-6] o.a.k.c.c.internals.AbstractCoordinator [Consumer clientId=consumer-2, groupId=3c1fc77e-019b-1000-d313-2bb91645ebde] (Re-)joining group
+2026-01-05 09:01:46,584 INFO [Timer-Driven Process Thread-1] o.a.k.c.c.internals.AbstractCoordinator [Consumer clientId=consumer-1, groupId=3c1fc77e-019b-1000-d313-2bb91645ebde] (Re-)joining group
+2026-01-05 09:01:48,746 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Deleted 36 files from archive for Container default; oldest Archive Date is now Fri Jan 02 21:25:50 UTC 2026; container cleanup took 2806 millis
+2026-01-05 09:01:48,876 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 27.61 GB, bytes free = 29.94 GB, capacity = 57.55 GB
+2026-01-05 09:01:57,245 INFO [Timer-Driven Process Thread-6] o.a.k.c.c.internals.AbstractCoordinator [Consumer clientId=consumer-2, groupId=3c1fc77e-019b-1000-d313-2bb91645ebde] Successfully joined group with generation 97
+2026-01-05 09:01:57,247 INFO [Timer-Driven Process Thread-1] o.a.k.c.c.internals.AbstractCoordinator [Consumer clientId=consumer-1, groupId=3c1fc77e-019b-1000-d313-2bb91645ebde] Successfully joined group with generation 97
+2026-01-05 09:01:57,248 INFO [Timer-Driven Process Thread-6] o.a.k.c.c.internals.ConsumerCoordinator [Consumer clientId=consumer-2, groupId=3c1fc77e-019b-1000-d313-2bb91645ebde] Setting newly assigned partitions [prices_topic-0]
+2026-01-05 09:01:57,253 INFO [Timer-Driven Process Thread-1] o.a.k.c.c.internals.ConsumerCoordinator [Consumer clientId=consumer-1, groupId=3c1fc77e-019b-1000-d313-2bb91645ebde] Setting newly assigned partitions [securities_topic-0]
+2026-01-05 09:02:06,225 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-05 09:02:06,730 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 720 Records and 0 Swap Files in 498 milliseconds (Stop-the-world time = 152 milliseconds), max Transaction ID 72999
+2026-01-05 09:02:06,730 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 720 records in 499 milliseconds
+2026-01-05 09:02:08,088 INFO [FileSystemRepository Workers Thread-1] o.a.n.c.repository.FileSystemRepository Successfully archived 43 Resource Claims for Container default in 1225 millis

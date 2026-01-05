@@ -43,9 +43,12 @@ services:
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092,PLAINTEXT_INTERNAL://kafka:29092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_INTERNAL:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
     volumes:
       - kafka_data:/var/lib/kafka/data
 
@@ -69,6 +72,7 @@ services:
       - NIFI_WEB_HTTPS_PORT=8443
       - NIFI_WEB_HTTPS_HOST=0.0.0.0
     volumes:
+<<<<<<< HEAD
       - ./data/raw:/opt/nifi/data/raw
       - nifi_database:/opt/nifi/nifi-current/database_repository
       - nifi_flowfile:/opt/nifi/nifi-current/flowfile_repository
@@ -76,13 +80,25 @@ services:
       - nifi_provenance:/opt/nifi/nifi-current/provenance_repository
       - nifi_state:/opt/nifi/nifi-current/state
 
+=======
+      - ./Data/Raw:/data
+      - ./nifi/database_repository:/opt/nifi/nifi-current/database_repository
+      - ./nifi/flowfile_repository:/opt/nifi/nifi-current/flowfile_repository
+      - ./nifi/content_repository:/opt/nifi/nifi-current/content_repository
+      - ./nifi/provenance_repository:/opt/nifi/nifi-current/provenance_repository
+      - ./nifi/state:/opt/nifi/nifi-current/state
+      - ./nifi/logs:/opt/nifi/nifi-current/logs
+      # - ./nifi/conf:/opt/nifi/nifi-current/conf
+    
+>>>>>>> origin/chadia
   clickhouse:
-    image: clickhouse/clickhouse-server:24.3
+    image: clickhouse/clickhouse-server:latest
     container_name: clickhouse
     hostname: clickhouse
     networks:
       - bourse_network
     ports:
+<<<<<<< HEAD
       - "8123:8123"
       - "9000:9000"
     environment:
@@ -90,3 +106,29 @@ services:
       - CLICKHOUSE_PASSWORD=admin
     volumes:
       - clickhouse_data:/var/lib/clickhouse
+=======
+      - "8123:8123" # Port HTTP (Le plus stable pour NiFi)
+      - "9000:9000" # Port Natif (Pour les clients CLI)
+    environment:
+      - CLICKHOUSE_USER=default
+      - CLICKHOUSE_PASSWORD=admin
+      - CLICKHOUSE_DB=bourse
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
+    ulimits:
+      nofile:
+        soft: 262144
+        hard: 262144
+
+  trino:
+    image: trinodb/trino:latest
+    container_name: trino
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./trino_config/config.properties:/etc/trino/config.properties
+      - ./trino_config/catalog:/etc/trino/catalog
+      - ./clickhouse-jdbc-0.6.5-all.jar:/usr/lib/trino/plugin/clickhouse/clickhouse-jdbc-0.6.5-all.jar
+    networks:
+      - bourse_network
+>>>>>>> origin/chadia

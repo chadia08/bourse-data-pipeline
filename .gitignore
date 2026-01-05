@@ -1,0 +1,84 @@
+# ===================================
+# AIRFLOW
+# ===================================
+# Logs générés automatiquement
+airflow/logs/*
+!airflow/logs/.gitkeep
+
+# Fichiers temporaires Airflow
+airflow/*.pid
+airflow/airflow-webserver.pid
+airflow/webserver_config.py
+
+# Base de données SQLite locale (si utilisée)
+airflow/airflow.db
+airflow/unittests.db
+
+# ===================================
+# À GARDER (NE PAS IGNORER)
+# ===================================
+# airflow/dags/        ← NE PAS ignorer
+# airflow/plugins/     ← NE PAS ignorer
+
+# ===================================
+# CREDENTIALS (CRITIQUE)
+# ===================================
+.env
+*.pem
+*.key
+secrets/
+
+# ===================================
+# DATA (Fichiers volumineux)
+# ===================================
+data/raw/*
+data/processed/*
+data/warehouse/*
+!data/**/.gitkeep
+
+# ===================================
+# PYTHON
+# ===================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+.ENV/
+nifi/
+
+# ===================================
+# IDE
+# ===================================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ===================================
+# DOCKER VOLUMES
+# ===================================
+airflow_postgres_data/
+metabase_data/
+postgres_data/
+
+# ===================================
+# OS
+# ===================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+
+
+# ===================================
+# TESTS
+# ===================================
+.pytest_cache/
+.coverage
+htmlcov/

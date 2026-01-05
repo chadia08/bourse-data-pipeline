@@ -1,2 +1,5 @@
 python-dotenv
 requests
+kafka-python
+clickhouse-connect
+pandas
