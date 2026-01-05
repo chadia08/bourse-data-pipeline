@@ -1,6 +1,6 @@
 -- 1. Table de stockage final (Reste identique)
 DROP TABLE IF EXISTS bourse.dim_company;
-CREATE TABLE bourse.dim_company
+CREATE TABLE bourse.company
 (
     symbole String,
     nom String,
@@ -33,25 +33,24 @@ SETTINGS kafka_broker_list = 'kafka:29092',
 
 -- 3. La Vue Matérialisée (Reste identique)
 DROP TABLE IF EXISTS bourse.company_mv;
-CREATE MATERIALIZED VIEW bourse.company_mv TO bourse.dim_company AS
+CREATE MATERIALIZED VIEW bourse.company_mv TO bourse.company AS
 SELECT
     symbole,
     nom,
     secteur,
     sous_secteur,
     siege,
-    -- Conversion sécurisée en Date
     toDate(parseDateTimeBestEffortOrNull(date_introduction)) AS date_introduction,
     cik
 FROM bourse.company_kafka_queue;
 
 --------------------------------------------------------------------------------------------------------
 -- fact prices
-DROP TABLE IF EXISTS bourse_mv;
-DROP TABLE IF EXISTS bourse_kafka_queue;
-DROP TABLE IF EXISTS bourse_data;
+DROP TABLE IF EXISTS prices_mv;
+DROP TABLE IF EXISTS prices_kafka_queue;
+DROP TABLE IF EXISTS prices;
 
-CREATE TABLE bourse.bourse_data (
+CREATE TABLE bourse.prices (
     id String,
     date Date,              -- Correspond au champ "date" du JSON
     symbole LowCardinality(String),
@@ -67,7 +66,7 @@ CREATE TABLE bourse.bourse_data (
 ENGINE = MergeTree()
 ORDER BY (symbole, date);
 
-CREATE TABLE bourse.bourse_kafka_queue (
+CREATE TABLE bourse.prices_kafka_queue (
     id String,
     date String,
     symbole String,
@@ -87,7 +86,7 @@ SETTINGS
     kafka_group_name = 'group_final_v5', -- Nouveau groupe pour déclencher la lecture
     kafka_format = 'JSONEachRow';
 
-CREATE MATERIALIZED VIEW bourse.bourse_mv TO bourse.bourse_data AS
+CREATE MATERIALIZED VIEW bourse.prices_mv TO bourse.prices AS
 SELECT 
     id, 
     toDate(date) AS date, -- Conversion du String "2016-01-05" en Date
@@ -106,7 +105,7 @@ FROM bourse_kafka_queue;
 --------------------------------------------------------------------------------------------------------
 
 -- Table de jointure dans trino
-CREATE TABLE clickhouse.bourse.v_bourse_complete_analytics AS
+CREATE TABLE clickhouse.bourse.prices_analytics AS
 SELECT 
     p.id,
     p.date,
