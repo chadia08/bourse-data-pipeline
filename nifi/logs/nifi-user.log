@@ -130,3 +130,23 @@ java.lang.IllegalArgumentException: The username and password must be specified.
 	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
 	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
 	at java.base/java.lang.Thread.run(Unknown Source)
+2026-01-06 15:22:49,354 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
+2026-01-06 15:22:49,730 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Tue Jan 06 15:22:49 UTC 2026
+2026-01-06 15:22:50,475 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Tue Jan 06 15:22:50 UTC 2026
+2026-01-06 15:22:50,479 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
+2026-01-06 15:27:26,914 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
+2026-01-06 15:27:27,403 INFO [main] o.a.n.a.FileUserGroupProvider Creating new users file at /opt/nifi/nifi-current/./conf/users.xml
+2026-01-06 15:27:27,464 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Tue Jan 06 15:27:27 UTC 2026
+2026-01-06 15:27:27,465 INFO [main] o.a.n.a.FileAccessPolicyProvider Creating new authorizations file at /opt/nifi/nifi-current/./conf/authorizations.xml
+2026-01-06 15:27:27,769 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Tue Jan 06 15:27:27 UTC 2026
+2026-01-06 15:27:27,777 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
+2026-01-06 20:11:04,460 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
+2026-01-06 20:11:05,745 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Tue Jan 06 20:11:05 UTC 2026
+2026-01-06 20:11:06,528 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Tue Jan 06 20:11:06 UTC 2026
+2026-01-06 20:11:06,531 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
+2026-01-06 21:59:35,882 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
+2026-01-06 21:59:36,454 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Tue Jan 06 21:59:36 UTC 2026
+2026-01-06 21:59:37,416 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Tue Jan 06 21:59:37 UTC 2026
+2026-01-06 21:59:37,423 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
+2026-01-06 22:01:01,014 INFO [NiFi Web Server-24] org.apache.nifi.web.api.AccessResource Logout Request [dc86a2d2-210d-4605-8cf2-1b9dc30de35a] Identity [admin] started
+2026-01-06 22:01:01,290 INFO [NiFi Web Server-21] org.apache.nifi.web.api.AccessResource Logout Request [dc86a2d2-210d-4605-8cf2-1b9dc30de35a] Completed [admin]

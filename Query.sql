@@ -1,5 +1,5 @@
 -- 1. Table de stockage final (Reste identique)
-DROP TABLE IF EXISTS bourse.dim_company;
+DROP TABLE IF EXISTS bourse.company;
 CREATE TABLE bourse.company
 (
     symbole String,
