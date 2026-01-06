@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 from kafka import KafkaProducer
 
 # --- CONFIGURATION ---
-TOPIC_NAME = 'prices_topic'
+TOPIC_NAME = 'generate_prices'
 KAFKA_SERVER = 'localhost:9092'
 CSV_FILE = 'Data/Raw/securities.csv'
 

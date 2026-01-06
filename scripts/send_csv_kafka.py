@@ -38,8 +38,8 @@ def send_csv_to_kafka(file_path, topic_name, delimiter=';'):
 # --- EXEMPLES D'UTILISATION ---
 
 
-send_csv_to_kafka('Data/Raw/securities.csv', 'securities_topic', delimiter=',')
+# send_csv_to_kafka('Data/Raw/securities.csv', 'securities_topic', delimiter=',')
 
 # send_csv_to_kafka('Data/Raw/prices_test.csv', 'prices_topic', delimiter=',')
 
-# send_csv_to_kafka('data/raw/fundamentals.csv', 'fundamentals_topic', delimiter=',')
+send_csv_to_kafka('data/raw/fundamentals.csv', 'fundamentals_topic', delimiter=',')
