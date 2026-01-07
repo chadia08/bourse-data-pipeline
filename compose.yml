@@ -1,0 +1,92 @@
+networks:
+  bourse_network:
+    driver: bridge
+
+volumes:
+  zookeeper_data:
+  kafka_data:
+  nifi_database:
+  nifi_flowfile:
+  nifi_content:
+  nifi_provenance:
+  nifi_state:
+  clickhouse_data:
+
+services:
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.6.1
+    container_name: zookeeper
+    hostname: zookeeper
+    networks:
+      - bourse_network
+    ports:
+      - "2181:2181"
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    volumes:
+      - zookeeper_data:/var/lib/zookeeper/data
+
+  kafka:
+    image: confluentinc/cp-kafka:7.6.1
+    container_name: kafka
+    hostname: kafka
+    depends_on:
+      - zookeeper
+    networks:
+      - bourse_network
+    ports:
+      - "9092:9092"
+      - "29092:29092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,PLAINTEXT_HOST://0.0.0.0:29092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:29092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    volumes:
+      - kafka_data:/var/lib/kafka/data
+
+  nifi:
+    image: apache/nifi:1.20.0
+    container_name: nifi
+    hostname: nifi
+    depends_on:
+      - kafka
+    networks:
+      - bourse_network
+    ports:
+      - "8443:8443"
+    environment:
+      SINGLE_USER_CREDENTIALS_USERNAME: admin
+      SINGLE_USER_CREDENTIALS_PASSWORD: Admin123456!
+      NIFI_WEB_HTTPS_PORT: 8443
+      NIFI_WEB_HTTPS_HOST: 0.0.0.0
+    volumes:
+      # Données CSV (INPUT)
+      - ./Data/Raw:/opt/nifi/data/raw
+
+      # Repositories NiFi (OBLIGATOIRE)
+      - nifi_database:/opt/nifi/nifi-current/database_repository
+      - nifi_flowfile:/opt/nifi/nifi-current/flowfile_repository
+      - nifi_content:/opt/nifi/nifi-current/content_repository
+      - nifi_provenance:/opt/nifi/nifi-current/provenance_repository
+      - nifi_state:/opt/nifi/nifi-current/state
+
+  clickhouse:
+    image: clickhouse/clickhouse-server:24.3
+    container_name: clickhouse
+    hostname: clickhouse
+    networks:
+      - bourse_network
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+    environment:
+      - CLICKHOUSE_USER=admin
+      - CLICKHOUSE_PASSWORD=Admin123456
+      - CLICKHOUSE_DB=bourse
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
