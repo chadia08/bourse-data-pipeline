@@ -52,7 +52,7 @@ DROP TABLE IF EXISTS prices;
 
 CREATE TABLE bourse.prices (
     id String,
-    date Date,              -- Correspond au champ "date" du JSON
+    date Date,              
     symbole LowCardinality(String),
     prix_ouverture Float64,
     prix_cloture Float64,
@@ -125,3 +125,113 @@ SELECT
     c.date_introduction
 FROM clickhouse.bourse.prices p
 LEFT JOIN clickhouse.bourse.company c ON p.symbole = c.symbole;
+
+--------------------------------------------------------------------------
+----fundamentals
+
+CREATE TABLE bourse.fundamentals (
+    symbole String,
+    annee_fiscale Int32,
+    date_fin_periode Date,
+    revenu_total Int64,
+    profit_brut Int64,
+    resultat_net Int64,
+    resultat_exploitation Int64,
+    marge_exploitation Float32,
+    marge_beneficiaire Float32,
+    total_actifs Int64,
+    total_passifs Int64,
+    dette_long_terme Int64,
+    capitaux_propres Int64,
+    goodwill Int64,
+    ratio_courant Float32,
+    ratio_liquidite_immediate Float32,
+    benefice_par_action Float32,
+    rentabilite_fonds_propres_roe Float32
+) 
+ENGINE = MergeTree()
+ORDER BY (symbole, annee_fiscale);
+
+
+CREATE TABLE bourse.fundamentals_queue (
+    symbole String,
+    annee_fiscale String,
+    date_fin_periode String,
+    revenu_total String,
+    profit_brut String,
+    resultat_net String,
+    resultat_exploitation String,
+    marge_exploitation String,
+    marge_beneficiaire String,
+    total_actifs String,
+    total_passifs String,
+    dette_long_terme String,
+    capitaux_propres String,
+    goodwill String,
+    ratio_courant String,
+    ratio_liquidite_immediate String,
+    benefice_par_action String,
+    rentabilite_fonds_propres_roe String
+)
+ENGINE = Kafka
+SETTINGS 
+    kafka_broker_list = 'kafka:29092', 
+    kafka_topic_list = 'send_fundamentals',
+    kafka_group_name = 'group_final_reborn_v1', -- Nouveau nom pour tout relire
+    kafka_format = 'JSONEachRow';
+
+
+CREATE MATERIALIZED VIEW bourse.fundamentals_mv TO bourse.fundamentals AS
+SELECT 
+    symbole,
+    toUInt32OrZero(annee_fiscale) AS annee_fiscale,
+    toDateOrZero(date_fin_periode) AS date_fin_periode,
+    toInt64OrZero(revenu_total) AS revenu_total,
+    toInt64OrZero(profit_brut) AS profit_brut,
+    toInt64OrZero(resultat_net) AS resultat_net,
+    toInt64OrZero(resultat_exploitation) AS resultat_exploitation,
+    toFloat32OrZero(marge_exploitation) AS marge_exploitation,
+    toFloat32OrZero(marge_beneficiaire) AS marge_beneficiaire,
+    toInt64OrZero(total_actifs) AS total_actifs,
+    toInt64OrZero(total_passifs) AS total_passifs,
+    toInt64OrZero(dette_long_terme) AS dette_long_terme,
+    toInt64OrZero(capitaux_propres) AS capitaux_propres,
+    toInt64OrZero(goodwill) AS goodwill,
+    toFloat32OrZero(ratio_courant) AS ratio_courant,
+    toFloat32OrZero(ratio_liquidite_immediate) AS ratio_liquidite_immediate,
+    toFloat32OrZero(benefice_par_action) AS benefice_par_action,
+    toFloat32OrZero(rentabilite_fonds_propres_roe) AS rentabilite_fonds_propres_roe
+FROM bourse.fundamentals_queue;
+
+--------------------------------------------------------------------------------------------------------
+CREATE TABLE bourse.fundamentals_analytics AS
+SELECT 
+    -- Données COMPANY (c)
+    c.nom,
+    c.secteur,
+    c.sous_secteur,
+    c.siege,
+    c.date_introduction,
+    
+    -- Données FUNDAMENTALS (f)
+    f.symbole,
+    f.annee_fiscale,
+    f.date_fin_periode,
+    f.revenu_total,
+    f.profit_brut,
+    f.resultat_net,
+    f.resultat_exploitation,
+    f.marge_exploitation,
+    f.marge_beneficiaire,
+    f.total_actifs,
+    f.total_passifs,
+    f.dette_long_terme,
+    f.capitaux_propres,
+    f.goodwill,
+    f.ratio_courant,
+    f.ratio_liquidite_immediate,
+    f.benefice_par_action,
+    f.rentabilite_fonds_propres_roe
+
+FROM bourse.fundamentals f
+LEFT JOIN bourse.company c ON f.symbole = c.symbole;

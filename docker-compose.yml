@@ -13,6 +13,7 @@ volumes:
   nifi_content:
   nifi_provenance:
   nifi_state:
+  atlas_data:
 
 services:
 
@@ -23,10 +24,8 @@ services:
     image: confluentinc/cp-zookeeper:7.6.1
     container_name: zookeeper
     hostname: zookeeper
-    networks:
-      - bourse_network
-    ports:
-      - "2181:2181"
+    networks: [bourse_network]
+    ports: ["2181:2181"]
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
@@ -40,22 +39,16 @@ services:
     image: confluentinc/cp-kafka:7.6.1
     container_name: kafka
     hostname: kafka
-    depends_on:
-      - zookeeper
-    networks:
-      - bourse_network
-    ports:
-      - "9092:9092"
+    depends_on: [zookeeper]
+    networks: [bourse_network]
+    ports: ["9092:9092"]
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-
-      # Listener interne Docker + externe localhost
       KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:29092,PLAINTEXT_HOST://0.0.0.0:9092
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://localhost:9092
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
-
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
     volumes:
       - kafka_data:/var/lib/kafka/data
@@ -67,12 +60,9 @@ services:
     image: apache/nifi:1.20.0
     container_name: nifi
     hostname: nifi
-    depends_on:
-      - kafka
-    networks:
-      - bourse_network
-    ports:
-      - "8443:8443"
+    depends_on: [kafka]
+    networks: [bourse_network]
+    ports: ["8443:8443"]
     environment:
       SINGLE_USER_CREDENTIALS_USERNAME: admin
       SINGLE_USER_CREDENTIALS_PASSWORD: Admin123456!
@@ -94,11 +84,10 @@ services:
     image: clickhouse/clickhouse-server:24.3
     container_name: clickhouse
     hostname: clickhouse
-    networks:
-      - bourse_network
+    networks: [bourse_network]
     ports:
-      - "8123:8123"   # HTTP (Power BI, JDBC)
-      - "9000:9000"   # Native
+      - "8123:8123"
+      - "9000:9000"
     environment:
       CLICKHOUSE_DB: bourse
       CLICKHOUSE_USER: default
@@ -106,33 +95,4 @@ services:
     volumes:
       - clickhouse_data:/var/lib/clickhouse
 
-  # =====================
-  # MARQUEZ (LINEAGE API)
-  # =====================
-  marquez:
-    image: marquezproject/marquez:latest
-    container_name: marquez
-    hostname: marquez
-    networks:
-      - bourse_network
-    ports:
-      - "5000:5000"  # API OpenLineage
-      - "5001:5001"  # Admin
-    environment:
-      MARQUEZ_PORT: 5000
-      MARQUEZ_ADMIN_PORT: 5001
-
-  # =====================
-  # MARQUEZ WEB (LINEAGE UI)
-  # =====================
-  marquez-web:
-    image: marquezproject/marquez-web:latest
-    container_name: marquez-web
-    depends_on:
-      - marquez
-    networks:
-      - bourse_network
-    ports:
-      - "3000:3000"
-    environment:
-      MARQUEZ_API_URL: http://marquez:5000/api/v1
+  

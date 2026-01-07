@@ -31,10 +31,10 @@ secrets/
 # ===================================
 # DATA (Fichiers volumineux)
 # ===================================
-data/raw/*
-data/processed/*
-data/warehouse/*
-!data/**/.gitkeep
+# data/raw/*
+# data/processed/*
+# data/warehouse/*
+# !data/**/.gitkeep
 
 # ===================================
 # PYTHON
