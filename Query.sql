@@ -66,7 +66,7 @@ CREATE TABLE bourse.prices (
 ENGINE = MergeTree()
 ORDER BY (symbole, date);
 
-CREATE TABLE bourse.prices_kafka_queue (
+CREATE TABLE bourse.prices_queue (
     id String,
     date String,
     symbole String,
@@ -105,7 +105,7 @@ FROM bourse_kafka_queue;
 --------------------------------------------------------------------------------------------------------
 
 -- Table de jointure dans trino
-CREATE TABLE clickhouse.bourse.prices_analytics AS
+CREATE VIEW bourse.prices_analytics AS
 SELECT 
     p.id,
     p.date,
@@ -123,8 +123,8 @@ SELECT
     c.sous_secteur,
     c.siege,
     c.date_introduction
-FROM clickhouse.bourse.prices p
-LEFT JOIN clickhouse.bourse.company c ON p.symbole = c.symbole;
+FROM bourse.prices p
+LEFT JOIN bourse.company c ON p.symbole = c.symbole;
 
 --------------------------------------------------------------------------
 ----fundamentals
@@ -204,7 +204,7 @@ SELECT
 FROM bourse.fundamentals_queue;
 
 --------------------------------------------------------------------------------------------------------
-CREATE TABLE bourse.fundamentals_analytics AS
+CREATE VIEW bourse.fundamentals_analytics AS
 SELECT 
     -- Données COMPANY (c)
     c.nom,
