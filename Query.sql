@@ -99,7 +99,7 @@ SELECT
     variation, 
     volatilite, 
     dollar_volume
-FROM bourse_kafka_queue;
+FROM bourse.prices_queue;
 
 
 --------------------------------------------------------------------------------------------------------

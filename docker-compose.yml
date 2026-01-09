@@ -115,6 +115,41 @@ services:
       - atlas_data:/opt/apache-atlas-2.1.0/data
 
 
+  # prometheus:
+  #   image: prom/prometheus:latest
+  #   container_name: prometheus
+  #   ports:
+  #     - "9090:9090"
+  #   volumes:
+  #     - ./prometheus.yml:/etc/prometheus/prometheus.yml
+
+  # grafana:
+  #   image: grafana/grafana:latest
+  #   container_name: grafana
+  #   ports:
+  #     - "3000:3000"
+  #   environment:
+  #     - GF_SECURITY_ADMIN_PASSWORD=admin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   # trino:
   #   image: trinodb/trino:latest
   #   container_name: trino
