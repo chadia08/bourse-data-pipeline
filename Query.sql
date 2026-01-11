@@ -129,21 +129,23 @@ LEFT JOIN bourse.company c ON p.symbole = c.symbole;
 --------------------------------------------------------------------------
 ----fundamentals
 
+DROP TABLE IF EXISTS bourse.fundamentals;
+
 CREATE TABLE bourse.fundamentals (
     symbole String,
     annee_fiscale Int32,
     date_fin_periode Date,
-    revenu_total Int64,
-    profit_brut Int64,
-    resultat_net Int64,
-    resultat_exploitation Int64,
+    revenu_total Float64,  -- CHANGÉ DE Int64
+    profit_brut Float64,   -- CHANGÉ DE Int64
+    resultat_net Float64,  -- CHANGÉ DE Int64
+    resultat_exploitation Float64, -- CHANGÉ DE Int64
     marge_exploitation Float32,
     marge_beneficiaire Float32,
-    total_actifs Int64,
-    total_passifs Int64,
-    dette_long_terme Int64,
-    capitaux_propres Int64,
-    goodwill Int64,
+    total_actifs Float64,  -- CHANGÉ DE Int64
+    total_passifs Float64, -- CHANGÉ DE Int64
+    dette_long_terme Float64, -- CHANGÉ DE Int64
+    capitaux_propres Float64, -- CHANGÉ DE Int64
+    goodwill Float64,      -- CHANGÉ DE Int64
     ratio_courant Float32,
     ratio_liquidite_immediate Float32,
     benefice_par_action Float32,

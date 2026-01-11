@@ -9,7 +9,6 @@ volumes:
   kafka_data:
   nifi_data:
   clickhouse_data:
-  marquez_db:
   atlas_data:
 
 services:
@@ -46,8 +45,12 @@ services:
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_OPTS: "-Datlas.conf=/etc/kafka/config"
+      KAFKA_CLASSPATH: "/usr/share/java/kafka/*"
+      ATLAS_CLUSTER_NAME: "bourse_cluster"
     volumes:
       - kafka_data:/var/lib/kafka/data
+      - ./atlas-application.properties:/etc/kafka/config/atlas-application.properties
 
   nifi:
     image: 'apache/nifi:1.20.0'
@@ -97,8 +100,6 @@ services:
       nofile:
         soft: 262144
         hard: 262144
-  
-
 
   atlas:
     image: sburn/apache-atlas:latest
@@ -122,6 +123,8 @@ services:
   #     - "9090:9090"
   #   volumes:
   #     - ./prometheus.yml:/etc/prometheus/prometheus.yml
+  #   networks:
+  #     - bourse_network
 
   # grafana:
   #   image: grafana/grafana:latest
@@ -129,7 +132,9 @@ services:
   #   ports:
   #     - "3000:3000"
   #   environment:
-  #     - GF_SECURITY_ADMIN_PASSWORD=admin
+  #     - GF_INSTALL_PLUGINS=grafana-clickhouse-datasource
+  #   networks:
+  #     - bourse_network
 
 
 

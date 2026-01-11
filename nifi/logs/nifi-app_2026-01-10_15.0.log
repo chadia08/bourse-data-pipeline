@@ -1,0 +1,1623 @@
+2026-01-10 15:00:07,395 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:00:07,395 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1131 records in 0 milliseconds
+2026-01-10 15:00:27,395 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:00:27,395 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1131 records in 0 milliseconds
+2026-01-10 15:00:46,034 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-01-10 15:00:46,034 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 27.95 GB, bytes free = 3.38 GB, capacity = 31.33 GB
+2026-01-10 15:00:47,395 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:00:47,396 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1131 records in 0 milliseconds
+2026-01-10 15:01:07,396 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:01:07,396 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1131 records in 0 milliseconds
+2026-01-10 15:01:25,320 INFO [NiFi Web Server-28] o.a.n.c.s.StandardProcessScheduler Starting JoltTransformJSON[id=2f8f812a-1a38-3b13-71a7-5b5a885b735a]
+2026-01-10 15:01:25,320 INFO [NiFi Web Server-28] o.a.n.controller.StandardProcessorNode Starting JoltTransformJSON[id=2f8f812a-1a38-3b13-71a7-5b5a885b735a]
+2026-01-10 15:01:25,328 INFO [NiFi Web Server-28] o.a.n.c.s.StandardProcessScheduler Starting ConvertRecord[id=6e47006d-9edb-3999-a193-7461215ce66b]
+2026-01-10 15:01:25,328 INFO [NiFi Web Server-28] o.a.n.controller.StandardProcessorNode Starting ConvertRecord[id=6e47006d-9edb-3999-a193-7461215ce66b]
+2026-01-10 15:01:25,329 INFO [NiFi Web Server-28] o.a.n.c.s.StandardProcessScheduler Starting JoltTransformJSON[id=3b58f58e-f6ce-31f0-fdba-bbf36ae4a3ec]
+2026-01-10 15:01:25,329 INFO [NiFi Web Server-28] o.a.n.controller.StandardProcessorNode Starting JoltTransformJSON[id=3b58f58e-f6ce-31f0-fdba-bbf36ae4a3ec]
+2026-01-10 15:01:25,329 INFO [NiFi Web Server-28] o.a.n.c.s.StandardProcessScheduler Starting UpdateAttribute[id=1ed7ed4d-39ab-3b67-cf6f-81b28f921b52]
+2026-01-10 15:01:25,330 INFO [NiFi Web Server-28] o.a.n.controller.StandardProcessorNode Starting UpdateAttribute[id=1ed7ed4d-39ab-3b67-cf6f-81b28f921b52]
+2026-01-10 15:01:25,330 INFO [NiFi Web Server-28] o.a.n.c.s.StandardProcessScheduler Starting UpdateAttribute[id=ec4bdfab-936e-3712-1522-9492df5315c4]
+2026-01-10 15:01:25,331 INFO [NiFi Web Server-28] o.a.n.controller.StandardProcessorNode Starting UpdateAttribute[id=ec4bdfab-936e-3712-1522-9492df5315c4]
+2026-01-10 15:01:25,331 INFO [Timer-Driven Process Thread-3] o.a.n.c.s.TimerDrivenSchedulingAgent Scheduled ConvertRecord[id=6e47006d-9edb-3999-a193-7461215ce66b] to run with 1 threads
+2026-01-10 15:01:25,331 INFO [NiFi Web Server-28] o.a.n.c.s.StandardProcessScheduler Starting UpdateRecord[id=daa5c507-3fec-3f50-efad-a7748603bb47]
+2026-01-10 15:01:25,332 INFO [NiFi Web Server-28] o.a.n.controller.StandardProcessorNode Starting UpdateRecord[id=daa5c507-3fec-3f50-efad-a7748603bb47]
+2026-01-10 15:01:25,332 INFO [NiFi Web Server-28] o.a.n.c.s.StandardProcessScheduler Starting PublishKafkaRecord_2_0[id=fb6457c6-9769-3d25-10d8-dbbe3a7ba824]
+2026-01-10 15:01:25,332 INFO [NiFi Web Server-28] o.a.n.controller.StandardProcessorNode Starting PublishKafkaRecord_2_0[id=fb6457c6-9769-3d25-10d8-dbbe3a7ba824]
+2026-01-10 15:01:25,332 INFO [NiFi Web Server-28] o.a.n.c.s.StandardProcessScheduler Starting PublishKafkaRecord_2_0[id=38ce7c1c-e88e-316a-42ab-719ed8cb4fb2]
+2026-01-10 15:01:25,332 INFO [NiFi Web Server-28] o.a.n.controller.StandardProcessorNode Starting PublishKafkaRecord_2_0[id=38ce7c1c-e88e-316a-42ab-719ed8cb4fb2]
+2026-01-10 15:01:25,333 INFO [NiFi Web Server-28] o.a.n.c.s.StandardProcessScheduler Starting UpdateAttribute[id=1e0324c7-b2e6-33b0-a543-d12417ccefdf]
+2026-01-10 15:01:25,333 INFO [NiFi Web Server-28] o.a.n.controller.StandardProcessorNode Starting UpdateAttribute[id=1e0324c7-b2e6-33b0-a543-d12417ccefdf]
+2026-01-10 15:01:25,333 INFO [Timer-Driven Process Thread-6] o.a.n.c.s.TimerDrivenSchedulingAgent Scheduled PublishKafkaRecord_2_0[id=fb6457c6-9769-3d25-10d8-dbbe3a7ba824] to run with 1 threads
+2026-01-10 15:01:25,334 INFO [Timer-Driven Process Thread-5] o.a.n.c.s.TimerDrivenSchedulingAgent Scheduled PublishKafkaRecord_2_0[id=38ce7c1c-e88e-316a-42ab-719ed8cb4fb2] to run with 1 threads
+2026-01-10 15:01:25,334 INFO [NiFi Web Server-28] o.a.n.c.s.StandardProcessScheduler Starting ConvertRecord[id=1e560f03-a5da-3025-8e74-80f56fd0ae26]
+2026-01-10 15:01:25,334 INFO [NiFi Web Server-28] o.a.n.controller.StandardProcessorNode Starting ConvertRecord[id=1e560f03-a5da-3025-8e74-80f56fd0ae26]
+2026-01-10 15:01:25,334 INFO [NiFi Web Server-28] o.a.n.c.s.StandardProcessScheduler Starting SplitRecord[id=4adcb025-0461-39cd-9e1b-951b6637360f]
+2026-01-10 15:01:25,335 INFO [NiFi Web Server-28] o.a.n.controller.StandardProcessorNode Starting SplitRecord[id=4adcb025-0461-39cd-9e1b-951b6637360f]
+2026-01-10 15:01:25,335 INFO [Timer-Driven Process Thread-2] o.a.n.c.s.TimerDrivenSchedulingAgent Scheduled ConvertRecord[id=1e560f03-a5da-3025-8e74-80f56fd0ae26] to run with 1 threads
+2026-01-10 15:01:25,335 INFO [NiFi Web Server-28] o.a.n.c.s.StandardProcessScheduler Starting QueryRecord[id=25b3b5c0-ff61-32bd-228b-4db7d0299ca2]
+2026-01-10 15:01:25,335 INFO [NiFi Web Server-28] o.a.n.controller.StandardProcessorNode Starting QueryRecord[id=25b3b5c0-ff61-32bd-228b-4db7d0299ca2]
+2026-01-10 15:01:25,335 INFO [NiFi Web Server-28] o.a.n.c.s.StandardProcessScheduler Starting ConvertRecord[id=0bbb6973-c82b-3f76-83a0-1618040bf10c]
+2026-01-10 15:01:25,335 INFO [NiFi Web Server-28] o.a.n.controller.StandardProcessorNode Starting ConvertRecord[id=0bbb6973-c82b-3f76-83a0-1618040bf10c]
+2026-01-10 15:01:25,335 INFO [Timer-Driven Process Thread-3] o.a.n.c.s.TimerDrivenSchedulingAgent Scheduled UpdateRecord[id=daa5c507-3fec-3f50-efad-a7748603bb47] to run with 1 threads
+2026-01-10 15:01:25,336 INFO [NiFi Web Server-28] o.a.n.c.s.StandardProcessScheduler Starting JoltTransformJSON[id=a0d24fff-85ea-38c1-02ee-b1ffda0faabc]
+2026-01-10 15:01:25,336 INFO [NiFi Web Server-28] o.a.n.controller.StandardProcessorNode Starting JoltTransformJSON[id=a0d24fff-85ea-38c1-02ee-b1ffda0faabc]
+2026-01-10 15:01:25,336 INFO [Timer-Driven Process Thread-2] o.a.n.c.s.TimerDrivenSchedulingAgent Scheduled SplitRecord[id=4adcb025-0461-39cd-9e1b-951b6637360f] to run with 1 threads
+2026-01-10 15:01:25,337 INFO [NiFi Web Server-28] o.a.n.c.s.StandardProcessScheduler Starting JoltTransformJSON[id=20e08a50-9c1a-34c1-be67-c44ae2b59f5f]
+2026-01-10 15:01:25,337 INFO [NiFi Web Server-28] o.a.n.controller.StandardProcessorNode Starting JoltTransformJSON[id=20e08a50-9c1a-34c1-be67-c44ae2b59f5f]
+2026-01-10 15:01:25,337 INFO [Timer-Driven Process Thread-5] o.a.n.c.s.TimerDrivenSchedulingAgent Scheduled ConvertRecord[id=0bbb6973-c82b-3f76-83a0-1618040bf10c] to run with 1 threads
+2026-01-10 15:01:25,338 INFO [NiFi Web Server-28] o.a.n.c.s.StandardProcessScheduler Starting PublishKafkaRecord_2_0[id=e005c9f2-b9fb-3aef-d826-0162e49fe10b]
+2026-01-10 15:01:25,338 INFO [NiFi Web Server-28] o.a.n.controller.StandardProcessorNode Starting PublishKafkaRecord_2_0[id=e005c9f2-b9fb-3aef-d826-0162e49fe10b]
+2026-01-10 15:01:25,338 INFO [Timer-Driven Process Thread-8] o.a.n.c.s.TimerDrivenSchedulingAgent Scheduled QueryRecord[id=25b3b5c0-ff61-32bd-228b-4db7d0299ca2] to run with 1 threads
+2026-01-10 15:01:25,338 INFO [NiFi Web Server-28] o.a.n.c.s.StandardProcessScheduler Starting UpdateRecord[id=9304a784-b195-3e48-4ba1-d43899390aad]
+2026-01-10 15:01:25,338 INFO [NiFi Web Server-28] o.a.n.controller.StandardProcessorNode Starting UpdateRecord[id=9304a784-b195-3e48-4ba1-d43899390aad]
+2026-01-10 15:01:25,339 INFO [NiFi Web Server-28] o.a.n.c.s.StandardProcessScheduler Starting SplitRecord[id=2dcf9cf4-a3b0-3c9e-00e4-25734d418065]
+2026-01-10 15:01:25,339 INFO [NiFi Web Server-28] o.a.n.controller.StandardProcessorNode Starting SplitRecord[id=2dcf9cf4-a3b0-3c9e-00e4-25734d418065]
+2026-01-10 15:01:25,339 INFO [Timer-Driven Process Thread-6] o.a.n.c.s.TimerDrivenSchedulingAgent Scheduled PublishKafkaRecord_2_0[id=e005c9f2-b9fb-3aef-d826-0162e49fe10b] to run with 1 threads
+2026-01-10 15:01:25,340 INFO [Timer-Driven Process Thread-2] o.a.n.c.s.TimerDrivenSchedulingAgent Scheduled UpdateRecord[id=9304a784-b195-3e48-4ba1-d43899390aad] to run with 1 threads
+2026-01-10 15:01:25,340 INFO [Timer-Driven Process Thread-6] o.a.n.c.s.TimerDrivenSchedulingAgent Scheduled SplitRecord[id=2dcf9cf4-a3b0-3c9e-00e4-25734d418065] to run with 1 threads
+2026-01-10 15:01:25,472 INFO [Timer-Driven Process Thread-1] o.a.n.c.s.TimerDrivenSchedulingAgent Scheduled UpdateAttribute[id=1e0324c7-b2e6-33b0-a543-d12417ccefdf] to run with 1 threads
+2026-01-10 15:01:25,472 INFO [Timer-Driven Process Thread-10] o.a.n.c.s.TimerDrivenSchedulingAgent Scheduled UpdateAttribute[id=1ed7ed4d-39ab-3b67-cf6f-81b28f921b52] to run with 1 threads
+2026-01-10 15:01:25,473 INFO [Timer-Driven Process Thread-9] o.a.n.c.s.TimerDrivenSchedulingAgent Scheduled UpdateAttribute[id=ec4bdfab-936e-3712-1522-9492df5315c4] to run with 1 threads
+2026-01-10 15:01:25,481 INFO [Timer-Driven Process Thread-3] o.a.n.c.s.TimerDrivenSchedulingAgent Scheduled JoltTransformJSON[id=a0d24fff-85ea-38c1-02ee-b1ffda0faabc] to run with 1 threads
+2026-01-10 15:01:25,481 INFO [Timer-Driven Process Thread-7] o.a.n.c.s.TimerDrivenSchedulingAgent Scheduled JoltTransformJSON[id=2f8f812a-1a38-3b13-71a7-5b5a885b735a] to run with 1 threads
+2026-01-10 15:01:25,481 INFO [Timer-Driven Process Thread-5] o.a.n.c.s.TimerDrivenSchedulingAgent Scheduled JoltTransformJSON[id=20e08a50-9c1a-34c1-be67-c44ae2b59f5f] to run with 1 threads
+2026-01-10 15:01:25,483 INFO [Timer-Driven Process Thread-4] o.a.n.c.s.TimerDrivenSchedulingAgent Scheduled JoltTransformJSON[id=3b58f58e-f6ce-31f0-fdba-bbf36ae4a3ec] to run with 1 threads
+2026-01-10 15:01:25,859 INFO [Flow Service Tasks Thread-1] o.a.nifi.controller.StandardFlowService Saved flow controller org.apache.nifi.controller.FlowController@7ab8fd05 // Another save pending = false
+2026-01-10 15:01:27,396 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:01:27,396 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1131 records in 0 milliseconds
+2026-01-10 15:01:27,750 INFO [NiFi Web Server-105] o.a.n.controller.StandardProcessorNode GetFile[id=f02d5151-7140-3c0e-6027-500cf8df8d44] enabled so ScheduledState transitioned from DISABLED to STOPPED
+2026-01-10 15:01:27,877 INFO [Flow Service Tasks Thread-1] o.a.nifi.controller.StandardFlowService Saved flow controller org.apache.nifi.controller.FlowController@7ab8fd05 // Another save pending = false
+2026-01-10 15:01:32,709 INFO [NiFi Web Server-28] o.a.n.c.s.StandardProcessScheduler Running once GetFile[id=f02d5151-7140-3c0e-6027-500cf8df8d44]
+2026-01-10 15:01:32,709 INFO [NiFi Web Server-28] o.a.n.controller.StandardProcessorNode Starting GetFile[id=f02d5151-7140-3c0e-6027-500cf8df8d44]
+2026-01-10 15:01:32,775 INFO [Timer-Driven Process Thread-9] o.a.n.c.s.StandardProcessScheduler Stopping GetFile[id=f02d5151-7140-3c0e-6027-500cf8df8d44]
+2026-01-10 15:01:32,775 INFO [Timer-Driven Process Thread-9] o.a.n.controller.StandardProcessorNode Stopping processor: GetFile[id=f02d5151-7140-3c0e-6027-500cf8df8d44]
+2026-01-10 15:01:32,776 INFO [Timer-Driven Process Thread-9] o.a.n.c.s.TimerDrivenSchedulingAgent Stopped scheduling GetFile[id=f02d5151-7140-3c0e-6027-500cf8df8d44] to run
+2026-01-10 15:01:32,776 INFO [Timer-Driven Process Thread-9] o.a.n.controller.StandardProcessorNode GetFile[id=f02d5151-7140-3c0e-6027-500cf8df8d44] has completely stopped. Completing any associated Futures.
+2026-01-10 15:01:32,895 INFO [Flow Service Tasks Thread-1] o.a.nifi.controller.StandardFlowService Saved flow controller org.apache.nifi.controller.FlowController@7ab8fd05 // Another save pending = false
+2026-01-10 15:01:45,018 INFO [Write-Ahead Local State Provider Maintenance] org.wali.MinimalLockingWriteAheadLog org.wali.MinimalLockingWriteAheadLog@320967d4 checkpointed with 159 Records and 0 Swap Files in 121 milliseconds (Stop-the-world time = 1 milliseconds, Clear Edit Logs time = 1 millis), max Transaction ID 1944
+2026-01-10 15:01:46,053 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-01-10 15:01:46,053 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 27.96 GB, bytes free = 3.37 GB, capacity = 31.33 GB
+2026-01-10 15:01:47,396 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:01:47,396 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1131 records in 0 milliseconds
+2026-01-10 15:02:07,396 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:02:07,397 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1131 records in 0 milliseconds
+2026-01-10 15:02:27,397 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:02:27,397 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1131 records in 0 milliseconds
+2026-01-10 15:02:46,071 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-01-10 15:02:46,071 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 27.97 GB, bytes free = 3.36 GB, capacity = 31.33 GB
+2026-01-10 15:02:47,397 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:02:47,397 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1131 records in 0 milliseconds
+2026-01-10 15:03:07,397 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:03:07,398 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1131 records in 0 milliseconds
+2026-01-10 15:03:27,398 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:03:27,398 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1131 records in 0 milliseconds
+2026-01-10 15:03:43,625 INFO [NiFi Web Server-103] o.a.n.c.s.StandardProcessScheduler Running once GetFile[id=f02d5151-7140-3c0e-6027-500cf8df8d44]
+2026-01-10 15:03:43,626 INFO [NiFi Web Server-103] o.a.n.controller.StandardProcessorNode Starting GetFile[id=f02d5151-7140-3c0e-6027-500cf8df8d44]
+2026-01-10 15:03:43,903 INFO [Timer-Driven Process Thread-9] o.a.n.c.s.StandardProcessScheduler Stopping GetFile[id=f02d5151-7140-3c0e-6027-500cf8df8d44]
+2026-01-10 15:03:43,903 INFO [Timer-Driven Process Thread-9] o.a.n.controller.StandardProcessorNode Stopping processor: GetFile[id=f02d5151-7140-3c0e-6027-500cf8df8d44]
+2026-01-10 15:03:43,903 INFO [Timer-Driven Process Thread-9] o.a.n.c.s.TimerDrivenSchedulingAgent Stopped scheduling GetFile[id=f02d5151-7140-3c0e-6027-500cf8df8d44] to run
+2026-01-10 15:03:43,904 INFO [Timer-Driven Process Thread-9] o.a.n.controller.StandardProcessorNode GetFile[id=f02d5151-7140-3c0e-6027-500cf8df8d44] has completely stopped. Completing any associated Futures.
+2026-01-10 15:03:43,958 INFO [Flow Service Tasks Thread-2] o.a.nifi.controller.StandardFlowService Saved flow controller org.apache.nifi.controller.FlowController@7ab8fd05 // Another save pending = false
+2026-01-10 15:03:45,088 INFO [Write-Ahead Local State Provider Maintenance] org.wali.MinimalLockingWriteAheadLog org.wali.MinimalLockingWriteAheadLog@320967d4 checkpointed with 159 Records and 0 Swap Files in 69 milliseconds (Stop-the-world time = 7 milliseconds, Clear Edit Logs time = 8 millis), max Transaction ID 1944
+2026-01-10 15:03:46,149 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-01-10 15:03:46,155 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 28.03 GB, bytes free = 3.3 GB, capacity = 31.33 GB
+2026-01-10 15:03:47,398 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:03:47,712 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1132 Records and 0 Swap Files in 313 milliseconds (Stop-the-world time = 218 milliseconds), max Transaction ID 214982
+2026-01-10 15:03:47,712 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1132 records in 313 milliseconds
+2026-01-10 15:04:07,489 INFO [Timer-Driven Process Thread-8] o.a.k.clients.producer.ProducerConfig ProducerConfig values: 
+	acks = all
+	batch.size = 16384
+	bootstrap.servers = [kafka:29092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 5000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2026-01-10 15:04:07,713 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:04:07,899 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1219 Records and 0 Swap Files in 185 milliseconds (Stop-the-world time = 105 milliseconds), max Transaction ID 215096
+2026-01-10 15:04:07,901 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1219 records in 187 milliseconds
+2026-01-10 15:04:07,979 INFO [Timer-Driven Process Thread-8] o.a.kafka.common.utils.AppInfoParser Kafka version : 2.0.0
+2026-01-10 15:04:07,979 INFO [Timer-Driven Process Thread-8] o.a.kafka.common.utils.AppInfoParser Kafka commitId : 3402a8361b734732
+2026-01-10 15:04:08,928 WARN [Timer-Driven Process Thread-2] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 15
+2026-01-10 15:04:08,954 WARN [Timer-Driven Process Thread-6] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 21
+2026-01-10 15:04:08,984 INFO [FileSystemRepository Workers Thread-3] o.a.n.c.repository.FileSystemRepository Successfully archived 39 Resource Claims for Container default in 157 millis
+2026-01-10 15:04:09,282 WARN [Timer-Driven Process Thread-5] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 39
+2026-01-10 15:04:09,339 WARN [Timer-Driven Process Thread-4] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 39
+2026-01-10 15:04:10,104 WARN [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient [Producer clientId=producer-1] Error while fetching metadata with correlation id 1 : {send_prices=LEADER_NOT_AVAILABLE}
+2026-01-10 15:04:10,104 INFO [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata Cluster ID: 1D3sHoAFRzOkiG0CwUuUXA
+2026-01-10 15:04:10,255 ERROR [kafka-producer-network-thread | producer-1] o.a.n.p.k.pubsub.PublishKafkaRecord_2_0 PublishKafkaRecord_2_0[id=e005c9f2-b9fb-3aef-d826-0162e49fe10b] Failed to send StandardFlowFileRecord[uuid=83b4fb7f-0b84-4368-bcbc-9a834fad14e3,claim=StandardContentClaim [resourceClaim=StandardResourceClaim[id=1768057445662-93, container=default, section=93], offset=0, length=2404348],offset=0,name=prices.csv,size=2404348] to Kafka
+org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.
+2026-01-10 15:04:10,264 WARN [kafka-producer-network-thread | producer-1] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-1] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:04:10,265 WARN [kafka-producer-network-thread | producer-1] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-1] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:04:10,265 WARN [kafka-producer-network-thread | producer-1] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-1] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:04:10,265 WARN [kafka-producer-network-thread | producer-1] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-1] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:04:10,266 WARN [kafka-producer-network-thread | producer-1] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-1] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:04:10,266 WARN [kafka-producer-network-thread | producer-1] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-1] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:04:10,267 WARN [kafka-producer-network-thread | producer-1] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-1] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:04:10,268 INFO [Timer-Driven Process Thread-8] o.a.kafka.clients.producer.KafkaProducer [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 5000 ms.
+2026-01-10 15:04:10,272 INFO [Timer-Driven Process Thread-8] o.a.k.clients.producer.ProducerConfig ProducerConfig values: 
+	acks = all
+	batch.size = 16384
+	bootstrap.servers = [kafka:29092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 5000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2026-01-10 15:04:10,276 INFO [Timer-Driven Process Thread-8] o.a.kafka.common.utils.AppInfoParser Kafka version : 2.0.0
+2026-01-10 15:04:10,276 INFO [Timer-Driven Process Thread-8] o.a.kafka.common.utils.AppInfoParser Kafka commitId : 3402a8361b734732
+2026-01-10 15:04:10,339 INFO [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.Metadata Cluster ID: 1D3sHoAFRzOkiG0CwUuUXA
+2026-01-10 15:04:10,349 ERROR [kafka-producer-network-thread | producer-2] o.a.n.p.k.pubsub.PublishKafkaRecord_2_0 PublishKafkaRecord_2_0[id=e005c9f2-b9fb-3aef-d826-0162e49fe10b] Failed to send StandardFlowFileRecord[uuid=a4ce6e27-2361-47c3-a7d2-9497dbc7f3c8,claim=StandardContentClaim [resourceClaim=StandardResourceClaim[id=1768057447423-112, container=default, section=112], offset=0, length=2404463],offset=0,name=prices.csv,size=2404463] to Kafka
+org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.
+2026-01-10 15:04:10,351 WARN [kafka-producer-network-thread | producer-2] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-2] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:04:10,351 WARN [kafka-producer-network-thread | producer-2] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-2] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:04:10,353 WARN [kafka-producer-network-thread | producer-2] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-2] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:04:10,353 INFO [Timer-Driven Process Thread-8] o.a.kafka.clients.producer.KafkaProducer [Producer clientId=producer-2] Closing the Kafka producer with timeoutMillis = 5000 ms.
+2026-01-10 15:04:10,358 INFO [Timer-Driven Process Thread-9] o.a.k.clients.producer.ProducerConfig ProducerConfig values: 
+	acks = all
+	batch.size = 16384
+	bootstrap.servers = [kafka:29092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 5000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2026-01-10 15:04:10,362 INFO [Timer-Driven Process Thread-9] o.a.kafka.common.utils.AppInfoParser Kafka version : 2.0.0
+2026-01-10 15:04:10,362 INFO [Timer-Driven Process Thread-9] o.a.kafka.common.utils.AppInfoParser Kafka commitId : 3402a8361b734732
+2026-01-10 15:04:10,423 INFO [kafka-producer-network-thread | producer-3] org.apache.kafka.clients.Metadata Cluster ID: 1D3sHoAFRzOkiG0CwUuUXA
+2026-01-10 15:04:10,430 ERROR [kafka-producer-network-thread | producer-3] o.a.n.p.k.pubsub.PublishKafkaRecord_2_0 PublishKafkaRecord_2_0[id=e005c9f2-b9fb-3aef-d826-0162e49fe10b] Failed to send StandardFlowFileRecord[uuid=12f38f7c-8ed0-478e-906d-a7ae8c0430f9,claim=StandardContentClaim [resourceClaim=StandardResourceClaim[id=1768057448481-125, container=default, section=125], offset=0, length=2398627],offset=0,name=prices.csv,size=2398627] to Kafka
+org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.
+2026-01-10 15:04:10,431 WARN [kafka-producer-network-thread | producer-3] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-3] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:04:10,432 WARN [kafka-producer-network-thread | producer-3] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-3] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:04:10,435 WARN [kafka-producer-network-thread | producer-3] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-3] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:04:10,435 INFO [Timer-Driven Process Thread-9] o.a.kafka.clients.producer.KafkaProducer [Producer clientId=producer-3] Closing the Kafka producer with timeoutMillis = 5000 ms.
+2026-01-10 15:04:26,508 INFO [Flow Service Tasks Thread-2] o.a.nifi.controller.StandardFlowService Saved flow controller org.apache.nifi.controller.FlowController@7ab8fd05 // Another save pending = false
+2026-01-10 15:04:27,901 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:04:27,928 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1221 Records and 0 Swap Files in 26 milliseconds (Stop-the-world time = 0 milliseconds), max Transaction ID 215115
+2026-01-10 15:04:27,928 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1221 records in 26 milliseconds
+2026-01-10 15:04:28,988 INFO [FileSystemRepository Workers Thread-3] o.a.n.c.repository.FileSystemRepository Successfully archived 5 Resource Claims for Container default in 1 millis
+2026-01-10 15:04:32,027 INFO [Flow Service Tasks Thread-2] o.a.nifi.controller.StandardFlowService Saved flow controller org.apache.nifi.controller.FlowController@7ab8fd05 // Another save pending = false
+2026-01-10 15:04:37,542 INFO [Flow Service Tasks Thread-2] o.a.nifi.controller.StandardFlowService Saved flow controller org.apache.nifi.controller.FlowController@7ab8fd05 // Another save pending = false
+2026-01-10 15:04:46,209 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 44 files (96.7 MB) from archive
+2026-01-10 15:04:46,209 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 28.28 GB, bytes free = 3.05 GB, capacity = 31.33 GB
+2026-01-10 15:04:46,532 INFO [Timer-Driven Process Thread-7] o.a.k.clients.producer.ProducerConfig ProducerConfig values: 
+	acks = all
+	batch.size = 16384
+	bootstrap.servers = [kafka:29092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 5000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2026-01-10 15:04:46,540 INFO [Timer-Driven Process Thread-7] o.a.kafka.common.utils.AppInfoParser Kafka version : 2.0.0
+2026-01-10 15:04:46,540 INFO [Timer-Driven Process Thread-7] o.a.kafka.common.utils.AppInfoParser Kafka commitId : 3402a8361b734732
+2026-01-10 15:04:46,613 INFO [Flow Service Tasks Thread-2] o.a.nifi.controller.StandardFlowService Saved flow controller org.apache.nifi.controller.FlowController@7ab8fd05 // Another save pending = false
+2026-01-10 15:04:46,792 INFO [kafka-producer-network-thread | producer-4] org.apache.kafka.clients.Metadata Cluster ID: 1D3sHoAFRzOkiG0CwUuUXA
+2026-01-10 15:04:46,804 ERROR [kafka-producer-network-thread | producer-4] o.a.n.p.k.pubsub.PublishKafkaRecord_2_0 PublishKafkaRecord_2_0[id=e005c9f2-b9fb-3aef-d826-0162e49fe10b] Failed to send StandardFlowFileRecord[uuid=f4235729-6ba8-4b20-b4a5-4dfacb675766,claim=StandardContentClaim [resourceClaim=StandardResourceClaim[id=1768057486210-134, container=default, section=134], offset=0, length=2406608],offset=0,name=prices.csv,size=2406608] to Kafka
+org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.
+2026-01-10 15:04:46,809 WARN [kafka-producer-network-thread | producer-4] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-4] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:04:46,810 WARN [kafka-producer-network-thread | producer-4] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-4] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:04:46,810 WARN [kafka-producer-network-thread | producer-4] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-4] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:04:46,811 INFO [Timer-Driven Process Thread-7] o.a.kafka.clients.producer.KafkaProducer [Producer clientId=producer-4] Closing the Kafka producer with timeoutMillis = 5000 ms.
+2026-01-10 15:04:47,228 INFO [Timer-Driven Process Thread-1] o.a.k.clients.producer.ProducerConfig ProducerConfig values: 
+	acks = all
+	batch.size = 16384
+	bootstrap.servers = [kafka:29092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 5000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2026-01-10 15:04:47,237 INFO [Timer-Driven Process Thread-1] o.a.kafka.common.utils.AppInfoParser Kafka version : 2.0.0
+2026-01-10 15:04:47,237 INFO [Timer-Driven Process Thread-1] o.a.kafka.common.utils.AppInfoParser Kafka commitId : 3402a8361b734732
+2026-01-10 15:04:47,440 INFO [kafka-producer-network-thread | producer-5] org.apache.kafka.clients.Metadata Cluster ID: 1D3sHoAFRzOkiG0CwUuUXA
+2026-01-10 15:04:47,451 ERROR [kafka-producer-network-thread | producer-5] o.a.n.p.k.pubsub.PublishKafkaRecord_2_0 PublishKafkaRecord_2_0[id=e005c9f2-b9fb-3aef-d826-0162e49fe10b] Failed to send StandardFlowFileRecord[uuid=cbb2f689-e7c5-4978-b2da-8b8aca564f73,claim=StandardContentClaim [resourceClaim=StandardResourceClaim[id=1768057486799-142, container=default, section=142], offset=0, length=2404836],offset=0,name=prices.csv,size=2404836] to Kafka
+org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.
+2026-01-10 15:04:47,461 WARN [kafka-producer-network-thread | producer-5] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-5] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:04:47,462 WARN [kafka-producer-network-thread | producer-5] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-5] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:04:47,463 WARN [kafka-producer-network-thread | producer-5] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-5] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:04:47,466 WARN [kafka-producer-network-thread | producer-5] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-5] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:04:47,466 INFO [Timer-Driven Process Thread-1] o.a.kafka.clients.producer.KafkaProducer [Producer clientId=producer-5] Closing the Kafka producer with timeoutMillis = 5000 ms.
+2026-01-10 15:04:47,867 INFO [Timer-Driven Process Thread-3] o.a.k.clients.producer.ProducerConfig ProducerConfig values: 
+	acks = all
+	batch.size = 16384
+	bootstrap.servers = [kafka:29092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 5000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2026-01-10 15:04:47,881 INFO [Timer-Driven Process Thread-3] o.a.kafka.common.utils.AppInfoParser Kafka version : 2.0.0
+2026-01-10 15:04:47,881 INFO [Timer-Driven Process Thread-3] o.a.kafka.common.utils.AppInfoParser Kafka commitId : 3402a8361b734732
+2026-01-10 15:04:47,929 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:04:47,998 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1224 Records and 0 Swap Files in 68 milliseconds (Stop-the-world time = 5 milliseconds), max Transaction ID 215139
+2026-01-10 15:04:47,998 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1224 records in 68 milliseconds
+2026-01-10 15:04:48,125 INFO [kafka-producer-network-thread | producer-6] org.apache.kafka.clients.Metadata Cluster ID: 1D3sHoAFRzOkiG0CwUuUXA
+2026-01-10 15:04:48,135 ERROR [kafka-producer-network-thread | producer-6] o.a.n.p.k.pubsub.PublishKafkaRecord_2_0 PublishKafkaRecord_2_0[id=e005c9f2-b9fb-3aef-d826-0162e49fe10b] Failed to send StandardFlowFileRecord[uuid=35e8ae85-626f-4c72-af79-730aed5b294a,claim=StandardContentClaim [resourceClaim=StandardResourceClaim[id=1768057487453-149, container=default, section=149], offset=0, length=2405513],offset=0,name=prices.csv,size=2405513] to Kafka
+org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.
+2026-01-10 15:04:48,140 WARN [kafka-producer-network-thread | producer-6] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-6] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:04:48,143 WARN [kafka-producer-network-thread | producer-6] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-6] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:04:48,143 INFO [Timer-Driven Process Thread-3] o.a.kafka.clients.producer.KafkaProducer [Producer clientId=producer-6] Closing the Kafka producer with timeoutMillis = 5000 ms.
+2026-01-10 15:04:48,491 INFO [Timer-Driven Process Thread-10] o.a.k.clients.producer.ProducerConfig ProducerConfig values: 
+	acks = all
+	batch.size = 16384
+	bootstrap.servers = [kafka:29092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 5000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2026-01-10 15:04:48,501 INFO [Timer-Driven Process Thread-10] o.a.kafka.common.utils.AppInfoParser Kafka version : 2.0.0
+2026-01-10 15:04:48,501 INFO [Timer-Driven Process Thread-10] o.a.kafka.common.utils.AppInfoParser Kafka commitId : 3402a8361b734732
+2026-01-10 15:04:48,721 INFO [kafka-producer-network-thread | producer-7] org.apache.kafka.clients.Metadata Cluster ID: 1D3sHoAFRzOkiG0CwUuUXA
+2026-01-10 15:04:48,730 ERROR [kafka-producer-network-thread | producer-7] o.a.n.p.k.pubsub.PublishKafkaRecord_2_0 PublishKafkaRecord_2_0[id=e005c9f2-b9fb-3aef-d826-0162e49fe10b] Failed to send StandardFlowFileRecord[uuid=5265e97f-4d45-4783-bab7-c03a37766362,claim=StandardContentClaim [resourceClaim=StandardResourceClaim[id=1768057488078-155, container=default, section=155], offset=0, length=2403062],offset=0,name=prices.csv,size=2403062] to Kafka
+org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.
+2026-01-10 15:04:48,733 WARN [kafka-producer-network-thread | producer-7] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-7] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:04:48,734 WARN [kafka-producer-network-thread | producer-7] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-7] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:04:48,734 WARN [kafka-producer-network-thread | producer-7] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-7] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:04:48,735 INFO [Timer-Driven Process Thread-10] o.a.kafka.clients.producer.KafkaProducer [Producer clientId=producer-7] Closing the Kafka producer with timeoutMillis = 5000 ms.
+2026-01-10 15:04:49,038 WARN [Timer-Driven Process Thread-6] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 5
+2026-01-10 15:04:49,071 INFO [FileSystemRepository Workers Thread-1] o.a.n.c.repository.FileSystemRepository Successfully archived 15 Resource Claims for Container default in 77 millis
+2026-01-10 15:04:49,112 INFO [Timer-Driven Process Thread-4] o.a.k.clients.producer.ProducerConfig ProducerConfig values: 
+	acks = all
+	batch.size = 16384
+	bootstrap.servers = [kafka:29092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 5000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2026-01-10 15:04:49,118 INFO [Timer-Driven Process Thread-4] o.a.kafka.common.utils.AppInfoParser Kafka version : 2.0.0
+2026-01-10 15:04:49,118 INFO [Timer-Driven Process Thread-4] o.a.kafka.common.utils.AppInfoParser Kafka commitId : 3402a8361b734732
+2026-01-10 15:04:49,149 WARN [Timer-Driven Process Thread-5] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 15
+2026-01-10 15:04:49,192 INFO [kafka-producer-network-thread | producer-8] org.apache.kafka.clients.Metadata Cluster ID: 1D3sHoAFRzOkiG0CwUuUXA
+2026-01-10 15:04:49,198 ERROR [kafka-producer-network-thread | producer-8] o.a.n.p.k.pubsub.PublishKafkaRecord_2_0 PublishKafkaRecord_2_0[id=e005c9f2-b9fb-3aef-d826-0162e49fe10b] Failed to send StandardFlowFileRecord[uuid=90ba5229-9928-4b7c-86b2-24e8f908ebbc,claim=StandardContentClaim [resourceClaim=StandardResourceClaim[id=1768057488690-162, container=default, section=162], offset=0, length=2403337],offset=0,name=prices.csv,size=2403337] to Kafka
+org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.
+2026-01-10 15:04:49,199 WARN [kafka-producer-network-thread | producer-8] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-8] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:04:49,199 WARN [kafka-producer-network-thread | producer-8] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-8] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:04:49,201 WARN [kafka-producer-network-thread | producer-8] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-8] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:04:49,202 INFO [Timer-Driven Process Thread-4] o.a.kafka.clients.producer.KafkaProducer [Producer clientId=producer-8] Closing the Kafka producer with timeoutMillis = 5000 ms.
+2026-01-10 15:04:49,214 WARN [Timer-Driven Process Thread-8] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 15
+2026-01-10 15:05:07,998 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:05:08,023 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1226 Records and 0 Swap Files in 24 milliseconds (Stop-the-world time = 0 milliseconds), max Transaction ID 215155
+2026-01-10 15:05:08,023 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1226 records in 24 milliseconds
+2026-01-10 15:05:09,074 INFO [FileSystemRepository Workers Thread-4] o.a.n.c.repository.FileSystemRepository Successfully archived 11 Resource Claims for Container default in 1 millis
+2026-01-10 15:05:21,125 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=65db4129-08c7-3254-40e2-b6528f01979e] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,128 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=20566761-f995-3f77-5ff1-a0dc9be1509f] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,128 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=9eb3e8b2-a541-302c-6c35-b324899e4119] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,129 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=4cca5b4f-8f23-3f8e-2c7f-91a646448fba] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,129 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=f5a53f22-07d1-3627-81c8-416b74f9875c] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,133 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=71311ff6-c6a7-3176-51b1-dfc35457f40a] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,133 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=2f487cdb-478a-3ac9-f201-b9879d9371c1] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,133 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=c16f0b5e-4d9b-3fef-63a0-c2bd8917122c] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,133 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=137192ec-fec2-3fdc-db8c-d06601419e61] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,133 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=a97c11ae-e5b5-3991-0f2e-18f6b52ca2fe] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,133 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=4a0e94da-81fe-3f9b-a2d1-7f193cbdd404] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,133 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=b9bb6806-83a9-3727-4d8c-6e2b7f999867] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,133 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=7518ce34-4816-3090-b7d2-20e956853a79] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,133 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=febea174-ec6e-3cc6-503e-66a1c6d22a8d] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,133 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=f5ccc40a-3353-3d2f-8842-6f11222efbea] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,133 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=0d479c92-6dcd-32e1-5e09-9205283292be] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,134 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=b7df03f5-a154-36a4-0562-db85c5ab9311] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,138 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=4094c50b-3c1a-33a2-a313-51584d0846f5] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,138 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=1aaf42e6-d22b-30ee-fe92-5608d1fdb0a0] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,138 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=635e4380-83b1-35f7-5818-abadf8d39a92] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,138 INFO [Drop FlowFiles for Connection 65db4129-08c7-3254-40e2-b6528f01979e] o.a.n.c.queue.SwappablePriorityQueue Successfully dropped 8 FlowFiles (11877316 bytes) from Connection with ID 65db4129-08c7-3254-40e2-b6528f01979e on behalf of admin
+2026-01-10 15:05:21,138 INFO [Drop FlowFiles for Connection 20566761-f995-3f77-5ff1-a0dc9be1509f] o.a.n.c.queue.SwappablePriorityQueue Successfully dropped 8 FlowFiles (11875060 bytes) from Connection with ID 20566761-f995-3f77-5ff1-a0dc9be1509f on behalf of admin
+2026-01-10 15:05:21,139 INFO [Drop FlowFiles for Connection b7df03f5-a154-36a4-0562-db85c5ab9311] o.a.n.c.queue.SwappablePriorityQueue Successfully dropped 33 FlowFiles (45024794 bytes) from Connection with ID b7df03f5-a154-36a4-0562-db85c5ab9311 on behalf of admin
+2026-01-10 15:05:21,140 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=3be28de1-0c2d-33cd-cdb9-333db4d6f970] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,140 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=ed2e8df8-5dfa-34bb-a52c-556cd5ba4fad] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,140 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=4c9d255e-68fb-3fbb-37da-c84d401cd1ae] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,140 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=b3a416f3-8570-3796-4273-1c4e2b24b3c5] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,140 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=4022b046-1362-3a56-ac80-f95da31af5da] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,140 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=23e0afa8-1b8c-33fe-ee51-152d570bd7d5] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,139 INFO [Drop FlowFiles for Connection f5a53f22-07d1-3627-81c8-416b74f9875c] o.a.n.c.queue.SwappablePriorityQueue Successfully dropped 1 FlowFiles (92333189 bytes) from Connection with ID f5a53f22-07d1-3627-81c8-416b74f9875c on behalf of admin
+2026-01-10 15:05:21,140 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=4b9eb026-d384-3078-c1c5-3293cd13ecbd] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,140 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=c771c9bd-cbfd-31a7-1e36-8ae2a13f8843] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,140 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=03ff2654-7950-30ea-bbcc-cbff1d2cfc52] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,141 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=c002ab61-8e14-37b2-9222-c9a1147e61d8] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,141 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=a4e6356a-27c6-3782-81a4-10936d44f3ee] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,141 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=ae5783b8-eae7-391b-4194-8dd5598c5e1c] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,141 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=0308f742-a0d9-3600-efb4-f6772fce0e65] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,141 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=986f6d70-9ef5-3fbb-f4ac-59d3a3fd5c21] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,141 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=8cfe4b60-7242-3a9b-f082-df235dd01a50] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,141 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=707c9ce5-7e9b-35cf-ebed-df2afdce1873] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,141 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=96c82081-7c65-33d1-d5b0-126a9c6370d2] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,141 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=02c13a5c-db48-3535-fd6c-8c088957ec29] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,141 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=a3e5e4f6-861b-30a9-bee5-832a3a9e9879] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,141 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=16378685-e57f-31f9-3902-4a81808cbe41] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,141 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=3e9a6fdc-f535-34ae-3a76-8aefb01b8ad0] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,141 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=ecd4ee12-70eb-3c91-2d30-da3362fc2ea4] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,141 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=a74cc699-5529-3c1f-2243-7848f754b259] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,142 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=e48678aa-7a3a-30b4-9de9-4333e3ca05c7] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,142 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=06a55adf-169a-3202-3121-1906b475799a] on behalf of admin (request identifier=a870c3e3-019b-1000-b2d0-1736a13669c0)
+2026-01-10 15:05:21,149 INFO [Drop FlowFiles for Connection 635e4380-83b1-35f7-5818-abadf8d39a92] o.a.n.c.queue.SwappablePriorityQueue Successfully dropped 8 FlowFiles (19230794 bytes) from Connection with ID 635e4380-83b1-35f7-5818-abadf8d39a92 on behalf of admin
+2026-01-10 15:05:21,150 INFO [Drop FlowFiles for Connection 0308f742-a0d9-3600-efb4-f6772fce0e65] o.a.n.c.queue.SwappablePriorityQueue Successfully dropped 34 FlowFiles (35921680 bytes) from Connection with ID 0308f742-a0d9-3600-efb4-f6772fce0e65 on behalf of admin
+2026-01-10 15:05:28,023 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:05:28,047 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1134 Records and 0 Swap Files in 24 milliseconds (Stop-the-world time = 2 milliseconds), max Transaction ID 215161
+2026-01-10 15:05:28,047 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1134 records in 24 milliseconds
+2026-01-10 15:05:29,086 INFO [FileSystemRepository Workers Thread-4] o.a.n.c.repository.FileSystemRepository Successfully archived 92 Resource Claims for Container default in 10 millis
+2026-01-10 15:05:45,137 INFO [Write-Ahead Local State Provider Maintenance] org.wali.MinimalLockingWriteAheadLog org.wali.MinimalLockingWriteAheadLog@320967d4 checkpointed with 159 Records and 0 Swap Files in 47 milliseconds (Stop-the-world time = 1 milliseconds, Clear Edit Logs time = 1 millis), max Transaction ID 1944
+2026-01-10 15:05:46,305 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 118 files (321.76 MB) from archive
+2026-01-10 15:05:46,305 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 28.02 GB, bytes free = 3.3 GB, capacity = 31.33 GB
+2026-01-10 15:05:46,577 INFO [Timer-Driven Process Thread-2] o.a.k.clients.producer.ProducerConfig ProducerConfig values: 
+	acks = all
+	batch.size = 16384
+	bootstrap.servers = [kafka:29092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 5000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2026-01-10 15:05:46,594 INFO [Timer-Driven Process Thread-2] o.a.kafka.common.utils.AppInfoParser Kafka version : 2.0.0
+2026-01-10 15:05:46,594 INFO [Timer-Driven Process Thread-2] o.a.kafka.common.utils.AppInfoParser Kafka commitId : 3402a8361b734732
+2026-01-10 15:05:46,771 INFO [kafka-producer-network-thread | producer-9] org.apache.kafka.clients.Metadata Cluster ID: 1D3sHoAFRzOkiG0CwUuUXA
+2026-01-10 15:05:46,778 ERROR [kafka-producer-network-thread | producer-9] o.a.n.p.k.pubsub.PublishKafkaRecord_2_0 PublishKafkaRecord_2_0[id=e005c9f2-b9fb-3aef-d826-0162e49fe10b] Failed to send StandardFlowFileRecord[uuid=6c038fc3-c39e-494a-8d51-702252ccf003,claim=StandardContentClaim [resourceClaim=StandardResourceClaim[id=1768057546305-168, container=default, section=168], offset=0, length=2405581],offset=0,name=prices.csv,size=2405581] to Kafka
+org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.
+2026-01-10 15:05:46,780 WARN [kafka-producer-network-thread | producer-9] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-9] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:05:46,781 WARN [kafka-producer-network-thread | producer-9] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-9] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:05:46,784 WARN [kafka-producer-network-thread | producer-9] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-9] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:05:46,785 INFO [Timer-Driven Process Thread-2] o.a.kafka.clients.producer.KafkaProducer [Producer clientId=producer-9] Closing the Kafka producer with timeoutMillis = 5000 ms.
+2026-01-10 15:05:46,998 INFO [Timer-Driven Process Thread-10] o.a.k.clients.producer.ProducerConfig ProducerConfig values: 
+	acks = all
+	batch.size = 16384
+	bootstrap.servers = [kafka:29092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 5000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2026-01-10 15:05:47,000 INFO [Timer-Driven Process Thread-10] o.a.kafka.common.utils.AppInfoParser Kafka version : 2.0.0
+2026-01-10 15:05:47,001 INFO [Timer-Driven Process Thread-10] o.a.kafka.common.utils.AppInfoParser Kafka commitId : 3402a8361b734732
+2026-01-10 15:05:47,100 INFO [kafka-producer-network-thread | producer-10] org.apache.kafka.clients.Metadata Cluster ID: 1D3sHoAFRzOkiG0CwUuUXA
+2026-01-10 15:05:47,105 ERROR [kafka-producer-network-thread | producer-10] o.a.n.p.k.pubsub.PublishKafkaRecord_2_0 PublishKafkaRecord_2_0[id=e005c9f2-b9fb-3aef-d826-0162e49fe10b] Failed to send StandardFlowFileRecord[uuid=9e05dcdb-e94d-496b-9c3e-c7b4509a45aa,claim=StandardContentClaim [resourceClaim=StandardResourceClaim[id=1768057546785-170, container=default, section=170], offset=0, length=2405012],offset=0,name=prices.csv,size=2405012] to Kafka
+org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.
+2026-01-10 15:05:47,109 WARN [kafka-producer-network-thread | producer-10] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-10] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:05:47,112 WARN [kafka-producer-network-thread | producer-10] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-10] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:05:47,113 WARN [kafka-producer-network-thread | producer-10] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-10] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:05:47,113 WARN [kafka-producer-network-thread | producer-10] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-10] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:05:47,113 WARN [kafka-producer-network-thread | producer-10] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-10] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:05:47,113 WARN [kafka-producer-network-thread | producer-10] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-10] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:05:47,113 INFO [Timer-Driven Process Thread-10] o.a.kafka.clients.producer.KafkaProducer [Producer clientId=producer-10] Closing the Kafka producer with timeoutMillis = 5000 ms.
+2026-01-10 15:05:47,266 INFO [Timer-Driven Process Thread-9] o.a.k.clients.producer.ProducerConfig ProducerConfig values: 
+	acks = all
+	batch.size = 16384
+	bootstrap.servers = [kafka:29092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 5000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2026-01-10 15:05:47,268 INFO [Timer-Driven Process Thread-9] o.a.kafka.common.utils.AppInfoParser Kafka version : 2.0.0
+2026-01-10 15:05:47,268 INFO [Timer-Driven Process Thread-9] o.a.kafka.common.utils.AppInfoParser Kafka commitId : 3402a8361b734732
+2026-01-10 15:05:47,332 INFO [kafka-producer-network-thread | producer-11] org.apache.kafka.clients.Metadata Cluster ID: 1D3sHoAFRzOkiG0CwUuUXA
+2026-01-10 15:05:47,335 ERROR [kafka-producer-network-thread | producer-11] o.a.n.p.k.pubsub.PublishKafkaRecord_2_0 PublishKafkaRecord_2_0[id=e005c9f2-b9fb-3aef-d826-0162e49fe10b] Failed to send StandardFlowFileRecord[uuid=cf6887e9-9532-4a09-bd71-0680cc126dab,claim=StandardContentClaim [resourceClaim=StandardResourceClaim[id=1768057547112-171, container=default, section=171], offset=0, length=2404723],offset=0,name=prices.csv,size=2404723] to Kafka
+org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.
+2026-01-10 15:05:47,336 WARN [kafka-producer-network-thread | producer-11] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-11] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:05:47,337 WARN [kafka-producer-network-thread | producer-11] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-11] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:05:47,337 WARN [kafka-producer-network-thread | producer-11] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-11] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:05:47,338 WARN [kafka-producer-network-thread | producer-11] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-11] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:05:47,338 WARN [kafka-producer-network-thread | producer-11] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-11] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:05:47,338 WARN [kafka-producer-network-thread | producer-11] o.a.k.clients.producer.internals.Sender [Producer clientId=producer-11] Received invalid metadata error in produce request on partition send_prices-0 due to org.apache.kafka.common.errors.NotLeaderForPartitionException: This server is not the leader for that topic-partition.. Going to request metadata update now
+2026-01-10 15:05:47,338 INFO [Timer-Driven Process Thread-9] o.a.kafka.clients.producer.KafkaProducer [Producer clientId=producer-11] Closing the Kafka producer with timeoutMillis = 5000 ms.
+2026-01-10 15:05:48,047 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:05:48,077 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1137 Records and 0 Swap Files in 29 milliseconds (Stop-the-world time = 2 milliseconds), max Transaction ID 215170
+2026-01-10 15:05:48,077 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 29 milliseconds
+2026-01-10 15:05:49,088 INFO [FileSystemRepository Workers Thread-4] o.a.n.c.repository.FileSystemRepository Successfully archived 3 Resource Claims for Container default in 0 millis
+2026-01-10 15:06:08,077 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:06:08,077 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:06:28,077 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:06:28,078 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:06:46,324 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 3 files (3.64 MB) from archive
+2026-01-10 15:06:46,324 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 28.04 GB, bytes free = 3.28 GB, capacity = 31.33 GB
+2026-01-10 15:06:48,078 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:06:48,078 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:07:08,078 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:07:08,078 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:07:28,078 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:07:28,078 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:07:45,154 INFO [Write-Ahead Local State Provider Maintenance] org.wali.MinimalLockingWriteAheadLog org.wali.MinimalLockingWriteAheadLog@320967d4 checkpointed with 159 Records and 0 Swap Files in 17 milliseconds (Stop-the-world time = 1 milliseconds, Clear Edit Logs time = 2 millis), max Transaction ID 1944
+2026-01-10 15:07:46,342 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-01-10 15:07:46,342 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 28.08 GB, bytes free = 3.25 GB, capacity = 31.33 GB
+2026-01-10 15:07:48,079 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:07:48,079 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:07:57,711 INFO [Timer-Driven Process Thread-5] o.a.nifi.atlas.hook.NotificationSender Sending 2 messages to Atlas
+2026-01-10 15:07:57,777 INFO [Timer-Driven Process Thread-5] o.a.k.clients.producer.ProducerConfig ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [kafka:29092]
+	buffer.memory = 33554432
+	client.dns.lookup = default
+	client.id = ReportLineageToAtlas.a834b0e1-019b-1000-e042-4558d132f9ca
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2026-01-10 15:07:57,827 WARN [Timer-Driven Process Thread-5] o.a.k.clients.producer.ProducerConfig The configuration 'key.deserializer' was supplied but isn't a known config.
+2026-01-10 15:07:57,827 WARN [Timer-Driven Process Thread-5] o.a.k.clients.producer.ProducerConfig The configuration 'value.deserializer' was supplied but isn't a known config.
+2026-01-10 15:07:57,827 WARN [Timer-Driven Process Thread-5] o.a.k.clients.producer.ProducerConfig The configuration 'enable.auto.commit' was supplied but isn't a known config.
+2026-01-10 15:07:57,827 WARN [Timer-Driven Process Thread-5] o.a.k.clients.producer.ProducerConfig The configuration 'max.poll.records' was supplied but isn't a known config.
+2026-01-10 15:07:57,827 WARN [Timer-Driven Process Thread-5] o.a.k.clients.producer.ProducerConfig The configuration 'session.timeout.ms' was supplied but isn't a known config.
+2026-01-10 15:07:57,827 WARN [Timer-Driven Process Thread-5] o.a.k.clients.producer.ProducerConfig The configuration 'auto.offset.reset' was supplied but isn't a known config.
+2026-01-10 15:07:57,830 INFO [Timer-Driven Process Thread-5] o.a.kafka.common.utils.AppInfoParser Kafka version: 2.5.0
+2026-01-10 15:07:57,830 INFO [Timer-Driven Process Thread-5] o.a.kafka.common.utils.AppInfoParser Kafka commitId: 66563e712b0b9f84
+2026-01-10 15:07:57,830 INFO [Timer-Driven Process Thread-5] o.a.kafka.common.utils.AppInfoParser Kafka startTimeMs: 1768057677827
+2026-01-10 15:07:58,083 INFO [kafka-producer-network-thread | ReportLineageToAtlas.a834b0e1-019b-1000-e042-4558d132f9ca] org.apache.kafka.clients.Metadata [Producer clientId=ReportLineageToAtlas.a834b0e1-019b-1000-e042-4558d132f9ca] Cluster ID: 1D3sHoAFRzOkiG0CwUuUXA
+2026-01-10 15:07:58,137 INFO [Timer-Driven Process Thread-5] o.a.nifi.atlas.hook.NotificationSender Finished, 426 ms passed, totalMessages=2, createMessages=1, uniqueFlowPathCreates=0, uniqueOtherCreates=1, partialNiFiFlowPathUpdates=1, uniquePartialNiFiFlowPathUpdates=1, otherMessage=0, flowPathSearched=1, dataSetSearched=1, dataSetCacheHit=0, guidToQualifiedName.size=1, typedQualifiedNameToRef.size=2
+2026-01-10 15:08:08,079 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:08:08,079 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:08:28,079 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:08:28,079 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:08:46,360 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-01-10 15:08:46,360 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 28.11 GB, bytes free = 3.22 GB, capacity = 31.33 GB
+2026-01-10 15:08:48,079 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:08:48,080 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:09:08,080 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:09:08,080 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:09:28,080 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:09:28,080 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:09:45,457 INFO [Write-Ahead Local State Provider Maintenance] org.wali.MinimalLockingWriteAheadLog org.wali.MinimalLockingWriteAheadLog@320967d4 checkpointed with 159 Records and 0 Swap Files in 302 milliseconds (Stop-the-world time = 1 milliseconds, Clear Edit Logs time = 2 millis), max Transaction ID 1945
+2026-01-10 15:09:46,378 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-01-10 15:09:46,378 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 28.12 GB, bytes free = 3.21 GB, capacity = 31.33 GB
+2026-01-10 15:09:48,080 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:09:48,080 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:10:08,080 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:10:08,081 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:10:28,081 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:10:28,081 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:10:46,405 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-01-10 15:10:46,405 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 28.67 GB, bytes free = 2.66 GB, capacity = 31.33 GB
+2026-01-10 15:10:48,081 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:10:48,081 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:11:08,081 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:11:08,082 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:11:28,082 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:11:28,082 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:11:45,466 INFO [Write-Ahead Local State Provider Maintenance] org.wali.MinimalLockingWriteAheadLog org.wali.MinimalLockingWriteAheadLog@320967d4 checkpointed with 159 Records and 0 Swap Files in 8 milliseconds (Stop-the-world time = 1 milliseconds, Clear Edit Logs time = 2 millis), max Transaction ID 1945
+2026-01-10 15:11:46,423 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-01-10 15:11:46,423 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 28.67 GB, bytes free = 2.65 GB, capacity = 31.33 GB
+2026-01-10 15:11:48,082 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:11:48,082 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:12:08,082 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:12:08,082 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:12:28,082 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:12:28,082 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:12:46,441 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-01-10 15:12:46,441 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 28.64 GB, bytes free = 2.68 GB, capacity = 31.33 GB
+2026-01-10 15:12:48,083 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:12:48,083 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:13:08,083 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:13:08,083 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:13:28,083 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:13:28,083 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:13:45,499 INFO [Write-Ahead Local State Provider Maintenance] org.wali.MinimalLockingWriteAheadLog org.wali.MinimalLockingWriteAheadLog@320967d4 checkpointed with 159 Records and 0 Swap Files in 32 milliseconds (Stop-the-world time = 1 milliseconds, Clear Edit Logs time = 1 millis), max Transaction ID 1945
+2026-01-10 15:13:46,459 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-01-10 15:13:46,459 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 28.68 GB, bytes free = 2.65 GB, capacity = 31.33 GB
+2026-01-10 15:13:48,084 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:13:48,084 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:14:08,084 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:14:08,084 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:14:28,084 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:14:28,084 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:14:46,480 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-01-10 15:14:46,481 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 28.68 GB, bytes free = 2.64 GB, capacity = 31.33 GB
+2026-01-10 15:14:48,084 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:14:48,084 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:15:08,084 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:15:08,085 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:15:28,085 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:15:28,085 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:15:45,528 INFO [Write-Ahead Local State Provider Maintenance] org.wali.MinimalLockingWriteAheadLog org.wali.MinimalLockingWriteAheadLog@320967d4 checkpointed with 159 Records and 0 Swap Files in 28 milliseconds (Stop-the-world time = 1 milliseconds, Clear Edit Logs time = 1 millis), max Transaction ID 1945
+2026-01-10 15:15:46,500 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-01-10 15:15:46,500 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 28.68 GB, bytes free = 2.64 GB, capacity = 31.33 GB
+2026-01-10 15:15:48,085 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:15:48,085 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:16:08,086 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:16:08,086 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:16:28,086 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:16:28,087 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:16:46,520 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-01-10 15:16:46,520 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 28.5 GB, bytes free = 2.83 GB, capacity = 31.33 GB
+2026-01-10 15:16:48,087 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:16:48,087 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1137 records in 0 milliseconds
+2026-01-10 15:17:03,487 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=65db4129-08c7-3254-40e2-b6528f01979e] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,488 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=20566761-f995-3f77-5ff1-a0dc9be1509f] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,488 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=9eb3e8b2-a541-302c-6c35-b324899e4119] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,488 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=4cca5b4f-8f23-3f8e-2c7f-91a646448fba] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,488 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=f5a53f22-07d1-3627-81c8-416b74f9875c] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,488 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=71311ff6-c6a7-3176-51b1-dfc35457f40a] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,488 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=2f487cdb-478a-3ac9-f201-b9879d9371c1] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,488 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=c16f0b5e-4d9b-3fef-63a0-c2bd8917122c] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,488 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=137192ec-fec2-3fdc-db8c-d06601419e61] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,488 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=a97c11ae-e5b5-3991-0f2e-18f6b52ca2fe] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,488 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=4a0e94da-81fe-3f9b-a2d1-7f193cbdd404] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,488 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=b9bb6806-83a9-3727-4d8c-6e2b7f999867] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,488 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=7518ce34-4816-3090-b7d2-20e956853a79] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,488 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=febea174-ec6e-3cc6-503e-66a1c6d22a8d] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,488 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=f5ccc40a-3353-3d2f-8842-6f11222efbea] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,488 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=0d479c92-6dcd-32e1-5e09-9205283292be] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,488 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=b7df03f5-a154-36a4-0562-db85c5ab9311] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,488 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=4094c50b-3c1a-33a2-a313-51584d0846f5] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,488 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=1aaf42e6-d22b-30ee-fe92-5608d1fdb0a0] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,488 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=635e4380-83b1-35f7-5818-abadf8d39a92] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,488 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=3be28de1-0c2d-33cd-cdb9-333db4d6f970] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,489 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=ed2e8df8-5dfa-34bb-a52c-556cd5ba4fad] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,489 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=4c9d255e-68fb-3fbb-37da-c84d401cd1ae] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,489 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=b3a416f3-8570-3796-4273-1c4e2b24b3c5] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,489 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=4022b046-1362-3a56-ac80-f95da31af5da] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,489 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=23e0afa8-1b8c-33fe-ee51-152d570bd7d5] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,489 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=4b9eb026-d384-3078-c1c5-3293cd13ecbd] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,489 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=c771c9bd-cbfd-31a7-1e36-8ae2a13f8843] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,489 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=03ff2654-7950-30ea-bbcc-cbff1d2cfc52] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,489 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=c002ab61-8e14-37b2-9222-c9a1147e61d8] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,489 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=a4e6356a-27c6-3782-81a4-10936d44f3ee] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,489 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=ae5783b8-eae7-391b-4194-8dd5598c5e1c] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,489 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=0308f742-a0d9-3600-efb4-f6772fce0e65] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,489 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=986f6d70-9ef5-3fbb-f4ac-59d3a3fd5c21] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,489 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=8cfe4b60-7242-3a9b-f082-df235dd01a50] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,489 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=707c9ce5-7e9b-35cf-ebed-df2afdce1873] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,489 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=96c82081-7c65-33d1-d5b0-126a9c6370d2] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,489 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=02c13a5c-db48-3535-fd6c-8c088957ec29] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,489 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=a3e5e4f6-861b-30a9-bee5-832a3a9e9879] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,489 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=16378685-e57f-31f9-3902-4a81808cbe41] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,489 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=3e9a6fdc-f535-34ae-3a76-8aefb01b8ad0] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,489 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=ecd4ee12-70eb-3c91-2d30-da3362fc2ea4] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,489 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=a74cc699-5529-3c1f-2243-7848f754b259] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,489 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=e48678aa-7a3a-30b4-9de9-4333e3ca05c7] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,489 INFO [NiFi Web Server-105] o.a.n.c.queue.AbstractFlowFileQueue Initiating drop of FlowFiles from FlowFileQueue[id=06a55adf-169a-3202-3121-1906b475799a] on behalf of admin (request identifier=a87b7b7f-019b-1000-095c-222b137708a2)
+2026-01-10 15:17:03,489 INFO [Drop FlowFiles for Connection 65db4129-08c7-3254-40e2-b6528f01979e] o.a.n.p.store.WriteAheadStorePartition Successfully rolled over Event Writer for Provenance Event Store Partition[directory=./provenance_repository] due to MAX_TIME_REACHED. Event File was 239.62 KB and contained 275 events.
+2026-01-10 15:17:03,491 INFO [Drop FlowFiles for Connection 65db4129-08c7-3254-40e2-b6528f01979e] o.a.n.c.queue.SwappablePriorityQueue Successfully dropped 3 FlowFiles (4453410 bytes) from Connection with ID 65db4129-08c7-3254-40e2-b6528f01979e on behalf of admin
+2026-01-10 15:17:03,492 INFO [Drop FlowFiles for Connection 635e4380-83b1-35f7-5818-abadf8d39a92] o.a.n.c.queue.SwappablePriorityQueue Successfully dropped 3 FlowFiles (7215316 bytes) from Connection with ID 635e4380-83b1-35f7-5818-abadf8d39a92 on behalf of admin
+2026-01-10 15:17:08,087 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:17:08,112 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1131 Records and 0 Swap Files in 24 milliseconds (Stop-the-world time = 0 milliseconds), max Transaction ID 215172
+2026-01-10 15:17:08,112 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1131 records in 24 milliseconds
+2026-01-10 15:17:09,147 INFO [FileSystemRepository Workers Thread-1] o.a.n.c.repository.FileSystemRepository Successfully archived 6 Resource Claims for Container default in 1 millis
+2026-01-10 15:17:22,843 INFO [NiFi Web Server-88] o.a.n.c.s.StandardProcessScheduler Running once GetFile[id=f02d5151-7140-3c0e-6027-500cf8df8d44]
+2026-01-10 15:17:22,843 INFO [NiFi Web Server-88] o.a.n.controller.StandardProcessorNode Starting GetFile[id=f02d5151-7140-3c0e-6027-500cf8df8d44]
+2026-01-10 15:17:22,844 WARN [Timer-Driven Process Thread-3] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 6
+2026-01-10 15:17:23,251 INFO [Flow Service Tasks Thread-1] o.a.nifi.controller.StandardFlowService Saved flow controller org.apache.nifi.controller.FlowController@7ab8fd05 // Another save pending = false
+2026-01-10 15:17:28,112 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:17:28,112 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1131 records in 0 milliseconds
+2026-01-10 15:17:45,537 INFO [Write-Ahead Local State Provider Maintenance] org.wali.MinimalLockingWriteAheadLog org.wali.MinimalLockingWriteAheadLog@320967d4 checkpointed with 159 Records and 0 Swap Files in 8 milliseconds (Stop-the-world time = 1 milliseconds, Clear Edit Logs time = 1 millis), max Transaction ID 1945
+2026-01-10 15:17:46,542 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 6 files (11.13 MB) from archive
+2026-01-10 15:17:46,542 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 28.52 GB, bytes free = 2.81 GB, capacity = 31.33 GB
+2026-01-10 15:17:46,668 INFO [Timer-Driven Process Thread-3] o.a.n.c.s.StandardProcessScheduler Stopping GetFile[id=f02d5151-7140-3c0e-6027-500cf8df8d44]
+2026-01-10 15:17:46,668 INFO [Timer-Driven Process Thread-3] o.a.n.controller.StandardProcessorNode Stopping processor: GetFile[id=f02d5151-7140-3c0e-6027-500cf8df8d44]
+2026-01-10 15:17:46,669 INFO [Timer-Driven Process Thread-3] o.a.n.c.s.TimerDrivenSchedulingAgent Stopped scheduling GetFile[id=f02d5151-7140-3c0e-6027-500cf8df8d44] to run
+2026-01-10 15:17:46,669 INFO [Timer-Driven Process Thread-3] o.a.n.controller.StandardProcessorNode GetFile[id=f02d5151-7140-3c0e-6027-500cf8df8d44] has completely stopped. Completing any associated Futures.
+2026-01-10 15:17:48,112 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:17:48,143 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1132 Records and 0 Swap Files in 31 milliseconds (Stop-the-world time = 1 milliseconds), max Transaction ID 215173
+2026-01-10 15:17:48,143 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1132 records in 31 milliseconds
+2026-01-10 15:17:58,629 INFO [Timer-Driven Process Thread-8] o.a.nifi.atlas.hook.NotificationSender Sending 2 messages to Atlas
+2026-01-10 15:17:58,661 INFO [Timer-Driven Process Thread-8] o.a.nifi.atlas.hook.NotificationSender Finished, 32 ms passed, totalMessages=2, createMessages=1, uniqueFlowPathCreates=0, uniqueOtherCreates=1, partialNiFiFlowPathUpdates=1, uniquePartialNiFiFlowPathUpdates=1, otherMessage=0, flowPathSearched=1, dataSetSearched=1, dataSetCacheHit=0, guidToQualifiedName.size=1, typedQualifiedNameToRef.size=2
+2026-01-10 15:18:00,096 INFO [Timer-Driven Process Thread-2] o.a.k.clients.producer.ProducerConfig ProducerConfig values: 
+	acks = all
+	batch.size = 16384
+	bootstrap.servers = [kafka:29092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 5000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2026-01-10 15:18:00,104 INFO [Timer-Driven Process Thread-2] o.a.kafka.common.utils.AppInfoParser Kafka version : 2.0.0
+2026-01-10 15:18:00,104 INFO [Timer-Driven Process Thread-2] o.a.kafka.common.utils.AppInfoParser Kafka commitId : 3402a8361b734732
+2026-01-10 15:18:00,532 WARN [kafka-producer-network-thread | producer-12] org.apache.kafka.clients.NetworkClient [Producer clientId=producer-12] Error while fetching metadata with correlation id 1 : {send_prices=LEADER_NOT_AVAILABLE}
+2026-01-10 15:18:00,532 INFO [kafka-producer-network-thread | producer-12] org.apache.kafka.clients.Metadata Cluster ID: 1D3sHoAFRzOkiG0CwUuUXA
+2026-01-10 15:18:03,895 INFO [Flow Service Tasks Thread-1] o.a.nifi.controller.StandardFlowService Saved flow controller org.apache.nifi.controller.FlowController@7ab8fd05 // Another save pending = false
+2026-01-10 15:18:08,145 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:18:08,297 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1225 Records and 0 Swap Files in 151 milliseconds (Stop-the-world time = 7 milliseconds), max Transaction ID 215292
+2026-01-10 15:18:08,297 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1225 records in 151 milliseconds
+2026-01-10 15:18:09,296 WARN [Timer-Driven Process Thread-5] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 5
+2026-01-10 15:18:09,321 WARN [Timer-Driven Process Thread-3] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 32
+2026-01-10 15:18:09,329 INFO [FileSystemRepository Workers Thread-3] o.a.n.c.repository.FileSystemRepository Successfully archived 41 Resource Claims for Container default in 60 millis
+2026-01-10 15:18:09,474 WARN [Timer-Driven Process Thread-2] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 41
+2026-01-10 15:18:09,970 WARN [Timer-Driven Process Thread-10] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 41
+2026-01-10 15:18:28,299 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:18:28,324 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1226 Records and 0 Swap Files in 25 milliseconds (Stop-the-world time = 0 milliseconds), max Transaction ID 215310
+2026-01-10 15:18:28,324 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1226 records in 25 milliseconds
+2026-01-10 15:18:29,341 INFO [FileSystemRepository Workers Thread-1] o.a.n.c.repository.FileSystemRepository Successfully archived 5 Resource Claims for Container default in 0 millis
+2026-01-10 15:18:46,585 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 46 files (98.5 MB) from archive
+2026-01-10 15:18:46,585 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 28.82 GB, bytes free = 2.5 GB, capacity = 31.33 GB
+2026-01-10 15:18:48,324 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:18:48,462 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1228 Records and 0 Swap Files in 136 milliseconds (Stop-the-world time = 20 milliseconds), max Transaction ID 215335
+2026-01-10 15:18:48,463 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1228 records in 137 milliseconds
+2026-01-10 15:18:49,365 INFO [FileSystemRepository Workers Thread-1] o.a.n.c.repository.FileSystemRepository Successfully archived 11 Resource Claims for Container default in 20 millis
+2026-01-10 15:18:49,410 WARN [Timer-Driven Process Thread-9] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 11
+2026-01-10 15:18:49,445 WARN [Timer-Driven Process Thread-2] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 11
+2026-01-10 15:18:49,475 WARN [Timer-Driven Process Thread-10] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 11
+2026-01-10 15:19:08,463 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:19:08,491 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1229 Records and 0 Swap Files in 27 milliseconds (Stop-the-world time = 0 milliseconds), max Transaction ID 215345
+2026-01-10 15:19:08,491 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1229 records in 28 milliseconds
+2026-01-10 15:19:09,367 INFO [FileSystemRepository Workers Thread-3] o.a.n.c.repository.FileSystemRepository Successfully archived 6 Resource Claims for Container default in 0 millis
+2026-01-10 15:19:28,492 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:19:28,492 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1229 records in 0 milliseconds
+2026-01-10 15:19:45,548 INFO [Write-Ahead Local State Provider Maintenance] org.wali.MinimalLockingWriteAheadLog org.wali.MinimalLockingWriteAheadLog@320967d4 checkpointed with 159 Records and 0 Swap Files in 10 milliseconds (Stop-the-world time = 2 milliseconds, Clear Edit Logs time = 1 millis), max Transaction ID 1946
+2026-01-10 15:19:46,626 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 17 files (105.94 MB) from archive
+2026-01-10 15:19:46,627 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 28.75 GB, bytes free = 2.57 GB, capacity = 31.33 GB
+2026-01-10 15:19:48,493 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:19:48,601 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1231 Records and 0 Swap Files in 107 milliseconds (Stop-the-world time = 7 milliseconds), max Transaction ID 215360
+2026-01-10 15:19:48,603 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1231 records in 109 milliseconds
+2026-01-10 15:19:49,390 INFO [FileSystemRepository Workers Thread-4] o.a.n.c.repository.FileSystemRepository Successfully archived 12 Resource Claims for Container default in 9 millis
+2026-01-10 15:19:49,440 WARN [Timer-Driven Process Thread-10] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 12
+2026-01-10 15:19:49,729 WARN [Timer-Driven Process Thread-2] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 12
+2026-01-10 15:19:49,986 WARN [Timer-Driven Process Thread-4] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 12
+2026-01-10 15:20:08,603 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:20:08,628 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1233 Records and 0 Swap Files in 24 milliseconds (Stop-the-world time = 0 milliseconds), max Transaction ID 215371
+2026-01-10 15:20:08,629 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1233 records in 24 milliseconds
+2026-01-10 15:20:09,392 INFO [FileSystemRepository Workers Thread-1] o.a.n.c.repository.FileSystemRepository Successfully archived 6 Resource Claims for Container default in 0 millis
+2026-01-10 15:20:28,629 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:20:28,629 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1233 records in 0 milliseconds
+2026-01-10 15:20:46,650 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 18 files (19.96 MB) from archive
+2026-01-10 15:20:46,650 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 28.79 GB, bytes free = 2.54 GB, capacity = 31.33 GB
+2026-01-10 15:20:48,630 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:20:49,015 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1236 Records and 0 Swap Files in 384 milliseconds (Stop-the-world time = 304 milliseconds), max Transaction ID 215385
+2026-01-10 15:20:49,015 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1236 records in 384 milliseconds
+2026-01-10 15:20:49,423 INFO [FileSystemRepository Workers Thread-4] o.a.n.c.repository.FileSystemRepository Successfully archived 11 Resource Claims for Container default in 3 millis
+2026-01-10 15:20:49,610 WARN [Timer-Driven Process Thread-7] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 11
+2026-01-10 15:20:49,613 WARN [Timer-Driven Process Thread-10] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 11
+2026-01-10 15:20:49,906 WARN [Timer-Driven Process Thread-2] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 11
+2026-01-10 15:21:09,016 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:21:09,043 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1238 Records and 0 Swap Files in 27 milliseconds (Stop-the-world time = 1 milliseconds), max Transaction ID 215397
+2026-01-10 15:21:09,043 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1238 records in 27 milliseconds
+2026-01-10 15:21:10,427 INFO [FileSystemRepository Workers Thread-1] o.a.n.c.repository.FileSystemRepository Successfully archived 5 Resource Claims for Container default in 0 millis
+2026-01-10 15:21:29,043 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:21:29,043 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1238 records in 0 milliseconds
+2026-01-10 15:21:45,556 INFO [Write-Ahead Local State Provider Maintenance] org.wali.MinimalLockingWriteAheadLog org.wali.MinimalLockingWriteAheadLog@320967d4 checkpointed with 159 Records and 0 Swap Files in 8 milliseconds (Stop-the-world time = 1 milliseconds, Clear Edit Logs time = 1 millis), max Transaction ID 1946
+2026-01-10 15:21:46,673 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 16 files (17.62 MB) from archive
+2026-01-10 15:21:46,674 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 28.83 GB, bytes free = 2.5 GB, capacity = 31.33 GB
+2026-01-10 15:21:49,043 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:21:49,159 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1241 Records and 0 Swap Files in 115 milliseconds (Stop-the-world time = 17 milliseconds), max Transaction ID 215417
+2026-01-10 15:21:49,159 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1241 records in 115 milliseconds
+2026-01-10 15:21:50,471 INFO [FileSystemRepository Workers Thread-4] o.a.n.c.repository.FileSystemRepository Successfully archived 16 Resource Claims for Container default in 24 millis
+2026-01-10 15:21:50,502 WARN [Timer-Driven Process Thread-3] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 16
+2026-01-10 15:21:50,534 WARN [Timer-Driven Process Thread-7] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 16
+2026-01-10 15:22:09,160 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:22:09,189 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1244 Records and 0 Swap Files in 28 milliseconds (Stop-the-world time = 0 milliseconds), max Transaction ID 215431
+2026-01-10 15:22:09,189 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1244 records in 28 milliseconds
+2026-01-10 15:22:10,475 INFO [FileSystemRepository Workers Thread-4] o.a.n.c.repository.FileSystemRepository Successfully archived 6 Resource Claims for Container default in 0 millis
+2026-01-10 15:22:29,189 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:22:29,189 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1244 records in 0 milliseconds
+2026-01-10 15:22:46,703 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 22 files (23.71 MB) from archive
+2026-01-10 15:22:46,703 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 28.84 GB, bytes free = 2.49 GB, capacity = 31.33 GB
+2026-01-10 15:22:49,190 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:22:49,282 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1250 Records and 0 Swap Files in 91 milliseconds (Stop-the-world time = 10 milliseconds), max Transaction ID 215443
+2026-01-10 15:22:49,282 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1250 records in 92 milliseconds
+2026-01-10 15:22:50,484 INFO [FileSystemRepository Workers Thread-4] o.a.n.c.repository.FileSystemRepository Successfully archived 5 Resource Claims for Container default in 4 millis
+2026-01-10 15:22:50,792 WARN [Timer-Driven Process Thread-8] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 5
+2026-01-10 15:22:51,009 WARN [Timer-Driven Process Thread-6] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 5
+2026-01-10 15:22:58,823 INFO [Timer-Driven Process Thread-3] o.a.nifi.atlas.hook.NotificationSender Sending 70 messages to Atlas
+2026-01-10 15:22:58,850 INFO [Timer-Driven Process Thread-3] o.a.nifi.atlas.hook.NotificationSender Finished, 27 ms passed, totalMessages=70, createMessages=35, uniqueFlowPathCreates=0, uniqueOtherCreates=1, partialNiFiFlowPathUpdates=35, uniquePartialNiFiFlowPathUpdates=1, otherMessage=0, flowPathSearched=1, dataSetSearched=1, dataSetCacheHit=0, guidToQualifiedName.size=1, typedQualifiedNameToRef.size=2
+2026-01-10 15:23:09,282 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:23:09,320 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1253 Records and 0 Swap Files in 37 milliseconds (Stop-the-world time = 4 milliseconds), max Transaction ID 215458
+2026-01-10 15:23:09,320 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1253 records in 37 milliseconds
+2026-01-10 15:23:10,488 INFO [FileSystemRepository Workers Thread-4] o.a.n.c.repository.FileSystemRepository Successfully archived 4 Resource Claims for Container default in 0 millis
+2026-01-10 15:23:29,320 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:23:29,320 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1253 records in 0 milliseconds
+2026-01-10 15:23:45,763 INFO [Write-Ahead Local State Provider Maintenance] org.wali.MinimalLockingWriteAheadLog org.wali.MinimalLockingWriteAheadLog@320967d4 checkpointed with 159 Records and 0 Swap Files in 206 milliseconds (Stop-the-world time = 1 milliseconds, Clear Edit Logs time = 2 millis), max Transaction ID 1947
+2026-01-10 15:23:46,724 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 9 files (11.71 MB) from archive
+2026-01-10 15:23:46,724 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 28.9 GB, bytes free = 2.43 GB, capacity = 31.33 GB
+2026-01-10 15:23:49,322 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:23:49,412 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1259 Records and 0 Swap Files in 89 milliseconds (Stop-the-world time = 10 milliseconds), max Transaction ID 215469
+2026-01-10 15:23:49,414 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1259 records in 91 milliseconds
+2026-01-10 15:23:50,500 INFO [FileSystemRepository Workers Thread-3] o.a.n.c.repository.FileSystemRepository Successfully archived 4 Resource Claims for Container default in 6 millis
+2026-01-10 15:23:50,564 WARN [Timer-Driven Process Thread-5] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 4
+2026-01-10 15:23:50,622 WARN [Timer-Driven Process Thread-2] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 4
+2026-01-10 15:24:09,414 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:24:09,442 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1262 Records and 0 Swap Files in 27 milliseconds (Stop-the-world time = 0 milliseconds), max Transaction ID 215484
+2026-01-10 15:24:09,442 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1262 records in 27 milliseconds
+2026-01-10 15:24:10,502 INFO [FileSystemRepository Workers Thread-3] o.a.n.c.repository.FileSystemRepository Successfully archived 4 Resource Claims for Container default in 0 millis
+2026-01-10 15:24:29,442 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:24:29,442 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1262 records in 0 milliseconds
+2026-01-10 15:24:46,747 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 8 files (10.41 MB) from archive
+2026-01-10 15:24:46,747 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 28.97 GB, bytes free = 2.36 GB, capacity = 31.33 GB
+2026-01-10 15:24:49,446 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:24:49,844 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1268 Records and 0 Swap Files in 396 milliseconds (Stop-the-world time = 313 milliseconds), max Transaction ID 215499
+2026-01-10 15:24:49,845 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1268 records in 397 milliseconds
+2026-01-10 15:24:50,544 INFO [FileSystemRepository Workers Thread-2] o.a.n.c.repository.FileSystemRepository Successfully archived 7 Resource Claims for Container default in 34 millis
+2026-01-10 15:24:50,687 WARN [Timer-Driven Process Thread-5] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 7
+2026-01-10 15:24:50,751 WARN [Timer-Driven Process Thread-7] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 7
+2026-01-10 15:25:09,845 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:25:09,877 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1270 Records and 0 Swap Files in 32 milliseconds (Stop-the-world time = 6 milliseconds), max Transaction ID 215509
+2026-01-10 15:25:09,878 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1270 records in 32 milliseconds
+2026-01-10 15:25:10,549 INFO [FileSystemRepository Workers Thread-4] o.a.n.c.repository.FileSystemRepository Successfully archived 2 Resource Claims for Container default in 0 millis
+2026-01-10 15:25:29,878 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:25:29,878 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1270 records in 0 milliseconds
+2026-01-10 15:25:45,774 INFO [Write-Ahead Local State Provider Maintenance] org.wali.MinimalLockingWriteAheadLog org.wali.MinimalLockingWriteAheadLog@320967d4 checkpointed with 159 Records and 0 Swap Files in 10 milliseconds (Stop-the-world time = 1 milliseconds, Clear Edit Logs time = 1 millis), max Transaction ID 1947
+2026-01-10 15:25:46,773 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 9 files (11.72 MB) from archive
+2026-01-10 15:25:46,773 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 28.98 GB, bytes free = 2.35 GB, capacity = 31.33 GB
+2026-01-10 15:25:49,878 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:25:50,038 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1275 Records and 0 Swap Files in 159 milliseconds (Stop-the-world time = 85 milliseconds), max Transaction ID 215523
+2026-01-10 15:25:50,039 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1275 records in 159 milliseconds
+2026-01-10 15:25:50,560 INFO [FileSystemRepository Workers Thread-3] o.a.n.c.repository.FileSystemRepository Successfully archived 7 Resource Claims for Container default in 0 millis
+2026-01-10 15:25:50,683 WARN [Timer-Driven Process Thread-3] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 7
+2026-01-10 15:25:50,727 WARN [Timer-Driven Process Thread-7] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 7
+2026-01-10 15:26:10,039 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:26:10,071 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1277 Records and 0 Swap Files in 31 milliseconds (Stop-the-world time = 5 milliseconds), max Transaction ID 215532
+2026-01-10 15:26:10,071 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1277 records in 31 milliseconds
+2026-01-10 15:26:11,578 INFO [FileSystemRepository Workers Thread-1] o.a.n.c.repository.FileSystemRepository Successfully archived 2 Resource Claims for Container default in 2 millis
+2026-01-10 15:26:30,071 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:26:30,071 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1277 records in 0 milliseconds
+2026-01-10 15:26:46,794 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 9 files (11.72 MB) from archive
+2026-01-10 15:26:46,795 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 29.01 GB, bytes free = 2.32 GB, capacity = 31.33 GB
+2026-01-10 15:26:50,108 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:26:50,199 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1283 Records and 0 Swap Files in 90 milliseconds (Stop-the-world time = 9 milliseconds), max Transaction ID 215548
+2026-01-10 15:26:50,204 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1283 records in 95 milliseconds
+2026-01-10 15:26:51,583 INFO [FileSystemRepository Workers Thread-4] o.a.n.c.repository.FileSystemRepository Successfully archived 8 Resource Claims for Container default in 1 millis
+2026-01-10 15:26:51,627 WARN [Timer-Driven Process Thread-3] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 8
+2026-01-10 15:26:51,666 WARN [Timer-Driven Process Thread-8] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 8
+2026-01-10 15:27:10,204 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:27:10,235 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1286 Records and 0 Swap Files in 30 milliseconds (Stop-the-world time = 0 milliseconds), max Transaction ID 215562
+2026-01-10 15:27:10,235 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1286 records in 30 milliseconds
+2026-01-10 15:27:11,586 INFO [FileSystemRepository Workers Thread-4] o.a.n.c.repository.FileSystemRepository Successfully archived 4 Resource Claims for Container default in 0 millis
+2026-01-10 15:27:30,235 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:27:30,235 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1286 records in 0 milliseconds
+2026-01-10 15:27:46,037 INFO [Write-Ahead Local State Provider Maintenance] org.wali.MinimalLockingWriteAheadLog org.wali.MinimalLockingWriteAheadLog@320967d4 checkpointed with 159 Records and 0 Swap Files in 262 milliseconds (Stop-the-world time = 1 milliseconds, Clear Edit Logs time = 2 millis), max Transaction ID 1947
+2026-01-10 15:27:46,821 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 12 files (15.6 MB) from archive
+2026-01-10 15:27:46,821 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 29.06 GB, bytes free = 2.26 GB, capacity = 31.33 GB
+2026-01-10 15:27:46,969 INFO [Timer-Driven Process Thread-8] o.a.n.p.store.WriteAheadStorePartition Successfully rolled over Event Writer for Provenance Event Store Partition[directory=./provenance_repository] due to MAX_TIME_REACHED. Event File was 448.52 KB and contained 532 events.
+2026-01-10 15:27:50,236 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:27:50,575 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1292 Records and 0 Swap Files in 336 milliseconds (Stop-the-world time = 203 milliseconds), max Transaction ID 215577
+2026-01-10 15:27:50,575 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1292 records in 336 milliseconds
+2026-01-10 15:27:51,596 WARN [Timer-Driven Process Thread-2] o.a.n.c.repository.FileSystemRepository Unable to write flowfile content to content repository container default due to archive file size constraints; waiting for archive cleanup. Total number of files currently archived = 1
+2026-01-10 15:27:51,600 INFO [FileSystemRepository Workers Thread-4] o.a.n.c.repository.FileSystemRepository Successfully archived 6 Resource Claims for Container default in 8 millis
+2026-01-10 15:27:58,999 INFO [Timer-Driven Process Thread-7] o.a.nifi.atlas.hook.NotificationSender Sending 84 messages to Atlas
+2026-01-10 15:27:59,016 INFO [Timer-Driven Process Thread-7] o.a.nifi.atlas.hook.NotificationSender Finished, 17 ms passed, totalMessages=84, createMessages=42, uniqueFlowPathCreates=0, uniqueOtherCreates=1, partialNiFiFlowPathUpdates=42, uniquePartialNiFiFlowPathUpdates=1, otherMessage=0, flowPathSearched=1, dataSetSearched=1, dataSetCacheHit=0, guidToQualifiedName.size=1, typedQualifiedNameToRef.size=2
+2026-01-10 15:28:10,575 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:28:10,607 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1295 Records and 0 Swap Files in 32 milliseconds (Stop-the-world time = 1 milliseconds), max Transaction ID 215588
+2026-01-10 15:28:10,607 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1295 records in 32 milliseconds
+2026-01-10 15:28:11,604 INFO [FileSystemRepository Workers Thread-4] o.a.n.c.repository.FileSystemRepository Successfully archived 2 Resource Claims for Container default in 0 millis
+2026-01-10 15:28:30,607 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:28:30,607 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1295 records in 0 milliseconds
+2026-01-10 15:28:46,847 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 8 files (9.27 MB) from archive
+2026-01-10 15:28:46,847 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 29.1 GB, bytes free = 2.23 GB, capacity = 31.33 GB
+2026-01-10 15:28:50,609 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:28:50,921 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1304 Records and 0 Swap Files in 312 milliseconds (Stop-the-world time = 280 milliseconds), max Transaction ID 215602
+2026-01-10 15:28:50,922 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 312 milliseconds
+2026-01-10 15:29:10,922 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:29:10,952 INFO [pool-7-thread-1] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 1304 Records and 0 Swap Files in 29 milliseconds (Stop-the-world time = 2 milliseconds), max Transaction ID 215606
+2026-01-10 15:29:10,952 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 29 milliseconds
+2026-01-10 15:29:30,952 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:29:30,952 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:29:46,044 INFO [Write-Ahead Local State Provider Maintenance] org.wali.MinimalLockingWriteAheadLog org.wali.MinimalLockingWriteAheadLog@320967d4 checkpointed with 159 Records and 0 Swap Files in 7 milliseconds (Stop-the-world time = 1 milliseconds, Clear Edit Logs time = 1 millis), max Transaction ID 1948
+2026-01-10 15:29:46,865 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-01-10 15:29:46,865 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 29.13 GB, bytes free = 2.2 GB, capacity = 31.33 GB
+2026-01-10 15:29:50,952 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:29:50,952 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:30:10,952 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:30:10,952 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:30:30,952 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:30:30,952 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:30:46,883 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-01-10 15:30:46,883 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 29.13 GB, bytes free = 2.2 GB, capacity = 31.33 GB
+2026-01-10 15:30:50,952 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:30:50,953 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:31:10,953 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:31:10,953 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:31:30,953 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:31:30,953 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:31:46,052 INFO [Write-Ahead Local State Provider Maintenance] org.wali.MinimalLockingWriteAheadLog org.wali.MinimalLockingWriteAheadLog@320967d4 checkpointed with 159 Records and 0 Swap Files in 7 milliseconds (Stop-the-world time = 1 milliseconds, Clear Edit Logs time = 1 millis), max Transaction ID 1948
+2026-01-10 15:31:46,900 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-01-10 15:31:46,900 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 29.12 GB, bytes free = 2.21 GB, capacity = 31.33 GB
+2026-01-10 15:31:50,953 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:31:50,953 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:32:10,953 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:32:10,953 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:32:30,954 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:32:30,954 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:32:46,918 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-01-10 15:32:46,918 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 29.1 GB, bytes free = 2.23 GB, capacity = 31.33 GB
+2026-01-10 15:32:50,954 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:32:50,954 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:32:59,217 INFO [Timer-Driven Process Thread-5] o.a.nifi.atlas.hook.NotificationSender Sending 18 messages to Atlas
+2026-01-10 15:32:59,236 INFO [Timer-Driven Process Thread-5] o.a.nifi.atlas.hook.NotificationSender Finished, 19 ms passed, totalMessages=18, createMessages=9, uniqueFlowPathCreates=0, uniqueOtherCreates=1, partialNiFiFlowPathUpdates=9, uniquePartialNiFiFlowPathUpdates=1, otherMessage=0, flowPathSearched=1, dataSetSearched=1, dataSetCacheHit=0, guidToQualifiedName.size=1, typedQualifiedNameToRef.size=2
+2026-01-10 15:33:10,954 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:33:10,954 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:33:30,954 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:33:30,954 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:33:46,060 INFO [Write-Ahead Local State Provider Maintenance] org.wali.MinimalLockingWriteAheadLog org.wali.MinimalLockingWriteAheadLog@320967d4 checkpointed with 159 Records and 0 Swap Files in 7 milliseconds (Stop-the-world time = 1 milliseconds, Clear Edit Logs time = 1 millis), max Transaction ID 1949
+2026-01-10 15:33:46,936 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-01-10 15:33:46,936 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 29.1 GB, bytes free = 2.23 GB, capacity = 31.33 GB
+2026-01-10 15:33:50,954 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:33:50,954 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:34:10,955 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:34:10,955 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:34:30,955 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:34:30,955 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:34:46,954 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-01-10 15:34:46,954 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 29.09 GB, bytes free = 2.23 GB, capacity = 31.33 GB
+2026-01-10 15:34:50,955 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:34:50,955 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:35:10,955 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:35:10,955 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:35:30,955 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:35:30,955 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:35:46,068 INFO [Write-Ahead Local State Provider Maintenance] org.wali.MinimalLockingWriteAheadLog org.wali.MinimalLockingWriteAheadLog@320967d4 checkpointed with 159 Records and 0 Swap Files in 7 milliseconds (Stop-the-world time = 1 milliseconds, Clear Edit Logs time = 1 millis), max Transaction ID 1949
+2026-01-10 15:35:46,971 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-01-10 15:35:46,971 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 29.09 GB, bytes free = 2.24 GB, capacity = 31.33 GB
+2026-01-10 15:35:50,956 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:35:50,956 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:36:10,956 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:36:10,956 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:36:30,956 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:36:30,956 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:36:46,989 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-01-10 15:36:46,989 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 29.07 GB, bytes free = 2.26 GB, capacity = 31.33 GB
+2026-01-10 15:36:50,956 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:36:50,956 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:37:10,957 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:37:10,957 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:37:30,957 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:37:30,957 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:37:46,076 INFO [Write-Ahead Local State Provider Maintenance] org.wali.MinimalLockingWriteAheadLog org.wali.MinimalLockingWriteAheadLog@320967d4 checkpointed with 159 Records and 0 Swap Files in 8 milliseconds (Stop-the-world time = 1 milliseconds, Clear Edit Logs time = 2 millis), max Transaction ID 1949
+2026-01-10 15:37:47,009 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-01-10 15:37:47,010 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 29.1 GB, bytes free = 2.23 GB, capacity = 31.33 GB
+2026-01-10 15:37:50,957 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:37:50,957 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:38:10,957 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:38:10,958 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:38:30,958 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:38:30,958 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:38:47,027 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-01-10 15:38:47,028 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 29.18 GB, bytes free = 2.14 GB, capacity = 31.33 GB
+2026-01-10 15:38:50,958 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:38:50,958 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:39:10,958 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:39:10,958 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:39:30,958 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:39:30,958 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:39:46,085 INFO [Write-Ahead Local State Provider Maintenance] org.wali.MinimalLockingWriteAheadLog org.wali.MinimalLockingWriteAheadLog@320967d4 checkpointed with 159 Records and 0 Swap Files in 8 milliseconds (Stop-the-world time = 1 milliseconds, Clear Edit Logs time = 2 millis), max Transaction ID 1949
+2026-01-10 15:39:47,045 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-01-10 15:39:47,045 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 29.18 GB, bytes free = 2.15 GB, capacity = 31.33 GB
+2026-01-10 15:39:50,958 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:39:50,959 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:40:10,959 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:40:10,959 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:40:30,959 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:40:30,959 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:40:47,063 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-01-10 15:40:47,063 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 29.17 GB, bytes free = 2.16 GB, capacity = 31.33 GB
+2026-01-10 15:40:50,959 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:40:50,959 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:41:10,959 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:41:10,959 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:41:30,960 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:41:30,960 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:41:46,096 INFO [Write-Ahead Local State Provider Maintenance] org.wali.MinimalLockingWriteAheadLog org.wali.MinimalLockingWriteAheadLog@320967d4 checkpointed with 159 Records and 0 Swap Files in 10 milliseconds (Stop-the-world time = 1 milliseconds, Clear Edit Logs time = 1 millis), max Transaction ID 1949
+2026-01-10 15:41:47,081 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-01-10 15:41:47,081 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 29.17 GB, bytes free = 2.16 GB, capacity = 31.33 GB
+2026-01-10 15:41:50,960 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:41:50,960 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:42:10,960 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:42:10,960 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:42:30,960 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:42:30,961 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:42:47,100 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-01-10 15:42:47,100 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 29.17 GB, bytes free = 2.16 GB, capacity = 31.33 GB
+2026-01-10 15:42:50,961 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:42:50,961 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:42:59,665 ERROR [Timer-Driven Process Thread-9] o.a.n.a.reporting.ReportLineageToAtlas ReportLineageToAtlas[id=a834b0e1-019b-1000-e042-4558d132f9ca] Error running task ReportLineageToAtlas[id=a834b0e1-019b-1000-e042-4558d132f9ca] due to com.sun.jersey.api.client.ClientHandlerException: java.net.UnknownHostException: atlas
+2026-01-10 15:43:10,961 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:43:10,961 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:43:30,961 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:43:30,961 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:43:46,105 INFO [Write-Ahead Local State Provider Maintenance] org.wali.MinimalLockingWriteAheadLog org.wali.MinimalLockingWriteAheadLog@320967d4 checkpointed with 159 Records and 0 Swap Files in 9 milliseconds (Stop-the-world time = 1 milliseconds, Clear Edit Logs time = 2 millis), max Transaction ID 1949
+2026-01-10 15:43:47,117 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-01-10 15:43:47,118 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 29.08 GB, bytes free = 2.25 GB, capacity = 31.33 GB
+2026-01-10 15:43:50,961 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:43:50,961 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:44:10,961 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:44:10,962 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:44:30,962 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:44:30,962 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:44:47,135 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-01-10 15:44:47,135 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 29.07 GB, bytes free = 2.25 GB, capacity = 31.33 GB
+2026-01-10 15:44:50,962 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:44:50,962 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:45:10,962 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:45:10,962 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:45:30,962 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:45:30,962 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:45:46,129 INFO [Write-Ahead Local State Provider Maintenance] org.wali.MinimalLockingWriteAheadLog org.wali.MinimalLockingWriteAheadLog@320967d4 checkpointed with 159 Records and 0 Swap Files in 24 milliseconds (Stop-the-world time = 1 milliseconds, Clear Edit Logs time = 1 millis), max Transaction ID 1949
+2026-01-10 15:45:47,153 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-01-10 15:45:47,153 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 29.1 GB, bytes free = 2.22 GB, capacity = 31.33 GB
+2026-01-10 15:45:50,962 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:45:50,963 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:46:10,963 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:46:10,963 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:46:30,963 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:46:30,963 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds
+2026-01-10 15:46:47,171 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-01-10 15:46:47,171 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 29.07 GB, bytes free = 2.25 GB, capacity = 31.33 GB
+2026-01-10 15:46:50,963 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-01-10 15:46:50,963 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 1304 records in 0 milliseconds

@@ -1,8 +1,8 @@
 global:
-  scrape_interval: 5s
+  scrape_interval: 5s # Fréquence de mise à jour (très rapide pour la démo)
 
 scrape_configs:
-  - job_name: 'nifi'
-    metrics_path: '/nifi-api/metrics'
+  - job_name: 'nifi-monitoring'
+    metrics_path: '/nifi-api/metrics' # Endpoint standard de NiFi
     static_configs:
-      - targets: ['nifi:80']
+      - targets: ['nifi:8443'] # Remplace par l'IP/Nom de ton conteneur NiFi

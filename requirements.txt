@@ -3,3 +3,4 @@ requests
 kafka-python
 clickhouse-connect
 pandas
+pip install 'acryl-datahub'acryl-datahub
