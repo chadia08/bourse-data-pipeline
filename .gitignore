@@ -31,7 +31,8 @@ secrets/
 # ===================================
 # DATA (Fichiers volumineux)
 # ===================================
-# data/raw/*
+machine_learning/dataset/dataset_bourse_ml.csv
+
 # data/processed/*
 # data/warehouse/*
 # !data/**/.gitkeep
