@@ -7,6 +7,7 @@ networks:
 volumes:
   zookeeper_data:
   kafka_data:
+<<<<<<< HEAD
   clickhouse_data:
   nifi_database:
   nifi_flowfile:
@@ -20,33 +21,60 @@ services:
   # =====================
   # ZOOKEEPER
   # =====================
+=======
+  nifi_data:
+  clickhouse_data:
+  atlas_data:
+  mongo_data:
+
+services:
+>>>>>>> ffae8b3a8bfdb0b58228502562d6abc42f4fb29e
   zookeeper:
     image: confluentinc/cp-zookeeper:7.6.1
     container_name: zookeeper
     hostname: zookeeper
+<<<<<<< HEAD
     networks: [bourse_network]
     ports: ["2181:2181"]
+=======
+    networks:
+      - bourse_network
+    ports:
+      - "2181:2181"
+>>>>>>> ffae8b3a8bfdb0b58228502562d6abc42f4fb29e
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
     volumes:
       - zookeeper_data:/var/lib/zookeeper/data
 
+<<<<<<< HEAD
   # =====================
   # KAFKA
   # =====================
+=======
+>>>>>>> ffae8b3a8bfdb0b58228502562d6abc42f4fb29e
   kafka:
     image: confluentinc/cp-kafka:7.6.1
     container_name: kafka
     hostname: kafka
+<<<<<<< HEAD
     depends_on: [zookeeper]
     networks: [bourse_network]
     ports:
       - "29092:29092"
+=======
+    depends_on:
+      - zookeeper
+    networks:
+      - bourse_network
+    ports:
+>>>>>>> ffae8b3a8bfdb0b58228502562d6abc42f4fb29e
       - "9092:9092"
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+<<<<<<< HEAD
       KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:29092,PLAINTEXT_HOST://0.0.0.0:9092
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:29092,PLAINTEXT_HOST://localhost:9092
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
@@ -98,3 +126,146 @@ services:
       - clickhouse_data:/var/lib/clickhouse
 
   
+=======
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092,PLAINTEXT_INTERNAL://kafka:29092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_INTERNAL:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_OPTS: "-Datlas.conf=/etc/kafka/config"
+      KAFKA_CLASSPATH: "/usr/share/java/kafka/*"
+      ATLAS_CLUSTER_NAME: "bourse_cluster"
+    volumes:
+      - kafka_data:/var/lib/kafka/data
+      - ./atlas-application.properties:/etc/kafka/config/atlas-application.properties
+
+  nifi:
+    image: 'apache/nifi:1.20.0'
+    container_name: nifi
+    hostname: nifi
+    depends_on:
+      - kafka
+
+    networks:
+      - bourse_network
+    ports:
+      - "8443:8443"
+    environment:
+      - SINGLE_USER_CREDENTIALS_USERNAME=admin
+      - SINGLE_USER_CREDENTIALS_PASSWORD=Admin123456!
+      - NIFI_WEB_HTTPS_PORT=8443
+      - NIFI_WEB_HTTPS_HOST=0.0.0.0
+      - NIFI_WEB_PROXY_HOST=192.168.10.129:8443
+    restart: on-failure
+    volumes:
+      - ./Data/Raw:/data
+      - ./nifi/database_repository:/opt/nifi/nifi-current/database_repository
+      - ./nifi/flowfile_repository:/opt/nifi/nifi-current/flowfile_repository
+      - ./nifi/content_repository:/opt/nifi/nifi-current/content_repository
+      - ./nifi/provenance_repository:/opt/nifi/nifi-current/provenance_repository
+      - ./nifi/state:/opt/nifi/nifi-current/state
+      - ./nifi/logs:/opt/nifi/nifi-current/logs
+      - ./nifi/custom_lib:/opt/nifi/nifi-current/extensions
+      # - ./nifi/conf:/opt/nifi/nifi-current/conf
+    
+  clickhouse:
+    image: clickhouse/clickhouse-server:latest
+    container_name: clickhouse
+    hostname: clickhouse
+    networks:
+      - bourse_network
+    ports:
+      - "8123:8123" # Port HTTP (Le plus stable pour NiFi)
+      - "9000:9000" # Port Natif (Pour les clients CLI)
+    environment:
+      - CLICKHOUSE_USER=default
+      - CLICKHOUSE_PASSWORD=admin
+      - CLICKHOUSE_DB=bourse
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
+    ulimits:
+      nofile:
+        soft: 262144
+        hard: 262144
+
+  # atlas:
+  #   image: sburn/apache-atlas:latest
+  #   container_name: atlas
+  #   hostname: atlas
+  #   networks:
+  #     - bourse_network
+  #   ports:
+  #     - "21000:21000"
+  #   environment:
+  #     - MANAGE_LOCAL_HBASE=true
+  #     - MANAGE_LOCAL_SOLR=true
+  #   volumes:
+  #     - atlas_data:/opt/apache-atlas-2.1.0/data
+
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb_cache
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=bourse_cache
+
+  
+
+  # prometheus:
+  #   image: prom/prometheus:latest
+  #   container_name: prometheus
+  #   ports:
+  #     - "9090:9090"
+  #   volumes:
+  #     - ./prometheus.yml:/etc/prometheus/prometheus.yml
+  #   networks:
+  #     - bourse_network
+
+  # grafana:
+  #   image: grafana/grafana:latest
+  #   container_name: grafana
+  #   ports:
+  #     - "3000:3000"
+  #   environment:
+  #     - GF_INSTALL_PLUGINS=grafana-clickhouse-datasource
+  #   networks:
+  #     - bourse_network
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  # trino:
+  #   image: trinodb/trino:latest
+  #   container_name: trino
+  #   ports:
+  #     - "8080:8080"
+  #   volumes:
+  #     - ./trino_config/config.properties:/etc/trino/config.properties
+  #     - ./trino_config/catalog:/etc/trino/catalog
+  #     - ./clickhouse-jdbc-0.6.5-all.jar:/usr/lib/trino/plugin/clickhouse/clickhouse-jdbc-0.6.5-all.jar
+  #   networks:
+  #     - bourse_network
+  
+ 
+>>>>>>> ffae8b3a8bfdb0b58228502562d6abc42f4fb29e
