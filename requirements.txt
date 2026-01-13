@@ -6,3 +6,8 @@ pandas
 clickhouse_driver
 pymongo
 streamlit
+atlasclient
+fastapi
+uvicorn
+python-dotenv
+pydantic

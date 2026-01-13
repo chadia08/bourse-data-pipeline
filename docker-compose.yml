@@ -9,7 +9,7 @@ volumes:
   kafka_data:
   nifi_data:
   clickhouse_data:
-  atlas_data:
+  marquez_db:
   mongo_data:
 
 services:
@@ -102,19 +102,55 @@ services:
         soft: 262144
         hard: 262144
 
-  # atlas:
-  #   image: sburn/apache-atlas:latest
-  #   container_name: atlas
-  #   hostname: atlas
-  #   networks:
-  #     - bourse_network
-  #   ports:
-  #     - "21000:21000"
-  #   environment:
-  #     - MANAGE_LOCAL_HBASE=true
-  #     - MANAGE_LOCAL_SOLR=true
-  #   volumes:
-  #     - atlas_data:/opt/apache-atlas-2.1.0/data
+  
+  
+  # Base de données pour Marquez
+  marquez-db:
+    image: postgres:13
+    container_name: marquez-db
+    environment:
+      POSTGRES_USER: marquez
+      POSTGRES_PASSWORD: marquez
+      POSTGRES_DB: marquez
+    ports:
+      - "5432:5432"
+    volumes:
+      - marquez_db:/var/lib/postgresql/data
+    networks:
+      - bourse_network
+
+  marquez:
+    image: marquezproject/marquez:latest
+    container_name: marquez
+    depends_on:
+      - marquez-db
+    environment:
+      POSTGRES_HOST: marquez-db
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: marquez
+      POSTGRES_USER: marquez
+      POSTGRES_PASSWORD: marquez
+      MARQUEZ_PORT: 5002
+    ports:
+      - "5002:5002"
+    networks:
+      - bourse_network
+
+  marquez-web:
+    image: marquezproject/marquez-web:latest
+    container_name: marquez-web
+    depends_on:
+      - marquez
+    environment:
+      MARQUEZ_HOST: marquez
+      MARQUEZ_PORT: 5002
+      WEB_PORT: 3000
+    ports:
+      - "3000:3000"
+    networks:
+      - bourse_network
+
+
 
   mongodb:
     image: mongo:latest

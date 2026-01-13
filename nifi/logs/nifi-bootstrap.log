@@ -194,3 +194,140 @@
 2026-01-10 22:50:53,323 INFO [main] org.apache.nifi.bootstrap.Command NiFi PID [104] shutdown in progress...
 2026-01-10 22:50:55,327 INFO [main] org.apache.nifi.bootstrap.Command NiFi PID [104] shutdown in progress...
 2026-01-10 22:50:57,330 INFO [main] org.apache.nifi.bootstrap.Command NiFi PID [104] shutdown in progress...
+2026-01-12 12:08:11,007 INFO [main] o.a.n.b.NotificationServiceManager Successfully loaded the following 0 services: []
+2026-01-12 12:08:11,052 INFO [main] org.apache.nifi.bootstrap.RunNiFi Registered no Notification Services for Notification Type NIFI_STARTED
+2026-01-12 12:08:11,053 INFO [main] org.apache.nifi.bootstrap.RunNiFi Registered no Notification Services for Notification Type NIFI_STOPPED
+2026-01-12 12:08:11,053 INFO [main] org.apache.nifi.bootstrap.RunNiFi Registered no Notification Services for Notification Type NIFI_DIED
+2026-01-12 12:08:11,108 INFO [main] org.apache.nifi.bootstrap.RunNiFi Runtime Java version: 11.0.18
+2026-01-12 12:08:11,227 INFO [main] org.apache.nifi.bootstrap.Command Generating Self-Signed Certificate: Expires on 2026-03-13
+2026-01-12 12:08:35,793 INFO [main] org.apache.nifi.bootstrap.Command Generated Self-Signed Certificate SHA-256: D170966E32272074DAF9D01CEB7C2988B367DF03D3AD68E7B3A32DA55B624574
+2026-01-12 12:08:36,044 INFO [main] org.apache.nifi.bootstrap.Command Starting Apache NiFi...
+2026-01-12 12:08:36,051 INFO [main] org.apache.nifi.bootstrap.Command Working Directory: /opt/nifi/nifi-current
+2026-01-12 12:08:36,055 INFO [main] org.apache.nifi.bootstrap.Command Command: /opt/java/openjdk/bin/java -classpath /opt/nifi/nifi-current/./conf:/opt/nifi/nifi-current/./lib/nifi-server-api-1.20.0.jar:/opt/nifi/nifi-current/./lib/log4j-over-slf4j-2.0.6.jar:/opt/nifi/nifi-current/./lib/nifi-nar-utils-1.20.0.jar:/opt/nifi/nifi-current/./lib/logback-core-1.3.5.jar:/opt/nifi/nifi-current/./lib/jul-to-slf4j-2.0.6.jar:/opt/nifi/nifi-current/./lib/jetty-schemas-5.2.jar:/opt/nifi/nifi-current/./lib/slf4j-api-2.0.6.jar:/opt/nifi/nifi-current/./lib/nifi-properties-1.20.0.jar:/opt/nifi/nifi-current/./lib/nifi-framework-api-1.20.0.jar:/opt/nifi/nifi-current/./lib/nifi-property-utils-1.20.0.jar:/opt/nifi/nifi-current/./lib/jcl-over-slf4j-2.0.6.jar:/opt/nifi/nifi-current/./lib/nifi-stateless-bootstrap-1.20.0.jar:/opt/nifi/nifi-current/./lib/javax.servlet-api-3.1.0.jar:/opt/nifi/nifi-current/./lib/nifi-stateless-api-1.20.0.jar:/opt/nifi/nifi-current/./lib/logback-classic-1.3.5.jar:/opt/nifi/nifi-current/./lib/nifi-api-1.20.0.jar:/opt/nifi/nifi-current/./lib/nifi-runtime-1.20.0.jar:/opt/nifi/nifi-current/./lib/java11/txw2-2.3.5.jar:/opt/nifi/nifi-current/./lib/java11/istack-commons-runtime-3.0.12.jar:/opt/nifi/nifi-current/./lib/java11/jakarta.activation-api-1.2.2.jar:/opt/nifi/nifi-current/./lib/java11/javax.annotation-api-1.3.2.jar:/opt/nifi/nifi-current/./lib/java11/jakarta.activation-1.2.2.jar:/opt/nifi/nifi-current/./lib/java11/jaxb-runtime-2.3.5.jar:/opt/nifi/nifi-current/./lib/java11/jakarta.xml.bind-api-2.3.3.jar -Dorg.apache.jasper.compiler.disablejsr199=true -Xmx512m -Xms512m -Dcurator-log-only-first-connection-issue-as-error-level=true -Djavax.security.auth.useSubjectCredsOnly=true -Djava.security.egd=file:/dev/urandom -Dzookeeper.admin.enableServer=false -Dsun.net.http.allowRestrictedHeaders=true -Djava.net.preferIPv4Stack=true -Djava.awt.headless=true -Djava.protocol.handler.pkgs=sun.net.www.protocol -Dnifi.properties.file.path=/opt/nifi/nifi-current/./conf/nifi.properties -Dnifi.bootstrap.listen.port=37573 -Dapp=NiFi -Dorg.apache.nifi.bootstrap.config.log.dir=/opt/nifi/nifi-current/logs org.apache.nifi.NiFi 
+2026-01-12 12:08:36,476 INFO [main] org.apache.nifi.bootstrap.Command Launched Apache NiFi with Process ID 100
+2026-01-12 12:08:43,932 INFO [NiFi Bootstrap Command Listener] org.apache.nifi.bootstrap.RunNiFi Apache NiFi now running and listening for Bootstrap requests on port 38627
+2026-01-12 12:11:36,819 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 12:11:40,323 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 12:11:40,444 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 12:11:40,463 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 12:11:40,514 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 12:11:40,525 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 12:11:40,569 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 12:11:40,600 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 12:11:41,589 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 12:14:37,853 INFO [main] o.a.n.b.NotificationServiceManager Successfully loaded the following 0 services: []
+2026-01-12 12:14:37,866 INFO [main] org.apache.nifi.bootstrap.RunNiFi Registered no Notification Services for Notification Type NIFI_STARTED
+2026-01-12 12:14:37,866 INFO [main] org.apache.nifi.bootstrap.RunNiFi Registered no Notification Services for Notification Type NIFI_STOPPED
+2026-01-12 12:14:37,866 INFO [main] org.apache.nifi.bootstrap.RunNiFi Registered no Notification Services for Notification Type NIFI_DIED
+2026-01-12 12:14:37,938 INFO [main] org.apache.nifi.bootstrap.Command Apache NiFi has accepted the Shutdown Command and is shutting down now
+2026-01-12 12:14:38,066 INFO [main] org.apache.nifi.bootstrap.Command NiFi PID [100] shutdown in progress...
+2026-01-12 12:14:40,072 INFO [main] org.apache.nifi.bootstrap.Command NiFi PID [100] shutdown in progress...
+2026-01-12 12:14:41,849 INFO [main] org.apache.nifi.bootstrap.RunNiFi A shutdown was initiated. Will not restart NiFi
+2026-01-12 12:14:42,088 INFO [main] org.apache.nifi.bootstrap.Command NiFi PID [100] shutdown completed
+2026-01-12 12:17:48,064 INFO [main] o.a.n.b.NotificationServiceManager Successfully loaded the following 0 services: []
+2026-01-12 12:17:48,082 INFO [main] org.apache.nifi.bootstrap.RunNiFi Registered no Notification Services for Notification Type NIFI_STARTED
+2026-01-12 12:17:48,083 INFO [main] org.apache.nifi.bootstrap.RunNiFi Registered no Notification Services for Notification Type NIFI_STOPPED
+2026-01-12 12:17:48,085 INFO [main] org.apache.nifi.bootstrap.RunNiFi Registered no Notification Services for Notification Type NIFI_DIED
+2026-01-12 12:17:48,102 INFO [main] org.apache.nifi.bootstrap.RunNiFi Runtime Java version: 11.0.18
+2026-01-12 12:17:48,160 INFO [main] org.apache.nifi.bootstrap.Command Generating Self-Signed Certificate: Expires on 2026-03-13
+2026-01-12 12:17:57,608 INFO [main] org.apache.nifi.bootstrap.Command Generated Self-Signed Certificate SHA-256: BE271F40FACF417A798DCBED018F02EE997F5CE5AC4EEF608DF5553EBA79D6AB
+2026-01-12 12:17:57,713 INFO [main] org.apache.nifi.bootstrap.Command Starting Apache NiFi...
+2026-01-12 12:17:57,720 INFO [main] org.apache.nifi.bootstrap.Command Working Directory: /opt/nifi/nifi-current
+2026-01-12 12:17:57,722 INFO [main] org.apache.nifi.bootstrap.Command Command: /opt/java/openjdk/bin/java -classpath /opt/nifi/nifi-current/./conf:/opt/nifi/nifi-current/./lib/nifi-server-api-1.20.0.jar:/opt/nifi/nifi-current/./lib/log4j-over-slf4j-2.0.6.jar:/opt/nifi/nifi-current/./lib/nifi-nar-utils-1.20.0.jar:/opt/nifi/nifi-current/./lib/logback-core-1.3.5.jar:/opt/nifi/nifi-current/./lib/jul-to-slf4j-2.0.6.jar:/opt/nifi/nifi-current/./lib/jetty-schemas-5.2.jar:/opt/nifi/nifi-current/./lib/slf4j-api-2.0.6.jar:/opt/nifi/nifi-current/./lib/nifi-properties-1.20.0.jar:/opt/nifi/nifi-current/./lib/nifi-framework-api-1.20.0.jar:/opt/nifi/nifi-current/./lib/nifi-property-utils-1.20.0.jar:/opt/nifi/nifi-current/./lib/jcl-over-slf4j-2.0.6.jar:/opt/nifi/nifi-current/./lib/nifi-stateless-bootstrap-1.20.0.jar:/opt/nifi/nifi-current/./lib/javax.servlet-api-3.1.0.jar:/opt/nifi/nifi-current/./lib/nifi-stateless-api-1.20.0.jar:/opt/nifi/nifi-current/./lib/logback-classic-1.3.5.jar:/opt/nifi/nifi-current/./lib/nifi-api-1.20.0.jar:/opt/nifi/nifi-current/./lib/nifi-runtime-1.20.0.jar:/opt/nifi/nifi-current/./lib/java11/txw2-2.3.5.jar:/opt/nifi/nifi-current/./lib/java11/istack-commons-runtime-3.0.12.jar:/opt/nifi/nifi-current/./lib/java11/jakarta.activation-api-1.2.2.jar:/opt/nifi/nifi-current/./lib/java11/javax.annotation-api-1.3.2.jar:/opt/nifi/nifi-current/./lib/java11/jakarta.activation-1.2.2.jar:/opt/nifi/nifi-current/./lib/java11/jaxb-runtime-2.3.5.jar:/opt/nifi/nifi-current/./lib/java11/jakarta.xml.bind-api-2.3.3.jar -Dorg.apache.jasper.compiler.disablejsr199=true -Xmx512m -Xms512m -Dcurator-log-only-first-connection-issue-as-error-level=true -Djavax.security.auth.useSubjectCredsOnly=true -Djava.security.egd=file:/dev/urandom -Dzookeeper.admin.enableServer=false -Dsun.net.http.allowRestrictedHeaders=true -Djava.net.preferIPv4Stack=true -Djava.awt.headless=true -Djava.protocol.handler.pkgs=sun.net.www.protocol -Dnifi.properties.file.path=/opt/nifi/nifi-current/./conf/nifi.properties -Dnifi.bootstrap.listen.port=40859 -Dapp=NiFi -Dorg.apache.nifi.bootstrap.config.log.dir=/opt/nifi/nifi-current/logs org.apache.nifi.NiFi 
+2026-01-12 12:17:57,999 INFO [main] org.apache.nifi.bootstrap.Command Launched Apache NiFi with Process ID 99
+2026-01-12 12:18:02,432 INFO [NiFi Bootstrap Command Listener] org.apache.nifi.bootstrap.RunNiFi Apache NiFi now running and listening for Bootstrap requests on port 37313
+2026-01-12 12:19:42,478 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 12:19:45,223 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 12:19:45,435 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 12:19:45,463 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 12:19:45,597 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 12:19:45,610 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 12:19:45,675 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 12:19:45,751 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 12:19:47,668 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 12:21:32,591 ERROR [NiFi logging handler] org.apache.nifi.StdErr WARNING: An illegal reflective access operation has occurred
+2026-01-12 12:21:32,594 ERROR [NiFi logging handler] org.apache.nifi.StdErr WARNING: Illegal reflective access by org.springframework.cglib.core.ReflectUtils (file:/opt/nifi/nifi-current/./work/nar/framework/nifi-framework-nar-1.20.0.nar-unpacked/NAR-INF/bundled-dependencies/spring-core-5.3.24.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+2026-01-12 12:21:32,596 ERROR [NiFi logging handler] org.apache.nifi.StdErr WARNING: Please consider reporting this to the maintainers of org.springframework.cglib.core.ReflectUtils
+2026-01-12 12:21:32,596 ERROR [NiFi logging handler] org.apache.nifi.StdErr WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+2026-01-12 12:21:32,596 ERROR [NiFi logging handler] org.apache.nifi.StdErr WARNING: All illegal access operations will be denied in a future release
+2026-01-12 13:13:34,237 INFO [main] o.a.n.b.NotificationServiceManager Successfully loaded the following 0 services: []
+2026-01-12 13:13:34,293 INFO [main] org.apache.nifi.bootstrap.RunNiFi Registered no Notification Services for Notification Type NIFI_STARTED
+2026-01-12 13:13:34,294 INFO [main] org.apache.nifi.bootstrap.RunNiFi Registered no Notification Services for Notification Type NIFI_STOPPED
+2026-01-12 13:13:34,296 INFO [main] org.apache.nifi.bootstrap.RunNiFi Registered no Notification Services for Notification Type NIFI_DIED
+2026-01-12 13:13:34,657 INFO [main] org.apache.nifi.bootstrap.Command Apache NiFi has accepted the Shutdown Command and is shutting down now
+2026-01-12 13:13:35,521 INFO [main] org.apache.nifi.bootstrap.Command NiFi PID [99] shutdown in progress...
+2026-01-12 13:13:37,542 INFO [main] org.apache.nifi.bootstrap.Command NiFi PID [99] shutdown in progress...
+2026-01-12 13:14:24,844 INFO [main] o.a.n.b.NotificationServiceManager Successfully loaded the following 0 services: []
+2026-01-12 13:14:24,907 INFO [main] org.apache.nifi.bootstrap.RunNiFi Registered no Notification Services for Notification Type NIFI_STARTED
+2026-01-12 13:14:24,908 INFO [main] org.apache.nifi.bootstrap.RunNiFi Registered no Notification Services for Notification Type NIFI_STOPPED
+2026-01-12 13:14:24,909 INFO [main] org.apache.nifi.bootstrap.RunNiFi Registered no Notification Services for Notification Type NIFI_DIED
+2026-01-12 13:14:25,013 INFO [main] org.apache.nifi.bootstrap.RunNiFi Runtime Java version: 11.0.18
+2026-01-12 13:14:25,149 INFO [main] org.apache.nifi.bootstrap.Command Generating Self-Signed Certificate: Expires on 2026-03-13
+2026-01-12 13:14:41,089 INFO [main] org.apache.nifi.bootstrap.Command Generated Self-Signed Certificate SHA-256: E902850A3D9B9906BD3056EDDF27A01F7B252770431387316EFC2ACA69B6B11B
+2026-01-12 13:14:41,285 INFO [main] org.apache.nifi.bootstrap.Command Starting Apache NiFi...
+2026-01-12 13:14:41,286 INFO [main] org.apache.nifi.bootstrap.Command Working Directory: /opt/nifi/nifi-current
+2026-01-12 13:14:41,288 INFO [main] org.apache.nifi.bootstrap.Command Command: /opt/java/openjdk/bin/java -classpath /opt/nifi/nifi-current/./conf:/opt/nifi/nifi-current/./lib/nifi-server-api-1.20.0.jar:/opt/nifi/nifi-current/./lib/log4j-over-slf4j-2.0.6.jar:/opt/nifi/nifi-current/./lib/nifi-nar-utils-1.20.0.jar:/opt/nifi/nifi-current/./lib/logback-core-1.3.5.jar:/opt/nifi/nifi-current/./lib/jul-to-slf4j-2.0.6.jar:/opt/nifi/nifi-current/./lib/jetty-schemas-5.2.jar:/opt/nifi/nifi-current/./lib/slf4j-api-2.0.6.jar:/opt/nifi/nifi-current/./lib/nifi-properties-1.20.0.jar:/opt/nifi/nifi-current/./lib/nifi-framework-api-1.20.0.jar:/opt/nifi/nifi-current/./lib/nifi-property-utils-1.20.0.jar:/opt/nifi/nifi-current/./lib/jcl-over-slf4j-2.0.6.jar:/opt/nifi/nifi-current/./lib/nifi-stateless-bootstrap-1.20.0.jar:/opt/nifi/nifi-current/./lib/javax.servlet-api-3.1.0.jar:/opt/nifi/nifi-current/./lib/nifi-stateless-api-1.20.0.jar:/opt/nifi/nifi-current/./lib/logback-classic-1.3.5.jar:/opt/nifi/nifi-current/./lib/nifi-api-1.20.0.jar:/opt/nifi/nifi-current/./lib/nifi-runtime-1.20.0.jar:/opt/nifi/nifi-current/./lib/java11/txw2-2.3.5.jar:/opt/nifi/nifi-current/./lib/java11/istack-commons-runtime-3.0.12.jar:/opt/nifi/nifi-current/./lib/java11/jakarta.activation-api-1.2.2.jar:/opt/nifi/nifi-current/./lib/java11/javax.annotation-api-1.3.2.jar:/opt/nifi/nifi-current/./lib/java11/jakarta.activation-1.2.2.jar:/opt/nifi/nifi-current/./lib/java11/jaxb-runtime-2.3.5.jar:/opt/nifi/nifi-current/./lib/java11/jakarta.xml.bind-api-2.3.3.jar -Dorg.apache.jasper.compiler.disablejsr199=true -Xmx512m -Xms512m -Dcurator-log-only-first-connection-issue-as-error-level=true -Djavax.security.auth.useSubjectCredsOnly=true -Djava.security.egd=file:/dev/urandom -Dzookeeper.admin.enableServer=false -Dsun.net.http.allowRestrictedHeaders=true -Djava.net.preferIPv4Stack=true -Djava.awt.headless=true -Djava.protocol.handler.pkgs=sun.net.www.protocol -Dnifi.properties.file.path=/opt/nifi/nifi-current/./conf/nifi.properties -Dnifi.bootstrap.listen.port=43119 -Dapp=NiFi -Dorg.apache.nifi.bootstrap.config.log.dir=/opt/nifi/nifi-current/logs org.apache.nifi.NiFi 
+2026-01-12 13:14:41,662 INFO [main] org.apache.nifi.bootstrap.Command Launched Apache NiFi with Process ID 101
+2026-01-12 13:14:50,508 INFO [NiFi Bootstrap Command Listener] org.apache.nifi.bootstrap.RunNiFi Apache NiFi now running and listening for Bootstrap requests on port 41887
+2026-01-12 13:17:30,953 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 13:17:48,364 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 13:17:48,691 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 13:17:48,948 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 13:17:49,010 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 13:17:49,028 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 13:17:50,032 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 13:17:50,187 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 13:17:50,798 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 13:18:11,715 INFO [main] o.a.n.b.NotificationServiceManager Successfully loaded the following 0 services: []
+2026-01-12 13:18:11,766 INFO [main] org.apache.nifi.bootstrap.RunNiFi Registered no Notification Services for Notification Type NIFI_STARTED
+2026-01-12 13:18:11,766 INFO [main] org.apache.nifi.bootstrap.RunNiFi Registered no Notification Services for Notification Type NIFI_STOPPED
+2026-01-12 13:18:11,767 INFO [main] org.apache.nifi.bootstrap.RunNiFi Registered no Notification Services for Notification Type NIFI_DIED
+2026-01-12 13:18:12,189 INFO [main] org.apache.nifi.bootstrap.Command Apache NiFi has accepted the Shutdown Command and is shutting down now
+2026-01-12 13:18:12,691 INFO [main] org.apache.nifi.bootstrap.Command NiFi PID [101] shutdown in progress...
+2026-01-12 13:18:14,703 INFO [main] org.apache.nifi.bootstrap.Command NiFi PID [101] shutdown in progress...
+2026-01-12 13:19:43,489 INFO [main] o.a.n.b.NotificationServiceManager Successfully loaded the following 0 services: []
+2026-01-12 13:19:43,512 INFO [main] org.apache.nifi.bootstrap.RunNiFi Registered no Notification Services for Notification Type NIFI_STARTED
+2026-01-12 13:19:43,522 INFO [main] org.apache.nifi.bootstrap.RunNiFi Registered no Notification Services for Notification Type NIFI_STOPPED
+2026-01-12 13:19:43,524 INFO [main] org.apache.nifi.bootstrap.RunNiFi Registered no Notification Services for Notification Type NIFI_DIED
+2026-01-12 13:19:43,641 INFO [main] org.apache.nifi.bootstrap.RunNiFi Runtime Java version: 11.0.18
+2026-01-12 13:19:43,826 INFO [main] org.apache.nifi.bootstrap.Command Generating Self-Signed Certificate: Expires on 2026-03-13
+2026-01-12 13:20:02,173 INFO [main] org.apache.nifi.bootstrap.Command Generated Self-Signed Certificate SHA-256: C64DC1B117768F74A325ED69C9270710FA183DB1BF04FB1EB96AE3D7512BF9C4
+2026-01-12 13:20:02,621 INFO [main] org.apache.nifi.bootstrap.Command Starting Apache NiFi...
+2026-01-12 13:20:02,656 INFO [main] org.apache.nifi.bootstrap.Command Working Directory: /opt/nifi/nifi-current
+2026-01-12 13:20:02,656 INFO [main] org.apache.nifi.bootstrap.Command Command: /opt/java/openjdk/bin/java -classpath /opt/nifi/nifi-current/./conf:/opt/nifi/nifi-current/./lib/nifi-server-api-1.20.0.jar:/opt/nifi/nifi-current/./lib/log4j-over-slf4j-2.0.6.jar:/opt/nifi/nifi-current/./lib/nifi-nar-utils-1.20.0.jar:/opt/nifi/nifi-current/./lib/logback-core-1.3.5.jar:/opt/nifi/nifi-current/./lib/jul-to-slf4j-2.0.6.jar:/opt/nifi/nifi-current/./lib/jetty-schemas-5.2.jar:/opt/nifi/nifi-current/./lib/slf4j-api-2.0.6.jar:/opt/nifi/nifi-current/./lib/nifi-properties-1.20.0.jar:/opt/nifi/nifi-current/./lib/nifi-framework-api-1.20.0.jar:/opt/nifi/nifi-current/./lib/nifi-property-utils-1.20.0.jar:/opt/nifi/nifi-current/./lib/jcl-over-slf4j-2.0.6.jar:/opt/nifi/nifi-current/./lib/nifi-stateless-bootstrap-1.20.0.jar:/opt/nifi/nifi-current/./lib/javax.servlet-api-3.1.0.jar:/opt/nifi/nifi-current/./lib/nifi-stateless-api-1.20.0.jar:/opt/nifi/nifi-current/./lib/logback-classic-1.3.5.jar:/opt/nifi/nifi-current/./lib/nifi-api-1.20.0.jar:/opt/nifi/nifi-current/./lib/nifi-runtime-1.20.0.jar:/opt/nifi/nifi-current/./lib/java11/txw2-2.3.5.jar:/opt/nifi/nifi-current/./lib/java11/istack-commons-runtime-3.0.12.jar:/opt/nifi/nifi-current/./lib/java11/jakarta.activation-api-1.2.2.jar:/opt/nifi/nifi-current/./lib/java11/javax.annotation-api-1.3.2.jar:/opt/nifi/nifi-current/./lib/java11/jakarta.activation-1.2.2.jar:/opt/nifi/nifi-current/./lib/java11/jaxb-runtime-2.3.5.jar:/opt/nifi/nifi-current/./lib/java11/jakarta.xml.bind-api-2.3.3.jar -Dorg.apache.jasper.compiler.disablejsr199=true -Xmx512m -Xms512m -Dcurator-log-only-first-connection-issue-as-error-level=true -Djavax.security.auth.useSubjectCredsOnly=true -Djava.security.egd=file:/dev/urandom -Dzookeeper.admin.enableServer=false -Dsun.net.http.allowRestrictedHeaders=true -Djava.net.preferIPv4Stack=true -Djava.awt.headless=true -Djava.protocol.handler.pkgs=sun.net.www.protocol -Dnifi.properties.file.path=/opt/nifi/nifi-current/./conf/nifi.properties -Dnifi.bootstrap.listen.port=40041 -Dapp=NiFi -Dorg.apache.nifi.bootstrap.config.log.dir=/opt/nifi/nifi-current/logs org.apache.nifi.NiFi 
+2026-01-12 13:20:03,245 INFO [main] org.apache.nifi.bootstrap.Command Launched Apache NiFi with Process ID 100
+2026-01-12 13:20:10,153 INFO [NiFi Bootstrap Command Listener] org.apache.nifi.bootstrap.RunNiFi Apache NiFi now running and listening for Bootstrap requests on port 44463
+2026-01-12 13:22:46,683 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 13:23:14,379 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 13:23:14,518 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 13:23:14,585 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 13:23:14,619 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 13:23:14,636 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 13:23:15,134 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 13:23:15,226 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 13:23:15,617 ERROR [NiFi logging handler] org.apache.nifi.StdErr Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-01-12 13:24:45,356 ERROR [NiFi logging handler] org.apache.nifi.StdErr WARNING: An illegal reflective access operation has occurred
+2026-01-12 13:24:45,467 ERROR [NiFi logging handler] org.apache.nifi.StdErr WARNING: Illegal reflective access by org.springframework.cglib.core.ReflectUtils (file:/opt/nifi/nifi-current/./work/nar/framework/nifi-framework-nar-1.20.0.nar-unpacked/NAR-INF/bundled-dependencies/spring-core-5.3.24.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+2026-01-12 13:24:45,468 ERROR [NiFi logging handler] org.apache.nifi.StdErr WARNING: Please consider reporting this to the maintainers of org.springframework.cglib.core.ReflectUtils
+2026-01-12 13:24:45,468 ERROR [NiFi logging handler] org.apache.nifi.StdErr WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+2026-01-12 13:24:45,468 ERROR [NiFi logging handler] org.apache.nifi.StdErr WARNING: All illegal access operations will be denied in a future release
+2026-01-12 14:51:33,854 WARN [main] org.apache.nifi.bootstrap.RunNiFi Apache NiFi appears to have died. Restarting...
+2026-01-12 14:51:34,408 INFO [main] org.apache.nifi.bootstrap.Command Launched Apache NiFi with Process ID 283
+2026-01-12 14:51:34,409 INFO [main] org.apache.nifi.bootstrap.RunNiFi Successfully started Apache NiFi with PID 283
+2026-01-12 14:51:41,332 INFO [NiFi Bootstrap Command Listener] org.apache.nifi.bootstrap.RunNiFi Apache NiFi now running and listening for Bootstrap requests on port 45009
+2026-01-12 15:07:06,352 WARN [main] org.apache.nifi.bootstrap.RunNiFi Apache NiFi appears to have died. Restarting...
+2026-01-12 15:07:06,750 INFO [main] org.apache.nifi.bootstrap.Command Launched Apache NiFi with Process ID 388
+2026-01-12 15:07:06,751 INFO [main] org.apache.nifi.bootstrap.RunNiFi Successfully started Apache NiFi with PID 388
+2026-01-12 15:07:12,597 INFO [NiFi Bootstrap Command Listener] org.apache.nifi.bootstrap.RunNiFi Apache NiFi now running and listening for Bootstrap requests on port 45717
+2026-01-12 15:10:53,888 WARN [main] org.apache.nifi.bootstrap.RunNiFi Apache NiFi appears to have died. Restarting...
+2026-01-12 15:10:53,952 INFO [main] org.apache.nifi.bootstrap.Command Launched Apache NiFi with Process ID 481
+2026-01-12 15:10:53,953 INFO [main] org.apache.nifi.bootstrap.RunNiFi Successfully started Apache NiFi with PID 481
+2026-01-12 15:10:55,971 INFO [NiFi Bootstrap Command Listener] org.apache.nifi.bootstrap.RunNiFi Apache NiFi now running and listening for Bootstrap requests on port 46219
+2026-01-12 15:38:18,950 INFO [main] o.a.n.b.NotificationServiceManager Successfully loaded the following 0 services: []
+2026-01-12 15:38:18,972 INFO [main] org.apache.nifi.bootstrap.RunNiFi Registered no Notification Services for Notification Type NIFI_STARTED
+2026-01-12 15:38:18,974 INFO [main] org.apache.nifi.bootstrap.RunNiFi Registered no Notification Services for Notification Type NIFI_STOPPED
+2026-01-12 15:38:18,975 INFO [main] org.apache.nifi.bootstrap.RunNiFi Registered no Notification Services for Notification Type NIFI_DIED
+2026-01-12 15:38:19,124 INFO [main] org.apache.nifi.bootstrap.Command Apache NiFi has accepted the Shutdown Command and is shutting down now
+2026-01-12 15:38:19,421 INFO [main] org.apache.nifi.bootstrap.Command NiFi PID [481] shutdown in progress...
+2026-01-12 15:38:21,529 INFO [main] org.apache.nifi.bootstrap.Command NiFi PID [481] shutdown in progress...
+2026-01-12 15:38:23,742 INFO [main] org.apache.nifi.bootstrap.Command NiFi PID [481] shutdown in progress...
