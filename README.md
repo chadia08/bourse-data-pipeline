@@ -57,6 +57,9 @@ Quitter l'environnement virtuel : ```deactivate```
 Vérifier l'état de la branche : ```git status```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3c24fb5660dc98711b6b16749d746a4dcb2f6ab1
 
 ## Etape Kafka
 à faire 
@@ -164,6 +167,7 @@ Avant d'ouvrir Power BI, tu dois déclarer ta base Docker à Windows :
 Une fois connecté, Power BI va te demander comment traiter les données :
 - Import : Power BI télécharge les données. C'est plus rapide pour les calculs complexes, mais il faut rafraîchir manuellement.
 - DirectQuery : Power BI interroge ClickHouse à chaque clic. C'est l'idéal pour voir tes données boursières bouger presque en "temps réel" dès que NiFi pousse un message.
+<<<<<<< HEAD
 --
 =======
 ### 6 Premierement la Préparation des fichiers CSV , pour ce projet on a choisi:
@@ -245,3 +249,6 @@ Cliquez sur OK pour enregistrer.
 
 
 >>>>>>> 064dbc232e0566df996ec3e0bc74e14a9d41c92f
+=======
+--
+>>>>>>> 3c24fb5660dc98711b6b16749d746a4dcb2f6ab1

@@ -1,6 +1,7 @@
 python-dotenv
 requests
 <<<<<<< HEAD
+<<<<<<< HEAD
 kafka-python
 clickhouse-connect
 pandas
@@ -30,3 +31,37 @@ et certains drivers haute performance (Java/Python).
 Port 8123 (HTTP) : Utilisé par les interfaces web (Tabix, Play),
  DBeaver, et les requêtes via curl.
 >>>>>>> 064dbc232e0566df996ec3e0bc74e14a9d41c92f
+=======
+kafka-python
+clickhouse-connect
+pandas
+clickhouse_driver
+pymongo
+streamlit
+atlasclient
+fastapi
+uvicorn
+python-dotenv
+pydantic
+>>>>>>> 3c24fb5660dc98711b6b16749d746a4dcb2f6ab1
+
+cette étape et pour la configutation la lineage Marquez:
+Crée un nouveau fichier nommé setup_marquez.sh.
+
+Colle tout le texte des commandes curl que tu as fourni à l'intérieur.
+
+Enregistre-le.
+
+3. Exécution pas à pas
+Ouvre ton terminal et tape ces commandes :
+
+Étape A : Donner les droits d'exécution au fichier
+
+Bash
+
+chmod +x setup_marquez.sh
+Étape B : Lancer le script
+
+Bash
+
+./setup_marquez.sh

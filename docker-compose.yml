@@ -9,7 +9,8 @@ volumes:
   kafka_data:
   nifi_data:
   clickhouse_data:
-  atlas_data:
+  marquez_db:
+  mongo_data:
 
 services:
   zookeeper:
@@ -45,8 +46,12 @@ services:
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_OPTS: "-Datlas.conf=/etc/kafka/config"
+      KAFKA_CLASSPATH: "/usr/share/java/kafka/*"
+      #ATLAS_CLUSTER_NAME: "bourse_cluster"
     volumes:
       - kafka_data:/var/lib/kafka/data
+      #- ./atlas-application.properties:/etc/kafka/config/atlas-application.properties
 
   nifi:
     image: 'apache/nifi:1.20.0'
@@ -54,7 +59,6 @@ services:
     hostname: nifi
     depends_on:
       - kafka
-
     networks:
       - bourse_network
     ports:
@@ -74,8 +78,8 @@ services:
       - ./nifi/provenance_repository:/opt/nifi/nifi-current/provenance_repository
       - ./nifi/state:/opt/nifi/nifi-current/state
       - ./nifi/logs:/opt/nifi/nifi-current/logs
-      # - ./nifi/conf:/opt/nifi/nifi-current/conf
-    
+      - ./nifi/custom_lib:/opt/nifi/nifi-current/extensions
+
   clickhouse:
     image: clickhouse/clickhouse-server:latest
     container_name: clickhouse
@@ -83,8 +87,8 @@ services:
     networks:
       - bourse_network
     ports:
-      - "8123:8123" # Port HTTP (Le plus stable pour NiFi)
-      - "9000:9000" # Port Natif (Pour les clients CLI)
+      - "8123:8123"
+      - "9000:9000"
     environment:
       - CLICKHOUSE_USER=default
       - CLICKHOUSE_PASSWORD=admin
@@ -95,28 +99,75 @@ services:
       nofile:
         soft: 262144
         hard: 262144
-  atlas:
-    image: sburn/apache-atlas:latest
-    container_name: atlas
-    hostname: atlas
+
+  # atlas:
+    # image: sburn/apache-atlas:latest
+    #container_name: atlas
+    #hostname: atlas
+    #networks:
+     # - bourse_network
+    #ports:
+     # - "21000:21000"
+    #environment:
+     # - MANAGE_LOCAL_HBASE=true
+      #- MANAGE_LOCAL_SOLR=true
+    #volumes:
+     # - atlas_data:/opt/apache-atlas-2.1.0/data
+
+  marquez-db:
+    image: postgres:13
+    container_name: marquez-db
+    environment:
+      POSTGRES_USER: marquez
+      POSTGRES_PASSWORD: marquez
+      POSTGRES_DB: marquez
+    ports:
+      - "5432:5432"
+    volumes:
+      - marquez_db:/var/lib/postgresql/data
+    networks:
+      - bourse_network
+
+  marquez:
+    image: marquezproject/marquez:latest
+    container_name: marquez
+    depends_on:
+      - marquez-db
+    environment:
+      POSTGRES_HOST: marquez-db
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: marquez
+      POSTGRES_USER: marquez
+      POSTGRES_PASSWORD: marquez
+      MARQUEZ_PORT: 5002
+    ports:
+      - "5002:5002"
+    networks:
+      - bourse_network
+
+  marquez-web:
+    image: marquezproject/marquez-web:latest
+    container_name: marquez-web
+    depends_on:
+      - marquez
+    environment:
+      MARQUEZ_HOST: marquez
+      MARQUEZ_PORT: 5002
+      WEB_PORT: 3000
+    ports:
+      - "3000:3000"
+    networks:
+      - bourse_network
+
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb_cache
+    restart: always
     networks:
       - bourse_network
     ports:
-      - "21000:21000"
-    environment:
-      - MANAGE_LOCAL_HBASE=true
-      - MANAGE_LOCAL_SOLR=true
+      - "27017:27017"
     volumes:
-      - atlas_data:/opt/apache-atlas-2.1.0/data
-  
-  #trino:
-    #image: trinodb/trino:latest
-    #container_name: trino
-    #ports:
-     # - "8080:8080"
-    #volumes:
-     # - ./trino_config/config.properties:/etc/trino/config.properties
-     # - ./trino_config/catalog:/etc/trino/catalog
-      #- ./clickhouse-jdbc-0.6.5-all.jar:/usr/lib/trino/plugin/clickhouse/clickhouse-jdbc-0.6.5-all.jar
-    #networks:
-     # - bourse_network
+      - mongo_data:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=bourse_cache

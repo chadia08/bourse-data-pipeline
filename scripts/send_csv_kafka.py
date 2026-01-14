@@ -42,4 +42,8 @@ def send_csv_to_kafka(file_path, topic_name, delimiter=';'):
 
 # send_csv_to_kafka('Data/Raw/prices_test.csv', 'prices_topic', delimiter=',')
 
+<<<<<<< HEAD
 send_csv_to_kafka('data/raw/fundamentals.csv', 'fundamentals_topic', delimiter=',')
+=======
+send_csv_to_kafka('Data/Raw/fundamentals.csv', 'fundamentals_topic', delimiter=',')
+>>>>>>> 3c24fb5660dc98711b6b16749d746a4dcb2f6ab1

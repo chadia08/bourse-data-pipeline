@@ -1,14 +1,16 @@
-2026-01-06 08:06:24,144 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
-2026-01-06 08:06:24,577 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Tue Jan 06 08:06:24 UTC 2026
-2026-01-06 08:06:25,712 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Tue Jan 06 08:06:25 UTC 2026
-2026-01-06 08:06:25,718 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
-2026-01-06 14:17:35,575 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
-2026-01-06 14:17:36,169 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Tue Jan 06 14:17:36 UTC 2026
-2026-01-06 14:17:38,387 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Tue Jan 06 14:17:38 UTC 2026
-2026-01-06 14:17:38,396 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
-2026-01-06 14:19:24,825 INFO [NiFi Web Server-83] o.a.n.w.a.c.IllegalArgumentExceptionMapper java.lang.IllegalArgumentException: The username and password must be specified.}. Returning Bad Request} response.
-java.lang.IllegalArgumentException: The username and password must be specified.
-	at org.apache.nifi.web.api.AccessResource.createAccessToken(AccessResource.java:417)
+2026-01-14 01:14:03,203 INFO [NiFi Web Server-25] org.apache.nifi.web.api.AccessResource Logout Request [1c28304b-3ec7-41dc-a1f9-e268725ce781] Identity [admin] started
+2026-01-14 01:14:04,275 INFO [NiFi Web Server-24] org.apache.nifi.web.api.AccessResource Logout Request [1c28304b-3ec7-41dc-a1f9-e268725ce781] Completed [admin]
+2026-01-14 10:08:42,430 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
+2026-01-14 10:08:44,251 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Wed Jan 14 10:08:44 UTC 2026
+2026-01-14 10:08:44,661 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Wed Jan 14 10:08:44 UTC 2026
+2026-01-14 10:08:44,664 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
+2026-01-14 10:42:43,732 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
+2026-01-14 10:42:45,816 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Wed Jan 14 10:42:45 UTC 2026
+2026-01-14 10:42:46,188 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Wed Jan 14 10:42:46 UTC 2026
+2026-01-14 10:42:46,189 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
+2026-01-14 10:50:43,021 INFO [NiFi Web Server-27] o.a.n.w.a.c.IllegalArgumentExceptionMapper java.lang.IllegalArgumentException: The supplied username and password are not valid.}. Returning Bad Request} response.
+java.lang.IllegalArgumentException: The supplied username and password are not valid.
+	at org.apache.nifi.web.api.AccessResource.createAccessToken(AccessResource.java:430)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -130,23 +132,290 @@ java.lang.IllegalArgumentException: The username and password must be specified.
 	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
 	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
 	at java.base/java.lang.Thread.run(Unknown Source)
-2026-01-06 15:22:49,354 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
-2026-01-06 15:22:49,730 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Tue Jan 06 15:22:49 UTC 2026
-2026-01-06 15:22:50,475 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Tue Jan 06 15:22:50 UTC 2026
-2026-01-06 15:22:50,479 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
-2026-01-06 15:27:26,914 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
-2026-01-06 15:27:27,403 INFO [main] o.a.n.a.FileUserGroupProvider Creating new users file at /opt/nifi/nifi-current/./conf/users.xml
-2026-01-06 15:27:27,464 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Tue Jan 06 15:27:27 UTC 2026
-2026-01-06 15:27:27,465 INFO [main] o.a.n.a.FileAccessPolicyProvider Creating new authorizations file at /opt/nifi/nifi-current/./conf/authorizations.xml
-2026-01-06 15:27:27,769 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Tue Jan 06 15:27:27 UTC 2026
-2026-01-06 15:27:27,777 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
-2026-01-06 20:11:04,460 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
-2026-01-06 20:11:05,745 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Tue Jan 06 20:11:05 UTC 2026
-2026-01-06 20:11:06,528 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Tue Jan 06 20:11:06 UTC 2026
-2026-01-06 20:11:06,531 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
-2026-01-06 21:59:35,882 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
-2026-01-06 21:59:36,454 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Tue Jan 06 21:59:36 UTC 2026
-2026-01-06 21:59:37,416 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Tue Jan 06 21:59:37 UTC 2026
-2026-01-06 21:59:37,423 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
-2026-01-06 22:01:01,014 INFO [NiFi Web Server-24] org.apache.nifi.web.api.AccessResource Logout Request [dc86a2d2-210d-4605-8cf2-1b9dc30de35a] Identity [admin] started
-2026-01-06 22:01:01,290 INFO [NiFi Web Server-21] org.apache.nifi.web.api.AccessResource Logout Request [dc86a2d2-210d-4605-8cf2-1b9dc30de35a] Completed [admin]
+Caused by: org.apache.nifi.authentication.exception.InvalidLoginCredentialsException: Username verification failed
+	at org.apache.nifi.authentication.single.user.SingleUserLoginIdentityProvider.authenticate(SingleUserLoginIdentityProvider.java:89)
+	at org.apache.nifi.web.security.spring.LoginIdentityProviderFactoryBean$1.authenticate(LoginIdentityProviderFactoryBean.java:343)
+	at org.apache.nifi.web.api.AccessResource.createAccessToken(AccessResource.java:422)
+	... 121 common frames omitted
+2026-01-14 10:51:00,495 INFO [NiFi Web Server-21] o.a.n.w.a.c.IllegalArgumentExceptionMapper java.lang.IllegalArgumentException: The supplied username and password are not valid.}. Returning Bad Request} response.
+java.lang.IllegalArgumentException: The supplied username and password are not valid.
+	at org.apache.nifi.web.api.AccessResource.createAccessToken(AccessResource.java:430)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:134)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:177)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:176)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:81)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:475)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:397)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:81)
+	at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:255)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:234)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:684)
+	at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:394)
+	at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:346)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:358)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:311)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+	at org.eclipse.jetty.servlet.ServletHolder$NotAsync.service(ServletHolder.java:1459)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:799)
+	at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1656)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:352)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361)
+	at org.apache.nifi.web.security.log.AuthenticationUserFilter.doFilterInternal(AuthenticationUserFilter.java:57)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361)
+	at org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter.doFilterInternal(BearerTokenAuthenticationFilter.java:132)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361)
+	at org.apache.nifi.web.security.NiFiAuthenticationFilter.authenticate(NiFiAuthenticationFilter.java:94)
+	at org.apache.nifi.web.security.NiFiAuthenticationFilter.doFilter(NiFiAuthenticationFilter.java:56)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361)
+	at org.apache.nifi.web.security.csrf.SkipReplicatedCsrfFilter.doFilterInternal(SkipReplicatedCsrfFilter.java:59)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:225)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:190)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:193)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1626)
+	at org.apache.nifi.web.filter.ExceptionFilter.doFilter(ExceptionFilter.java:46)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:201)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1626)
+	at org.eclipse.jetty.servlets.DoSFilter.doFilterChain(DoSFilter.java:487)
+	at org.eclipse.jetty.servlets.DoSFilter.doFilter(DoSFilter.java:336)
+	at org.eclipse.jetty.servlets.DoSFilter.doFilter(DoSFilter.java:301)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:193)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1626)
+	at org.eclipse.jetty.servlets.DoSFilter.doFilterChain(DoSFilter.java:487)
+	at org.apache.nifi.web.server.filter.DataTransferExcludedDoSFilter.doFilterChain(DataTransferExcludedDoSFilter.java:51)
+	at org.eclipse.jetty.servlets.DoSFilter.doFilter(DoSFilter.java:336)
+	at org.eclipse.jetty.servlets.DoSFilter.doFilter(DoSFilter.java:301)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:193)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1626)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:193)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1626)
+	at org.apache.nifi.web.server.log.RequestAuthenticationFilter.doFilterInternal(RequestAuthenticationFilter.java:59)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:193)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1626)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:552)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:600)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1440)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:505)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1355)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:772)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:191)
+	at org.eclipse.jetty.server.handler.HandlerList.handle(HandlerList.java:59)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:516)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:487)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:732)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:479)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ssl.SslConnection$DecryptedEndPoint.onFillable(SslConnection.java:555)
+	at org.eclipse.jetty.io.ssl.SslConnection.onFillable(SslConnection.java:410)
+	at org.eclipse.jetty.io.ssl.SslConnection$2.succeeded(SslConnection.java:164)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: org.apache.nifi.authentication.exception.InvalidLoginCredentialsException: Username verification failed
+	at org.apache.nifi.authentication.single.user.SingleUserLoginIdentityProvider.authenticate(SingleUserLoginIdentityProvider.java:89)
+	at org.apache.nifi.web.security.spring.LoginIdentityProviderFactoryBean$1.authenticate(LoginIdentityProviderFactoryBean.java:343)
+	at org.apache.nifi.web.api.AccessResource.createAccessToken(AccessResource.java:422)
+	... 121 common frames omitted
+2026-01-14 10:51:24,807 INFO [NiFi Web Server-26] o.a.n.w.a.c.IllegalArgumentExceptionMapper java.lang.IllegalArgumentException: The supplied username and password are not valid.}. Returning Bad Request} response.
+java.lang.IllegalArgumentException: The supplied username and password are not valid.
+	at org.apache.nifi.web.api.AccessResource.createAccessToken(AccessResource.java:430)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:134)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:177)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:176)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:81)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:475)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:397)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:81)
+	at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:255)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:234)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:684)
+	at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:394)
+	at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:346)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:358)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:311)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+	at org.eclipse.jetty.servlet.ServletHolder$NotAsync.service(ServletHolder.java:1459)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:799)
+	at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1656)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:352)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361)
+	at org.apache.nifi.web.security.log.AuthenticationUserFilter.doFilterInternal(AuthenticationUserFilter.java:57)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361)
+	at org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter.doFilterInternal(BearerTokenAuthenticationFilter.java:132)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361)
+	at org.apache.nifi.web.security.NiFiAuthenticationFilter.authenticate(NiFiAuthenticationFilter.java:94)
+	at org.apache.nifi.web.security.NiFiAuthenticationFilter.doFilter(NiFiAuthenticationFilter.java:56)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361)
+	at org.apache.nifi.web.security.csrf.SkipReplicatedCsrfFilter.doFilterInternal(SkipReplicatedCsrfFilter.java:59)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:225)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:190)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:193)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1626)
+	at org.apache.nifi.web.filter.ExceptionFilter.doFilter(ExceptionFilter.java:46)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:201)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1626)
+	at org.eclipse.jetty.servlets.DoSFilter.doFilterChain(DoSFilter.java:487)
+	at org.eclipse.jetty.servlets.DoSFilter.doFilter(DoSFilter.java:336)
+	at org.eclipse.jetty.servlets.DoSFilter.doFilter(DoSFilter.java:301)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:193)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1626)
+	at org.eclipse.jetty.servlets.DoSFilter.doFilterChain(DoSFilter.java:487)
+	at org.apache.nifi.web.server.filter.DataTransferExcludedDoSFilter.doFilterChain(DataTransferExcludedDoSFilter.java:51)
+	at org.eclipse.jetty.servlets.DoSFilter.doFilter(DoSFilter.java:336)
+	at org.eclipse.jetty.servlets.DoSFilter.doFilter(DoSFilter.java:301)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:193)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1626)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:193)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1626)
+	at org.apache.nifi.web.server.log.RequestAuthenticationFilter.doFilterInternal(RequestAuthenticationFilter.java:59)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:193)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1626)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:552)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:600)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1440)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:505)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1355)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:772)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:191)
+	at org.eclipse.jetty.server.handler.HandlerList.handle(HandlerList.java:59)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:516)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:487)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:732)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:479)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ssl.SslConnection$DecryptedEndPoint.onFillable(SslConnection.java:555)
+	at org.eclipse.jetty.io.ssl.SslConnection.onFillable(SslConnection.java:410)
+	at org.eclipse.jetty.io.ssl.SslConnection$2.succeeded(SslConnection.java:164)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: org.apache.nifi.authentication.exception.InvalidLoginCredentialsException: Username verification failed
+	at org.apache.nifi.authentication.single.user.SingleUserLoginIdentityProvider.authenticate(SingleUserLoginIdentityProvider.java:89)
+	at org.apache.nifi.web.security.spring.LoginIdentityProviderFactoryBean$1.authenticate(LoginIdentityProviderFactoryBean.java:343)
+	at org.apache.nifi.web.api.AccessResource.createAccessToken(AccessResource.java:422)
+	... 121 common frames omitted
+2026-01-14 11:19:18,188 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
+2026-01-14 11:19:20,131 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Wed Jan 14 11:19:20 UTC 2026
+2026-01-14 11:19:20,504 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Wed Jan 14 11:19:20 UTC 2026
+2026-01-14 11:19:20,506 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
+2026-01-14 11:51:20,021 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
+2026-01-14 11:51:22,022 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Wed Jan 14 11:51:22 UTC 2026
+2026-01-14 11:51:22,446 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Wed Jan 14 11:51:22 UTC 2026
+2026-01-14 11:51:22,448 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
+2026-01-14 12:07:32,379 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
+2026-01-14 12:07:34,795 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Wed Jan 14 12:07:34 UTC 2026
+2026-01-14 12:07:35,177 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Wed Jan 14 12:07:35 UTC 2026
+2026-01-14 12:07:35,180 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
+2026-01-14 12:49:43,143 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
+2026-01-14 12:49:44,979 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Wed Jan 14 12:49:44 UTC 2026
+2026-01-14 12:49:45,453 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Wed Jan 14 12:49:45 UTC 2026
+2026-01-14 12:49:45,456 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
+2026-01-14 14:17:59,012 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
+2026-01-14 14:18:01,188 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Wed Jan 14 14:18:01 UTC 2026
+2026-01-14 14:18:01,750 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Wed Jan 14 14:18:01 UTC 2026
+2026-01-14 14:18:01,752 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
+2026-01-14 14:57:42,347 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
+2026-01-14 14:57:44,236 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Wed Jan 14 14:57:44 UTC 2026
+2026-01-14 14:57:44,649 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Wed Jan 14 14:57:44 UTC 2026
+2026-01-14 14:57:44,651 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer

@@ -31,7 +31,12 @@ secrets/
 # ===================================
 # DATA (Fichiers volumineux)
 # ===================================
+<<<<<<< HEAD
 # data/raw/*
+=======
+machine_learning/dataset/dataset_bourse_ml.csv
+
+>>>>>>> 3c24fb5660dc98711b6b16749d746a4dcb2f6ab1
 # data/processed/*
 # data/warehouse/*
 # !data/**/.gitkeep
@@ -50,7 +55,11 @@ build/
 .venv/
 venv/
 .ENV/
+<<<<<<< HEAD
 nifi/
+=======
+
+>>>>>>> 3c24fb5660dc98711b6b16749d746a4dcb2f6ab1
 
 # ===================================
 # IDE
