@@ -1,0 +1,13 @@
+ici je vais ajouter les kpis dans le fichier syn_ch_to_mongo.py
+prmier kpi1:KPI1: Prix de clôture moyen (période courte) le fichier nommer kpi_mongodb.py:
+Évite la moyenne sur plusieurs années, Donne une tendance récente
+Le concept : Au lieu de calculer la moyenne depuis la création de l'entreprise (qui peut dater de 20 ans), on ne prend que les données récentes (par exemple depuis le 1er janvier 2024).
+L'utilité : Cela donne une image réelle de la valeur actuelle de l'action. Si le prix moyen récent est beaucoup plus haut que le prix moyen historique, l'action est dans une phase de croissance.
+Traduction technique : Dans ClickHouse, on utilise une clause WHERE avec la date. Dans MongoDB, on utilise $match.
+Filtre Temporel : Tu as maintenant une distinction nette entre le prix "historique" et le prix "récent".
+il faut juste exécuter la commande python3 nomfichier.py et aller voir les tableaux dans extension MongoDB 
+bien dans add connexion : faut ajouter localhost:27017 et chercher bourse_cache pour visualiser les donnees
+pour les voir tous il faul aller a create New plyground   et coller cette requete 
+use('bourse_cache'); db.market_summary.find().toArray(); puis run.
+pour ce kpi on ajout la fonction avgIf qui calcule la moyenne uniquement si la date est supérieure ou égale au 1er janvier 2024:
+avgIf(prix_cloture, date >= '2024-01-01') as prix_moyen_recent 

@@ -19,6 +19,7 @@ def sync_job():
         max(prix_haut) as high_24h,
         sum(volume) as volume_total,
         max(date) as derniere_maj
+        avgIf(prix_cloture, date >= '2024-01-01') as prix_moyen_recent
     FROM bourse.prices_analytics
     GROUP BY symbole
     """

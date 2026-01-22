@@ -40,7 +40,7 @@ try:
             current_sim_date = datetime(2017, 1, 1)
 
         print(f"Génération de la journée : {current_sim_date.strftime('%Y-%m-%d')}")
-        
+
         # Pour chaque journée, on traite TOUTES les entreprises
         # On peut envoyer par petits lots (ex: 50 entreprises par message) 
         # pour ne pas saturer un seul message Kafka
@@ -48,20 +48,19 @@ try:
         for i in range(0, len(SYMBOLS), batch_size):
             chunk = SYMBOLS[i:i + batch_size]
             messages_to_send = []
-            
+
             for s in chunk:
                 # Logique financière
                 drift = 0.0002
                 volatility = 0.012
                 change_pct = drift + (volatility * random.gauss(0, 1))
-                
+
                 open_price = last_prices[s]
                 close_price = open_price * (1 + change_pct)
                 high_price = max(open_price, close_price) * (1 + abs(random.gauss(0, 0.002)))
                 low_price = min(open_price, close_price) * (1 - abs(random.gauss(0, 0.002)))
 
                 record = {
-                    # "id": int(time.time() * 1000) + random.randint(0, 1000),
                     "date": current_sim_date.strftime("%Y-%m-%d"),
                     "symbol": s,
                     "open": round(open_price, 2),
@@ -73,16 +72,15 @@ try:
                 
                 messages_to_send.append(record)
                 last_prices[s] = close_price # Sauvegarde pour le jour suivant
-            
+
             # Envoi du lot de 50 entreprises à Kafka
             producer.send(TOPIC_NAME, messages_to_send)
 
-        # Une fois que les 505 entreprises sont envoyées pour cette date :
+        # Une fois que toutes les entreprises sont envoyées pour cette date :
         # On passe au jour suivant
         current_sim_date += timedelta(days=1)
-        
+
         # Pause de 10 secondes avant de générer la date suivante
-        # (Ajustez cette pause pour accélérer ou ralentir la simulation)
         time.sleep(10)
 
 except KeyboardInterrupt:

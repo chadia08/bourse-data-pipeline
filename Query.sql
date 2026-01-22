@@ -86,7 +86,7 @@ SETTINGS
     kafka_group_name = 'group_final_v5', -- Nouveau groupe pour déclencher la lecture
     kafka_format = 'JSONEachRow';
 
-CREATE MATERIALIZED VIEW bourse.prices_mv TO bourse.prices AS
+CREATE MATERIALIZED VIEW bourse.prices_mv TO bourse.prices AS 
 SELECT 
     id, 
     toDate(date) AS date, -- Conversion du String "2016-01-05" en Date
@@ -99,8 +99,8 @@ SELECT
     variation, 
     volatilite, 
     dollar_volume
-FROM bourse_kafka_queue;
-
+FROM bourse.prices_kafka_queue;
+                                            
 
 --------------------------------------------------------------------------------------------------------
 
