@@ -22,7 +22,8 @@ def sync_job():
         avgIf(prix_cloture, date >= '2024-01-01') as prix_moyen_recent,
         stddevPop(prix_cloture),                    -- KPI 2 (Volatilité Écart-type)
         avg((prix_cloture - prix_ouverture) / prix_ouverture) * 100 as variation_moyenne,
-        avg(volume) as volume_moyen_quotidien
+        avg(volume) as volume_moyen_quotidien,
+        sum(revenu_annuel) as ca_total -- <-- KPI 5 ICI (Index 7)
     FROM bourse.prices_analytics
     GROUP BY symbole
     """
@@ -53,6 +54,13 @@ def sync_job():
                 "liquidity_metrics": {
                     "avg_daily_volume": round(row[8], 0),
                     "total_volume_history": row[3]
+                },
+                # --- AJOUT DU KPI 5 ---
+                "chiffre_affaires_total": round(row[9], 2) if row[9] else 0,
+            
+                "kpi_recent": {
+                "avg_price_2024": round(row[5], 2) if row[5] else None,
+                "description": "Moyenne 2024 et CA consolidé"
                 }
             }
             

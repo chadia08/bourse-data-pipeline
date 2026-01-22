@@ -2,3 +2,15 @@
 2026-01-22 00:17:02,795 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Thu Jan 22 00:17:02 UTC 2026
 2026-01-22 00:17:03,283 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Thu Jan 22 00:17:03 UTC 2026
 2026-01-22 00:17:03,286 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
+2026-01-22 10:16:14,908 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
+2026-01-22 10:16:16,931 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Thu Jan 22 10:16:16 UTC 2026
+2026-01-22 10:16:17,358 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Thu Jan 22 10:16:17 UTC 2026
+2026-01-22 10:16:17,360 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
+2026-01-22 11:07:23,765 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
+2026-01-22 11:07:28,790 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Thu Jan 22 11:07:28 UTC 2026
+2026-01-22 11:07:29,768 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Thu Jan 22 11:07:29 UTC 2026
+2026-01-22 11:07:29,771 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
+2026-01-22 11:39:12,133 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
+2026-01-22 11:39:14,340 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Thu Jan 22 11:39:14 UTC 2026
+2026-01-22 11:39:14,883 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Thu Jan 22 11:39:14 UTC 2026
+2026-01-22 11:39:14,886 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer

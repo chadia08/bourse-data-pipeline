@@ -144,3 +144,20 @@ resultat : },
     "total_volume_history": 37616400
   }
 }
+
+KPI 5 — Chiffre d'Affaires YoY  (Year-over-Year)  pour ton script.
+1. Explication Bref : Pourquoi le Revenu YoY ?
+Croissance : Il compare la performance financière d'une année sur l'autre (Year-over-Year).
+Santé financière : Un chiffre d'affaires qui augmente est le signe principal d'une entreprise qui gagne des parts de marché.
+Pour ton projet : C'est un indicateur de "Fondamentaux" qui complète tes indicateurs "Temps réel" (prix et volume).
+# --- DANS LA QUERY (AJOUT DE SUM(revenue)) ---
+    # Note : On suppose que ta table 'prices' a été jointe ou contient le 'revenue'
+    # Sinon, on le calcule sur la table des fondamentaux.
+    ajouter ceci au code en bas : },
+                # --- AJOUT DU KPI 5 ---
+                "chiffre_affaires_total": round(row[9], 2) if row[9] else 0,
+            
+                "kpi_recent": {
+                "avg_price_2024": round(row[5], 2) if row[5] else None,
+                "description": "Moyenne 2024 et CA consolidé"
+                }
