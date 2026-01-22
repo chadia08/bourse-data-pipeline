@@ -11,3 +11,52 @@ pour les voir tous il faul aller a create New plyground   et coller cette requet
 use('bourse_cache'); db.market_summary.find().toArray(); puis run.
 pour ce kpi on ajout la fonction avgIf qui calcule la moyenne uniquement si la date est supérieure ou égale au 1er janvier 2024:
 avgIf(prix_cloture, date >= '2024-01-01') as prix_moyen_recent 
+
+KPI 2 — Volatilité (écart-type):
+Indispensable pour trading  : Mesure le risque réel
+Mesure du risque : Elle indique si le prix d'une action "saute" beaucoup ou s'il est stable. Un écart-type élevé signifie une action risquée et instable.
+Complément de la moyenne : La moyenne (KPI 1) donne la direction, mais la volatilité donne la nervosité du marché.
+Utilité ML : C'est une donnée cruciale pour ton futur
+-Modification du script (Ajout propre)
+l'ajouter sans rien modifier à ta configuration, on enrichit simplement la requête SQL dans ClickHouse (qui possède la fonction stddevPop) et on ajoute le champ dans ton dictionnaire.
+Excellent choix. L'écart-type (Standard Deviation) est le KPI fondamental pour mesurer le risque. Plus l'écart-type est élevé, plus l'action est risquée et imprévisible.
+
+Dans ClickHouse, l'équivalent de $stdDevPop est la fonction stddevPop().
+Modifie ta variable query pour inclure la fonction d'écart-type:
+query = """
+    SELECT 
+        symbole, 
+        avg(prix_cloture) as prix_moyen,
+        max(prix_haut) as high_24h,
+        sum(volume) as volume_total,
+        max(date) as derniere_maj,
+        avgIf(prix_cloture, date >= '2024-01-01'), -- KPI 1 (Moyenne récente)
+        stddevPop(prix_cloture)                    -- KPI 2 (Volatilité Écart-type)
+    FROM bourse.prices_analytics
+    GROUP BY symbole
+    et apres:stats_doc = {
+                "ticker": row[0],
+                "avg_price_global": round(row[1], 2),
+                "day_high": row[2],
+                "total_volume": row[3],
+                "timestamp": str(row[4]),
+                "avg_price_recent": round(row[5], 2) if row[5] else None,
+                # Nouveau KPI : Volatilité (Écart-type)
+                "risk_metrics": {
+                    "volatility_std_dev": round(row[6], 3) if row[6] else 0,
+                    "description": "Écart-type de la population des prix de clôture"
+                }
+            }
+  le resultat pour ce kpi  volatility:  },
+  "ticker": "DAL",
+  "avg_price": 12.76,
+  "day_high": 13.73,
+  "total_volume": 357135600,
+  "timestamp": "2010-02-02",
+  "avg_price_recent": {
+    "$numberDouble": "NaN"
+  },
+  "risk_metrics": {
+    "volatility_std_dev": 0.523,
+    "description": "Écart-type de la population des prix de clôture"
+  }        

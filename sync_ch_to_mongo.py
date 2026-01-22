@@ -18,8 +18,9 @@ def sync_job():
         avg(prix_cloture) as prix_moyen,
         max(prix_haut) as high_24h,
         sum(volume) as volume_total,
-        max(date) as derniere_maj
-        avgIf(prix_cloture, date >= '2024-01-01') as prix_moyen_recent
+        max(date) as derniere_maj,
+        avgIf(prix_cloture, date >= '2024-01-01') as prix_moyen_recent,
+        stddevPop(prix_cloture)                    -- KPI 2 (Volatilité Écart-type)
     FROM bourse.prices_analytics
     GROUP BY symbole
     """
@@ -34,8 +35,15 @@ def sync_job():
                 "avg_price": round(row[1], 2),
                 "day_high": row[2],
                 "total_volume": row[3],
-                "timestamp": str(row[4])
+                "timestamp": str(row[4]),
+                "avg_price_recent": round(row[5], 2) if row[5] else None,
+                # Nouveau KPI : Volatilité (Écart-type)
+                "risk_metrics": {
+                    "volatility_std_dev": round(row[6], 3) if row[6] else 0,
+                    "description": "Écart-type de la population des prix de clôture"
+                }
             }
+            
             
             # Upsert : si le symbole existe on met à jour, sinon on crée
             col_stats.replace_one({"ticker": row[0]}, stats_doc, upsert=True)
