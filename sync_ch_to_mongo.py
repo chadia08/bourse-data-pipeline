@@ -21,7 +21,8 @@ def sync_job():
         max(date) as derniere_maj,
         avgIf(prix_cloture, date >= '2024-01-01') as prix_moyen_recent,
         stddevPop(prix_cloture),                    -- KPI 2 (Volatilité Écart-type)
-        avg((prix_cloture - prix_ouverture) / prix_ouverture) * 100 as variation_moyenne
+        avg((prix_cloture - prix_ouverture) / prix_ouverture) * 100 as variation_moyenne,
+        avg(volume) as volume_moyen_quotidien
     FROM bourse.prices_analytics
     GROUP BY symbole
     """
@@ -47,6 +48,11 @@ def sync_job():
                 "performance_metrics": {
                     "avg_daily_change_pct": round(row[7], 2) if row[7] else 0,
                     "status": "POSITIVE" if row[7] and row[7] > 0 else "NEGATIVE"
+                },
+                # AJOUT DU KPI 4
+                "liquidity_metrics": {
+                    "avg_daily_volume": round(row[8], 0),
+                    "total_volume_history": row[3]
                 }
             }
             

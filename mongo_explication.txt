@@ -101,3 +101,46 @@ resultat :  },
     "status": "POSITIVE"
   }
 }
+Explication du KPI 4 : Volume moyen échangé
+Le volume moyen est un indicateur de liquidité.
+
+L'objectif : Savoir combien de titres sont échangés en moyenne chaque jour pour une action donnée.
+
+Pourquoi c'est important ? Une action avec un volume moyen très élevé est facile à acheter ou vendre sans faire bouger son prix. Une action à faible volume est dite "illiquide" et plus risquée.
+
+La logique : On fait simplement la moyenne de la colonne volume pour chaque symbole.
+Modification de la requête SQL (query)
+On ajoute avg(volume) à la fin de notre sélection
+Mise à jour du dictionnaire stats_doc
+Le volume moyen se trouve maintenant à l'index row[8]. On va l'ajouter dans une nouvelle section:# AJOUT DU KPI 4
+                "liquidity_metrics": {
+                    "avg_daily_volume": round(row[8], 0),
+                    "total_volume_history": row[3]
+                }
+resultat on cherche le bloc liquidity_metrics.
+
+Pour DAL, tu devrais voir un avg_daily_volume aux alentours de plusieurs millions.
+
+Si avg_daily_volume est presque égal à total_volume_history, cela signifie que tu n'as qu'un seul jour de données pour cette action.
+resultat : },
+  "ticker": "HRL",
+  "avg_price": 38.61,
+  "day_high": 39.66,
+  "total_volume": 37616400,
+  "timestamp": "2010-02-02",
+  "avg_price_recent": {
+    "$numberDouble": "NaN"
+  },
+  "risk_metrics": {
+    "volatility_std_dev": 0.35,
+    "description": "Écart-type de la population des prix de clôture"
+  },
+  "performance_metrics": {
+    "avg_daily_change_pct": 0.12,
+    "status": "POSITIVE"
+  },
+  "liquidity_metrics": {
+    "avg_daily_volume": 1791257,
+    "total_volume_history": 37616400
+  }
+}
