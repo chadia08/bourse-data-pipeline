@@ -20,7 +20,8 @@ def sync_job():
         sum(volume) as volume_total,
         max(date) as derniere_maj,
         avgIf(prix_cloture, date >= '2024-01-01') as prix_moyen_recent,
-        stddevPop(prix_cloture)                    -- KPI 2 (Volatilité Écart-type)
+        stddevPop(prix_cloture),                    -- KPI 2 (Volatilité Écart-type)
+        avg((prix_cloture - prix_ouverture) / prix_ouverture) * 100 as variation_moyenne
     FROM bourse.prices_analytics
     GROUP BY symbole
     """
@@ -41,6 +42,11 @@ def sync_job():
                 "risk_metrics": {
                     "volatility_std_dev": round(row[6], 3) if row[6] else 0,
                     "description": "Écart-type de la population des prix de clôture"
+                },
+                # AJOUT DU KPI 3
+                "performance_metrics": {
+                    "avg_daily_change_pct": round(row[7], 2) if row[7] else 0,
+                    "status": "POSITIVE" if row[7] and row[7] > 0 else "NEGATIVE"
                 }
             }
             

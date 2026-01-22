@@ -60,3 +60,44 @@ query = """
     "volatility_std_dev": 0.523,
     "description": "Écart-type de la population des prix de clôture"
   }        
+ KPI 3 — Variation journalière (%)
+db.prices.aggregate([ { $project: { symbol: 1, daily_change_pct: { $multiply: [ {
+$divide: [{ $subtract: ["$close", "$open"] }, "$open"] }, 100 ] } } } ]):
+Explication du KPI 3 : Variation Journalière (%)
+Ce KPI mesure la performance d'une action entre l'ouverture et la clôture du marché sur une même journée.
+
+L'objectif : Identifier si l'action a gagné ou perdu de la valeur durant la séance.
+
+La logique : On calcule l'écart entre le prix final (close) et le prix de départ (open), puis on le ramène en pourcentage par rapport au prix de départ.
+
+Interprétation : * Positif (+) : L'action a progressé (Hausse).
+
+Négatif (-) : L'action a chuté (Baisse).
+Modification de la requête SQL (query)
+Dans ClickHouse, on peut calculer la variation moyenne journalière sur toute la période :
+avg((prix_cloture - prix_ouverture) / prix_ouverture) * 100 as variation_moyenne
+Le nouveau KPI se trouve à l'index row[7] :
+# AJOUT DU KPI 3
+                "performance_metrics": {
+                    "avg_daily_change_pct": round(row[7], 2) if row[7] else 0,
+                    "status": "POSITIVE" if row[7] and row[7] > 0 else "NEGATIVE"
+                }
+Une nouvelle section performance_metrics apparaîtra. Par exemple, pour DAL, si tu vois 0.45, cela signifie qu'en moyenne, l'action gagne 0.45% entre l'ouverture et la clôture chaque jour.
+resultat :  },
+  "ticker": "CTXS",
+  "avg_price": 42.54,
+  "day_high": 44.01,
+  "total_volume": 70605400,
+  "timestamp": "2010-02-02",
+  "avg_price_recent": {
+    "$numberDouble": "NaN"
+  },
+  "risk_metrics": {
+    "volatility_std_dev": 0.686,
+    "description": "Écart-type de la population des prix de clôture"
+  },
+  "performance_metrics": {
+    "avg_daily_change_pct": 0.17,
+    "status": "POSITIVE"
+  }
+}
