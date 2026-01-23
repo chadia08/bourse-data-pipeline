@@ -3,3 +3,14 @@ requests
 kafka-python
 clickhouse-connect
 pandas
+<<<<<<< HEAD
+=======
+clickhouse_driver
+pymongo
+streamlit
+atlasclient
+fastapi
+uvicorn
+python-dotenv
+pydantic
+>>>>>>> 3c24fb5660dc98711b6b16749d746a4dcb2f6ab1

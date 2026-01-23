@@ -1,42 +1,16 @@
-<<<<<<< HEAD
-2026-01-04 21:27:21,562 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
-2026-01-04 21:27:23,053 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Sun Jan 04 21:27:23 UTC 2026
-2026-01-04 21:27:23,439 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Sun Jan 04 21:27:23 UTC 2026
-2026-01-04 21:27:23,441 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
-2026-01-05 08:29:26,845 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
-2026-01-05 08:29:27,839 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Mon Jan 05 08:29:27 UTC 2026
-2026-01-05 08:29:30,265 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Mon Jan 05 08:29:30 UTC 2026
-2026-01-05 08:29:30,275 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
-2026-01-06 12:42:08,132 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
-2026-01-06 12:42:08,501 INFO [main] o.a.n.a.FileUserGroupProvider Creating new users file at /opt/nifi/nifi-current/./conf/users.xml
-2026-01-06 12:42:08,529 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Tue Jan 06 12:42:08 UTC 2026
-2026-01-06 12:42:08,531 INFO [main] o.a.n.a.FileAccessPolicyProvider Creating new authorizations file at /opt/nifi/nifi-current/./conf/authorizations.xml
-2026-01-06 12:42:08,571 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Tue Jan 06 12:42:08 UTC 2026
-2026-01-06 12:42:08,576 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
-2026-01-06 13:30:23,602 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
-2026-01-06 13:30:23,936 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Tue Jan 06 13:30:23 UTC 2026
-2026-01-06 13:30:24,592 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Tue Jan 06 13:30:24 UTC 2026
-2026-01-06 13:30:24,596 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
-2026-01-06 14:05:45,309 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
-2026-01-06 14:05:45,684 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Tue Jan 06 14:05:45 UTC 2026
-2026-01-06 14:05:46,445 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Tue Jan 06 14:05:46 UTC 2026
-2026-01-06 14:05:46,456 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
-2026-01-06 14:23:36,226 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
-2026-01-06 14:23:36,543 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Tue Jan 06 14:23:36 UTC 2026
-2026-01-06 14:23:37,719 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Tue Jan 06 14:23:37 UTC 2026
-2026-01-06 14:23:37,721 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
-=======
-2026-01-06 08:06:24,144 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
-2026-01-06 08:06:24,577 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Tue Jan 06 08:06:24 UTC 2026
-2026-01-06 08:06:25,712 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Tue Jan 06 08:06:25 UTC 2026
-2026-01-06 08:06:25,718 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
-2026-01-06 14:17:35,575 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
-2026-01-06 14:17:36,169 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Tue Jan 06 14:17:36 UTC 2026
-2026-01-06 14:17:38,387 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Tue Jan 06 14:17:38 UTC 2026
-2026-01-06 14:17:38,396 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
-2026-01-06 14:19:24,825 INFO [NiFi Web Server-83] o.a.n.w.a.c.IllegalArgumentExceptionMapper java.lang.IllegalArgumentException: The username and password must be specified.}. Returning Bad Request} response.
-java.lang.IllegalArgumentException: The username and password must be specified.
-	at org.apache.nifi.web.api.AccessResource.createAccessToken(AccessResource.java:417)
+2026-01-23 07:26:21,460 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
+2026-01-23 07:26:21,785 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Fri Jan 23 07:26:21 UTC 2026
+2026-01-23 07:26:22,653 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Fri Jan 23 07:26:22 UTC 2026
+2026-01-23 07:26:22,659 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
+2026-01-23 08:06:30,595 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
+2026-01-23 08:06:31,075 INFO [main] o.a.n.a.FileUserGroupProvider Creating new users file at /opt/nifi/nifi-current/./conf/users.xml
+2026-01-23 08:06:31,128 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Fri Jan 23 08:06:31 UTC 2026
+2026-01-23 08:06:31,130 INFO [main] o.a.n.a.FileAccessPolicyProvider Creating new authorizations file at /opt/nifi/nifi-current/./conf/authorizations.xml
+2026-01-23 08:06:31,304 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Fri Jan 23 08:06:31 UTC 2026
+2026-01-23 08:06:31,319 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
+2026-01-23 16:30:16,579 INFO [NiFi Web Server-408] o.a.n.w.a.c.IllegalArgumentExceptionMapper java.lang.IllegalArgumentException: The supplied username and password are not valid.}. Returning Bad Request} response.
+java.lang.IllegalArgumentException: The supplied username and password are not valid.
+	at org.apache.nifi.web.api.AccessResource.createAccessToken(AccessResource.java:430)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -158,4 +132,8 @@ java.lang.IllegalArgumentException: The username and password must be specified.
 	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
 	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
 	at java.base/java.lang.Thread.run(Unknown Source)
->>>>>>> e9d93b2380bf1fe22ddb6da19d394891a337947b
+Caused by: org.apache.nifi.authentication.exception.InvalidLoginCredentialsException: Password verification failed
+	at org.apache.nifi.authentication.single.user.SingleUserLoginIdentityProvider.authenticate(SingleUserLoginIdentityProvider.java:92)
+	at org.apache.nifi.web.security.spring.LoginIdentityProviderFactoryBean$1.authenticate(LoginIdentityProviderFactoryBean.java:343)
+	at org.apache.nifi.web.api.AccessResource.createAccessToken(AccessResource.java:422)
+	... 121 common frames omitted

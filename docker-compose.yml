@@ -7,126 +7,39 @@ networks:
 volumes:
   zookeeper_data:
   kafka_data:
-<<<<<<< HEAD
-  clickhouse_data:
-  nifi_database:
-  nifi_flowfile:
-  nifi_content:
-  nifi_provenance:
-  nifi_state:
-  atlas_data:
-
-services:
-
-  # =====================
-  # ZOOKEEPER
-  # =====================
-=======
   nifi_data:
   clickhouse_data:
-  atlas_data:
+  marquez_db:
   mongo_data:
 
 services:
->>>>>>> ffae8b3a8bfdb0b58228502562d6abc42f4fb29e
   zookeeper:
     image: confluentinc/cp-zookeeper:7.6.1
     container_name: zookeeper
     hostname: zookeeper
-<<<<<<< HEAD
-    networks: [bourse_network]
-    ports: ["2181:2181"]
-=======
     networks:
       - bourse_network
     ports:
       - "2181:2181"
->>>>>>> ffae8b3a8bfdb0b58228502562d6abc42f4fb29e
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
     volumes:
       - zookeeper_data:/var/lib/zookeeper/data
 
-<<<<<<< HEAD
-  # =====================
-  # KAFKA
-  # =====================
-=======
->>>>>>> ffae8b3a8bfdb0b58228502562d6abc42f4fb29e
   kafka:
     image: confluentinc/cp-kafka:7.6.1
     container_name: kafka
     hostname: kafka
-<<<<<<< HEAD
-    depends_on: [zookeeper]
-    networks: [bourse_network]
-    ports:
-      - "29092:29092"
-=======
     depends_on:
       - zookeeper
     networks:
       - bourse_network
     ports:
->>>>>>> ffae8b3a8bfdb0b58228502562d6abc42f4fb29e
       - "9092:9092"
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-<<<<<<< HEAD
-      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:29092,PLAINTEXT_HOST://0.0.0.0:9092
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:29092,PLAINTEXT_HOST://localhost:9092
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
-      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
-      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
-    volumes:
-      - kafka_data:/var/lib/kafka/data
-
-  # =====================
-  # NIFI
-  # =====================
-  nifi:
-    image: apache/nifi:1.20.0
-    container_name: nifi
-    hostname: nifi
-    depends_on: [kafka]
-    networks: [bourse_network]
-    ports: ["8443:8443"]
-    environment:
-      SINGLE_USER_CREDENTIALS_USERNAME: admin
-      SINGLE_USER_CREDENTIALS_PASSWORD: Admin123456!
-      NIFI_WEB_HTTPS_PORT: 8443
-      NIFI_JVM_HEAP_INIT: 2g
-      NIFI_JVM_HEAP_MAX: 4g
-    volumes:
-      - ./Data/Raw:/opt/nifi/data/raw
-      - nifi_database:/opt/nifi/nifi-current/database_repository
-      - nifi_flowfile:/opt/nifi/nifi-current/flowfile_repository
-      - nifi_content:/opt/nifi/nifi-current/content_repository
-      - nifi_provenance:/opt/nifi/nifi-current/provenance_repository
-      - nifi_state:/opt/nifi/nifi-current/state
-
-  # =====================
-  # CLICKHOUSE
-  # =====================
-  clickhouse:
-    image: clickhouse/clickhouse-server:24.3
-    container_name: clickhouse
-    hostname: clickhouse
-    networks: [bourse_network]
-    ports:
-      - "8123:8123"
-      - "9000:9000"
-    environment:
-      CLICKHOUSE_DB: bourse
-      CLICKHOUSE_USER: default
-      CLICKHOUSE_PASSWORD: admin
-    volumes:
-      - clickhouse_data:/var/lib/clickhouse
-
-  
-=======
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092,PLAINTEXT_INTERNAL://kafka:29092
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_INTERNAL:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
@@ -189,19 +102,55 @@ services:
         soft: 262144
         hard: 262144
 
-  # atlas:
-  #   image: sburn/apache-atlas:latest
-  #   container_name: atlas
-  #   hostname: atlas
-  #   networks:
-  #     - bourse_network
-  #   ports:
-  #     - "21000:21000"
-  #   environment:
-  #     - MANAGE_LOCAL_HBASE=true
-  #     - MANAGE_LOCAL_SOLR=true
-  #   volumes:
-  #     - atlas_data:/opt/apache-atlas-2.1.0/data
+  
+  
+  # Base de données pour Marquez
+  marquez-db:
+    image: postgres:13
+    container_name: marquez-db
+    environment:
+      POSTGRES_USER: marquez
+      POSTGRES_PASSWORD: marquez
+      POSTGRES_DB: marquez
+    ports:
+      - "5432:5432"
+    volumes:
+      - marquez_db:/var/lib/postgresql/data
+    networks:
+      - bourse_network
+
+  marquez:
+    image: marquezproject/marquez:latest
+    container_name: marquez
+    depends_on:
+      - marquez-db
+    environment:
+      POSTGRES_HOST: marquez-db
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: marquez
+      POSTGRES_USER: marquez
+      POSTGRES_PASSWORD: marquez
+      MARQUEZ_PORT: 5002
+    ports:
+      - "5002:5002"
+    networks:
+      - bourse_network
+
+  marquez-web:
+    image: marquezproject/marquez-web:latest
+    container_name: marquez-web
+    depends_on:
+      - marquez
+    environment:
+      MARQUEZ_HOST: marquez
+      MARQUEZ_PORT: 5002
+      WEB_PORT: 3000
+    ports:
+      - "3000:3000"
+    networks:
+      - bourse_network
+
+
 
   mongodb:
     image: mongo:latest
@@ -266,6 +215,3 @@ services:
   #     - ./clickhouse-jdbc-0.6.5-all.jar:/usr/lib/trino/plugin/clickhouse/clickhouse-jdbc-0.6.5-all.jar
   #   networks:
   #     - bourse_network
-  
- 
->>>>>>> ffae8b3a8bfdb0b58228502562d6abc42f4fb29e
