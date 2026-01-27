@@ -1,0 +1,150 @@
+{"symbol": "MMM", "company_name": "3M", "sector": "Industrials", "updated_at": "2026-01-15T11:45:46.053143"}
+{"symbol": "AOS", "company_name": "A. O. Smith", "sector": "Industrials", "updated_at": "2026-01-15T11:45:46.053292"}
+{"symbol": "ABT", "company_name": "Abbott Laboratories", "sector": "Health Care", "updated_at": "2026-01-15T11:45:46.053382"}
+{"symbol": "ABBV", "company_name": "AbbVie", "sector": "Health Care", "updated_at": "2026-01-15T11:45:46.053465"}
+{"symbol": "ACN", "company_name": "Accenture", "sector": "Information Technology", "updated_at": "2026-01-15T11:45:46.053545"}
+{"symbol": "ADBE", "company_name": "Adobe Inc.", "sector": "Information Technology", "updated_at": "2026-01-15T11:45:46.053642"}
+{"symbol": "AMD", "company_name": "Advanced Micro Devices", "sector": "Information Technology", "updated_at": "2026-01-15T11:45:46.053722"}
+{"symbol": "AES", "company_name": "AES Corporation", "sector": "Utilities", "updated_at": "2026-01-15T11:45:46.053798"}
+{"symbol": "AFL", "company_name": "Aflac", "sector": "Financials", "updated_at": "2026-01-15T11:45:46.053873"}
+{"symbol": "A", "company_name": "Agilent Technologies", "sector": "Health Care", "updated_at": "2026-01-15T11:45:46.053948"}
+{"symbol": "APD", "company_name": "Air Products", "sector": "Materials", "updated_at": "2026-01-15T11:45:46.054022"}
+{"symbol": "ABNB", "company_name": "Airbnb", "sector": "Consumer Discretionary", "updated_at": "2026-01-15T11:45:46.054097"}
+{"symbol": "AKAM", "company_name": "Akamai Technologies", "sector": "Information Technology", "updated_at": "2026-01-15T11:45:46.054172"}
+{"symbol": "ALB", "company_name": "Albemarle Corporation", "sector": "Materials", "updated_at": "2026-01-15T11:45:46.054247"}
+{"symbol": "ARE", "company_name": "Alexandria Real Estate Equities", "sector": "Real Estate", "updated_at": "2026-01-15T11:45:46.054351"}
+{"symbol": "ALGN", "company_name": "Align Technology", "sector": "Health Care", "updated_at": "2026-01-15T11:45:46.054449"}
+{"symbol": "ALLE", "company_name": "Allegion", "sector": "Industrials", "updated_at": "2026-01-15T11:45:46.054565"}
+{"symbol": "LNT", "company_name": "Alliant Energy", "sector": "Utilities", "updated_at": "2026-01-15T11:45:46.054690"}
+{"symbol": "ALL", "company_name": "Allstate", "sector": "Financials", "updated_at": "2026-01-15T11:45:46.054792"}
+{"symbol": "GOOGL", "company_name": "Alphabet Inc. (Class A)", "sector": "Communication Services", "updated_at": "2026-01-15T11:45:46.054909"}
+{"symbol": "GOOG", "company_name": "Alphabet Inc. (Class C)", "sector": "Communication Services", "updated_at": "2026-01-15T11:45:46.055032"}
+{"symbol": "MO", "company_name": "Altria", "sector": "Consumer Staples", "updated_at": "2026-01-15T11:45:46.055135"}
+{"symbol": "AMZN", "company_name": "Amazon", "sector": "Consumer Discretionary", "updated_at": "2026-01-15T11:45:46.055235"}
+{"symbol": "AMCR", "company_name": "Amcor", "sector": "Materials", "updated_at": "2026-01-15T11:45:46.055334"}
+{"symbol": "AEE", "company_name": "Ameren", "sector": "Utilities", "updated_at": "2026-01-15T11:45:46.055433"}
+{"symbol": "AEP", "company_name": "American Electric Power", "sector": "Utilities", "updated_at": "2026-01-15T11:45:46.055531"}
+{"symbol": "AXP", "company_name": "American Express", "sector": "Financials", "updated_at": "2026-01-15T11:45:46.055651"}
+{"symbol": "AIG", "company_name": "American International Group", "sector": "Financials", "updated_at": "2026-01-15T11:45:46.055755"}
+{"symbol": "AMT", "company_name": "American Tower", "sector": "Real Estate", "updated_at": "2026-01-15T11:45:46.055861"}
+{"symbol": "AWK", "company_name": "American Water Works", "sector": "Utilities", "updated_at": "2026-01-15T11:45:46.055961"}
+{"symbol": "AMP", "company_name": "Ameriprise Financial", "sector": "Financials", "updated_at": "2026-01-15T11:45:46.056060"}
+{"symbol": "AME", "company_name": "Ametek", "sector": "Industrials", "updated_at": "2026-01-15T11:45:46.056158"}
+{"symbol": "AMGN", "company_name": "Amgen", "sector": "Health Care", "updated_at": "2026-01-15T11:45:46.056255"}
+{"symbol": "APH", "company_name": "Amphenol", "sector": "Information Technology", "updated_at": "2026-01-15T11:45:46.056353"}
+{"symbol": "ADI", "company_name": "Analog Devices", "sector": "Information Technology", "updated_at": "2026-01-15T11:45:46.056450"}
+{"symbol": "AON", "company_name": "Aon plc", "sector": "Financials", "updated_at": "2026-01-15T11:45:46.056547"}
+{"symbol": "APA", "company_name": "APA Corporation", "sector": "Energy", "updated_at": "2026-01-15T11:45:46.056666"}
+{"symbol": "APO", "company_name": "Apollo Global Management", "sector": "Financials", "updated_at": "2026-01-15T11:45:46.056770"}
+{"symbol": "AAPL", "company_name": "Apple Inc.", "sector": "Information Technology", "updated_at": "2026-01-15T11:45:46.056868"}
+{"symbol": "AMAT", "company_name": "Applied Materials", "sector": "Information Technology", "updated_at": "2026-01-15T11:45:46.056967"}
+{"symbol": "APP", "company_name": "AppLovin", "sector": "Information Technology", "updated_at": "2026-01-15T11:45:46.057065"}
+{"symbol": "APTV", "company_name": "Aptiv", "sector": "Consumer Discretionary", "updated_at": "2026-01-15T11:45:46.057163"}
+{"symbol": "ACGL", "company_name": "Arch Capital Group", "sector": "Financials", "updated_at": "2026-01-15T11:45:46.057262"}
+{"symbol": "ADM", "company_name": "Archer Daniels Midland", "sector": "Consumer Staples", "updated_at": "2026-01-15T11:45:46.057361"}
+{"symbol": "ARES", "company_name": "Ares Management", "sector": "Financials", "updated_at": "2026-01-15T11:45:46.057471"}
+{"symbol": "ANET", "company_name": "Arista Networks", "sector": "Information Technology", "updated_at": "2026-01-15T11:45:46.057569"}
+{"symbol": "AJG", "company_name": "Arthur J. Gallagher & Co.", "sector": "Financials", "updated_at": "2026-01-15T11:45:46.057683"}
+{"symbol": "AIZ", "company_name": "Assurant", "sector": "Financials", "updated_at": "2026-01-15T11:45:46.057783"}
+{"symbol": "T", "company_name": "AT&T", "sector": "Communication Services", "updated_at": "2026-01-15T11:45:46.057882"}
+{"symbol": "ATO", "company_name": "Atmos Energy", "sector": "Utilities", "updated_at": "2026-01-15T11:45:46.057980"}
+{"symbol": "MMM", "company_name": "3M", "sector": "Industrials", "updated_at": "2026-01-15T11:57:01.594762"}
+{"symbol": "AOS", "company_name": "A. O. Smith", "sector": "Industrials", "updated_at": "2026-01-15T11:57:01.594921"}
+{"symbol": "ABT", "company_name": "Abbott Laboratories", "sector": "Health Care", "updated_at": "2026-01-15T11:57:01.595010"}
+{"symbol": "ABBV", "company_name": "AbbVie", "sector": "Health Care", "updated_at": "2026-01-15T11:57:01.595090"}
+{"symbol": "ACN", "company_name": "Accenture", "sector": "Information Technology", "updated_at": "2026-01-15T11:57:01.595175"}
+{"symbol": "ADBE", "company_name": "Adobe Inc.", "sector": "Information Technology", "updated_at": "2026-01-15T11:57:01.595272"}
+{"symbol": "AMD", "company_name": "Advanced Micro Devices", "sector": "Information Technology", "updated_at": "2026-01-15T11:57:01.595351"}
+{"symbol": "AES", "company_name": "AES Corporation", "sector": "Utilities", "updated_at": "2026-01-15T11:57:01.595426"}
+{"symbol": "AFL", "company_name": "Aflac", "sector": "Financials", "updated_at": "2026-01-15T11:57:01.595534"}
+{"symbol": "A", "company_name": "Agilent Technologies", "sector": "Health Care", "updated_at": "2026-01-15T11:57:01.595635"}
+{"symbol": "APD", "company_name": "Air Products", "sector": "Materials", "updated_at": "2026-01-15T11:57:01.595713"}
+{"symbol": "ABNB", "company_name": "Airbnb", "sector": "Consumer Discretionary", "updated_at": "2026-01-15T11:57:01.595787"}
+{"symbol": "AKAM", "company_name": "Akamai Technologies", "sector": "Information Technology", "updated_at": "2026-01-15T11:57:01.595861"}
+{"symbol": "ALB", "company_name": "Albemarle Corporation", "sector": "Materials", "updated_at": "2026-01-15T11:57:01.595946"}
+{"symbol": "ARE", "company_name": "Alexandria Real Estate Equities", "sector": "Real Estate", "updated_at": "2026-01-15T11:57:01.596041"}
+{"symbol": "ALGN", "company_name": "Align Technology", "sector": "Health Care", "updated_at": "2026-01-15T11:57:01.596135"}
+{"symbol": "ALLE", "company_name": "Allegion", "sector": "Industrials", "updated_at": "2026-01-15T11:57:01.596209"}
+{"symbol": "LNT", "company_name": "Alliant Energy", "sector": "Utilities", "updated_at": "2026-01-15T11:57:01.596282"}
+{"symbol": "ALL", "company_name": "Allstate", "sector": "Financials", "updated_at": "2026-01-15T11:57:01.596354"}
+{"symbol": "GOOGL", "company_name": "Alphabet Inc. (Class A)", "sector": "Communication Services", "updated_at": "2026-01-15T11:57:01.596426"}
+{"symbol": "GOOG", "company_name": "Alphabet Inc. (Class C)", "sector": "Communication Services", "updated_at": "2026-01-15T11:57:01.596498"}
+{"symbol": "MO", "company_name": "Altria", "sector": "Consumer Staples", "updated_at": "2026-01-15T11:57:01.596571"}
+{"symbol": "AMZN", "company_name": "Amazon", "sector": "Consumer Discretionary", "updated_at": "2026-01-15T11:57:01.596663"}
+{"symbol": "AMCR", "company_name": "Amcor", "sector": "Materials", "updated_at": "2026-01-15T11:57:01.596738"}
+{"symbol": "AEE", "company_name": "Ameren", "sector": "Utilities", "updated_at": "2026-01-15T11:57:01.596811"}
+{"symbol": "AEP", "company_name": "American Electric Power", "sector": "Utilities", "updated_at": "2026-01-15T11:57:01.596883"}
+{"symbol": "AXP", "company_name": "American Express", "sector": "Financials", "updated_at": "2026-01-15T11:57:01.596955"}
+{"symbol": "AIG", "company_name": "American International Group", "sector": "Financials", "updated_at": "2026-01-15T11:57:01.597028"}
+{"symbol": "AMT", "company_name": "American Tower", "sector": "Real Estate", "updated_at": "2026-01-15T11:57:01.597125"}
+{"symbol": "AWK", "company_name": "American Water Works", "sector": "Utilities", "updated_at": "2026-01-15T11:57:01.597239"}
+{"symbol": "AMP", "company_name": "Ameriprise Financial", "sector": "Financials", "updated_at": "2026-01-15T11:57:01.597321"}
+{"symbol": "AME", "company_name": "Ametek", "sector": "Industrials", "updated_at": "2026-01-15T11:57:01.597395"}
+{"symbol": "AMGN", "company_name": "Amgen", "sector": "Health Care", "updated_at": "2026-01-15T11:57:01.597491"}
+{"symbol": "APH", "company_name": "Amphenol", "sector": "Information Technology", "updated_at": "2026-01-15T11:57:01.597637"}
+{"symbol": "ADI", "company_name": "Analog Devices", "sector": "Information Technology", "updated_at": "2026-01-15T11:57:01.597738"}
+{"symbol": "AON", "company_name": "Aon plc", "sector": "Financials", "updated_at": "2026-01-15T11:57:01.597817"}
+{"symbol": "APA", "company_name": "APA Corporation", "sector": "Energy", "updated_at": "2026-01-15T11:57:01.597891"}
+{"symbol": "APO", "company_name": "Apollo Global Management", "sector": "Financials", "updated_at": "2026-01-15T11:57:01.597964"}
+{"symbol": "AAPL", "company_name": "Apple Inc.", "sector": "Information Technology", "updated_at": "2026-01-15T11:57:01.598038"}
+{"symbol": "AMAT", "company_name": "Applied Materials", "sector": "Information Technology", "updated_at": "2026-01-15T11:57:01.598111"}
+{"symbol": "APP", "company_name": "AppLovin", "sector": "Information Technology", "updated_at": "2026-01-15T11:57:01.598183"}
+{"symbol": "APTV", "company_name": "Aptiv", "sector": "Consumer Discretionary", "updated_at": "2026-01-15T11:57:01.598254"}
+{"symbol": "ACGL", "company_name": "Arch Capital Group", "sector": "Financials", "updated_at": "2026-01-15T11:57:01.598326"}
+{"symbol": "ADM", "company_name": "Archer Daniels Midland", "sector": "Consumer Staples", "updated_at": "2026-01-15T11:57:01.598399"}
+{"symbol": "ARES", "company_name": "Ares Management", "sector": "Financials", "updated_at": "2026-01-15T11:57:01.598472"}
+{"symbol": "ANET", "company_name": "Arista Networks", "sector": "Information Technology", "updated_at": "2026-01-15T11:57:01.598544"}
+{"symbol": "AJG", "company_name": "Arthur J. Gallagher & Co.", "sector": "Financials", "updated_at": "2026-01-15T11:57:01.598645"}
+{"symbol": "AIZ", "company_name": "Assurant", "sector": "Financials", "updated_at": "2026-01-15T11:57:01.598726"}
+{"symbol": "T", "company_name": "AT&T", "sector": "Communication Services", "updated_at": "2026-01-15T11:57:01.598799"}
+{"symbol": "ATO", "company_name": "Atmos Energy", "sector": "Utilities", "updated_at": "2026-01-15T11:57:01.598871"}
+{"symbol": "MMM", "company_name": "3M", "sector": "Industrials", "updated_at": "2026-01-15T12:09:45.431677"}
+{"symbol": "AOS", "company_name": "A. O. Smith", "sector": "Industrials", "updated_at": "2026-01-15T12:09:45.431863"}
+{"symbol": "ABT", "company_name": "Abbott Laboratories", "sector": "Health Care", "updated_at": "2026-01-15T12:09:45.431977"}
+{"symbol": "ABBV", "company_name": "AbbVie", "sector": "Health Care", "updated_at": "2026-01-15T12:09:45.432084"}
+{"symbol": "ACN", "company_name": "Accenture", "sector": "Information Technology", "updated_at": "2026-01-15T12:09:45.432188"}
+{"symbol": "ADBE", "company_name": "Adobe Inc.", "sector": "Information Technology", "updated_at": "2026-01-15T12:09:45.432303"}
+{"symbol": "AMD", "company_name": "Advanced Micro Devices", "sector": "Information Technology", "updated_at": "2026-01-15T12:09:45.432421"}
+{"symbol": "AES", "company_name": "AES Corporation", "sector": "Utilities", "updated_at": "2026-01-15T12:09:45.432528"}
+{"symbol": "AFL", "company_name": "Aflac", "sector": "Financials", "updated_at": "2026-01-15T12:09:45.432648"}
+{"symbol": "A", "company_name": "Agilent Technologies", "sector": "Health Care", "updated_at": "2026-01-15T12:09:45.432750"}
+{"symbol": "APD", "company_name": "Air Products", "sector": "Materials", "updated_at": "2026-01-15T12:09:45.432849"}
+{"symbol": "ABNB", "company_name": "Airbnb", "sector": "Consumer Discretionary", "updated_at": "2026-01-15T12:09:45.432946"}
+{"symbol": "AKAM", "company_name": "Akamai Technologies", "sector": "Information Technology", "updated_at": "2026-01-15T12:09:45.433042"}
+{"symbol": "ALB", "company_name": "Albemarle Corporation", "sector": "Materials", "updated_at": "2026-01-15T12:09:45.433139"}
+{"symbol": "ARE", "company_name": "Alexandria Real Estate Equities", "sector": "Real Estate", "updated_at": "2026-01-15T12:09:45.433235"}
+{"symbol": "ALGN", "company_name": "Align Technology", "sector": "Health Care", "updated_at": "2026-01-15T12:09:45.433333"}
+{"symbol": "ALLE", "company_name": "Allegion", "sector": "Industrials", "updated_at": "2026-01-15T12:09:45.433428"}
+{"symbol": "LNT", "company_name": "Alliant Energy", "sector": "Utilities", "updated_at": "2026-01-15T12:09:45.433526"}
+{"symbol": "ALL", "company_name": "Allstate", "sector": "Financials", "updated_at": "2026-01-15T12:09:45.433649"}
+{"symbol": "GOOGL", "company_name": "Alphabet Inc. (Class A)", "sector": "Communication Services", "updated_at": "2026-01-15T12:09:45.433755"}
+{"symbol": "GOOG", "company_name": "Alphabet Inc. (Class C)", "sector": "Communication Services", "updated_at": "2026-01-15T12:09:45.433856"}
+{"symbol": "MO", "company_name": "Altria", "sector": "Consumer Staples", "updated_at": "2026-01-15T12:09:45.433967"}
+{"symbol": "AMZN", "company_name": "Amazon", "sector": "Consumer Discretionary", "updated_at": "2026-01-15T12:09:45.434069"}
+{"symbol": "AMCR", "company_name": "Amcor", "sector": "Materials", "updated_at": "2026-01-15T12:09:45.434169"}
+{"symbol": "AEE", "company_name": "Ameren", "sector": "Utilities", "updated_at": "2026-01-15T12:09:45.434269"}
+{"symbol": "AEP", "company_name": "American Electric Power", "sector": "Utilities", "updated_at": "2026-01-15T12:09:45.434369"}
+{"symbol": "AXP", "company_name": "American Express", "sector": "Financials", "updated_at": "2026-01-15T12:09:45.434469"}
+{"symbol": "AIG", "company_name": "American International Group", "sector": "Financials", "updated_at": "2026-01-15T12:09:45.434570"}
+{"symbol": "AMT", "company_name": "American Tower", "sector": "Real Estate", "updated_at": "2026-01-15T12:09:45.434701"}
+{"symbol": "AWK", "company_name": "American Water Works", "sector": "Utilities", "updated_at": "2026-01-15T12:09:45.434825"}
+{"symbol": "AMP", "company_name": "Ameriprise Financial", "sector": "Financials", "updated_at": "2026-01-15T12:09:45.434942"}
+{"symbol": "AME", "company_name": "Ametek", "sector": "Industrials", "updated_at": "2026-01-15T12:09:45.435043"}
+{"symbol": "AMGN", "company_name": "Amgen", "sector": "Health Care", "updated_at": "2026-01-15T12:09:45.435151"}
+{"symbol": "APH", "company_name": "Amphenol", "sector": "Information Technology", "updated_at": "2026-01-15T12:09:45.435254"}
+{"symbol": "ADI", "company_name": "Analog Devices", "sector": "Information Technology", "updated_at": "2026-01-15T12:09:45.435356"}
+{"symbol": "AON", "company_name": "Aon plc", "sector": "Financials", "updated_at": "2026-01-15T12:09:45.435456"}
+{"symbol": "APA", "company_name": "APA Corporation", "sector": "Energy", "updated_at": "2026-01-15T12:09:45.435556"}
+{"symbol": "APO", "company_name": "Apollo Global Management", "sector": "Financials", "updated_at": "2026-01-15T12:09:45.435668"}
+{"symbol": "AAPL", "company_name": "Apple Inc.", "sector": "Information Technology", "updated_at": "2026-01-15T12:09:45.435769"}
+{"symbol": "AMAT", "company_name": "Applied Materials", "sector": "Information Technology", "updated_at": "2026-01-15T12:09:45.435867"}
+{"symbol": "APP", "company_name": "AppLovin", "sector": "Information Technology", "updated_at": "2026-01-15T12:09:45.435964"}
+{"symbol": "APTV", "company_name": "Aptiv", "sector": "Consumer Discretionary", "updated_at": "2026-01-15T12:09:45.436060"}
+{"symbol": "ACGL", "company_name": "Arch Capital Group", "sector": "Financials", "updated_at": "2026-01-15T12:09:45.436157"}
+{"symbol": "ADM", "company_name": "Archer Daniels Midland", "sector": "Consumer Staples", "updated_at": "2026-01-15T12:09:45.436252"}
+{"symbol": "ARES", "company_name": "Ares Management", "sector": "Financials", "updated_at": "2026-01-15T12:09:45.436349"}
+{"symbol": "ANET", "company_name": "Arista Networks", "sector": "Information Technology", "updated_at": "2026-01-15T12:09:45.436458"}
+{"symbol": "AJG", "company_name": "Arthur J. Gallagher & Co.", "sector": "Financials", "updated_at": "2026-01-15T12:09:45.436560"}
+{"symbol": "AIZ", "company_name": "Assurant", "sector": "Financials", "updated_at": "2026-01-15T12:09:45.436679"}
+{"symbol": "T", "company_name": "AT&T", "sector": "Communication Services", "updated_at": "2026-01-15T12:09:45.436782"}
+{"symbol": "ATO", "company_name": "Atmos Energy", "sector": "Utilities", "updated_at": "2026-01-15T12:09:45.436881"}

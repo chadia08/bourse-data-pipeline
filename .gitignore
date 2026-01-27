@@ -51,7 +51,7 @@ build/
 .venv/
 venv/
 .ENV/
-
+node_modules/
 
 # ===================================
 # IDE
