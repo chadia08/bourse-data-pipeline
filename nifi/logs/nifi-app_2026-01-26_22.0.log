@@ -1,0 +1,15 @@
+2026-01-26 22:08:08,509 INFO [main] org.apache.nifi.NiFi Launching NiFi...
+2026-01-26 22:08:08,627 INFO [main] o.a.nifi.properties.NiFiPropertiesLoader Loading Application Properties [/opt/nifi/nifi-current/./conf/nifi.properties]
+2026-01-26 22:08:08,676 WARN [main] o.a.nifi.properties.NiFiPropertiesLoader Generating Random Sensitive Properties Key [nifi.sensitive.props.key]
+2026-01-26 22:08:08,708 INFO [main] o.a.nifi.properties.NiFiPropertiesLoader NiFi Properties [/opt/nifi/nifi-current/./conf/nifi.properties] updated with Sensitive Properties Key
+2026-01-26 22:08:08,710 INFO [main] o.a.nifi.properties.NiFiPropertiesLoader Loading Application Properties [/opt/nifi/nifi-current/./conf/nifi.properties]
+2026-01-26 22:08:08,717 INFO [main] org.apache.nifi.NiFi Application Properties loaded [203]
+2026-01-26 22:08:08,759 INFO [main] org.apache.nifi.BootstrapListener Started Bootstrap Listener, Listening for incoming requests on port 38767
+2026-01-26 22:08:08,791 INFO [main] org.apache.nifi.BootstrapListener Successfully initiated communication with Bootstrap
+2026-01-26 22:08:08,826 INFO [main] org.apache.nifi.nar.NarUnpacker Expanding 129 NAR files with all processors...
+2026-01-26 22:09:53,146 INFO [main] org.apache.nifi.nar.NarUnpacker NAR loading process took 104319981955 nanoseconds (104 seconds).
+2026-01-26 22:10:15,142 INFO [pool-2-thread-2] org.apache.nifi.BootstrapListener Received SHUTDOWN request from Bootstrap
+2026-01-26 22:10:15,143 INFO [pool-2-thread-2] org.apache.nifi.NiFi Application Server shutdown started
+2026-01-26 22:10:15,144 INFO [pool-2-thread-2] org.apache.nifi.NiFi Application Server shutdown completed
+2026-01-26 22:10:21,662 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-jetty-bundle-1.20.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-jetty-bundle-1.20.0.nar-unpacked]
+2026-01-26 22:10:21,681 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/framework/nifi-framework-nar-1.20.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/framework/nifi-framework-nar-1.20.0.nar-unpacked]
