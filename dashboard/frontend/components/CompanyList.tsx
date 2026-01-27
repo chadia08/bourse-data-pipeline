@@ -1,128 +1,75 @@
 'use client';
-
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
-import { Search } from 'lucide-react';
-import { fetchCompanies } from '@/lib/api';
+import { Search, ShieldCheck, TrendingUp, AlertCircle } from 'lucide-react';
 
-// Since this is a client component, we can't use server actions directly in the same way 
-// inside useEffect without some setup, but here we can import the server function 
-// if it's not 'use server' specific, or just fetch via an internal API route.
-// Ideally, we pass initial data and filter client side OR use a transition.
-// For simplicity in this structure, we will fetch on change.
-
-export default function CompanyList({ initialCompanies, sectors }: { initialCompanies: any[], sectors: string[] }) {
-    const [companies, setCompanies] = useState(initialCompanies);
+export default function CompanyList({ initialCompanies }: { initialCompanies: any[] }) {
     const [search, setSearch] = useState('');
-    const [sector, setSector] = useState('');
-    const [loading, setLoading] = useState(false);
 
-    useEffect(() => {
-        const load = async () => {
-            setLoading(true);
-            try {
-                // Determine if we should use the API directly or the wrapper.
-                // Since `fetchCompanies` in lib/api.ts is an async function that calls the backend,
-                // we can just call it. Next.js 13+ handles this gracefully.
-                const data = await fetchCompanies(sector, search);
-                setCompanies(data);
-            } catch (err) {
-                console.error(err);
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        const timeout = setTimeout(load, 300); // Debounce
-        return () => clearTimeout(timeout);
-    }, [search, sector]);
+    // Filtrage sur le symbole ou le nom (Identity.Nom du script 2)
+    const filtered = initialCompanies.filter(c => 
+        c.symbole.toLowerCase().includes(search.toLowerCase()) || 
+        (c.nom && c.nom.toLowerCase().includes(search.toLowerCase()))
+    );
 
     return (
         <div className="space-y-6">
-            <div className="flex flex-col sm:flex-row gap-4">
-                <div className="relative flex-1">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-4 h-4" />
-                    <input
-                        type="text"
-                        placeholder="Rechercher une société..."
-                        className="w-full pl-10 pr-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                        value={search}
-                        onChange={(e) => setSearch(e.target.value)}
-                    />
-                </div>
-                <select
-                    className="border border-slate-200 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary bg-white"
-                    value={sector}
-                    onChange={(e) => setSector(e.target.value)}
-                >
-                    <option value="">Tous les secteurs</option>
-                    {sectors.map(s => (
-                        <option key={s} value={s}>{s}</option>
-                    ))}
-                </select>
+            <div className="relative max-w-md">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5" />
+                <input 
+                    className="w-full pl-10 pr-4 py-2 rounded-lg border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none"
+                    placeholder="Rechercher (ex: DAL, HRL...)"
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                />
             </div>
 
-            <div className={`bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden ${loading ? 'opacity-50' : ''}`}>
-                <div className="overflow-x-auto">
-                    <table className="w-full text-sm text-left">
-                        <thead className="text-xs text-slate-500 uppercase bg-slate-50">
-                            <tr>
-                                <th className="px-6 py-3">Symbole</th>
-                                <th className="px-6 py-3">Nom</th>
-                                <th className="px-6 py-3">Secteur</th>
-                                <th className="px-6 py-3 text-right">Cours</th>
-                                <th className="px-6 py-3 text-right">Var %</th>
-                                <th className="px-6 py-3 text-right">Volume</th>
+            <div className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+                <table className="w-full text-left text-sm">
+                    <thead className="bg-slate-50 text-slate-500 uppercase text-[10px] font-bold">
+                        <tr>
+                            <th className="px-6 py-4">Valeur</th>
+                            <th className="px-6 py-4 text-right">Dernier Prix</th>
+                            <th className="px-6 py-4 text-center">Santé IA</th>
+                            <th className="px-6 py-4 text-center">Momentum (RSI)</th>
+                            <th className="px-6 py-4 text-right">Performance 5J</th>
+                        </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-100">
+                        {filtered.map((company) => (
+                            <tr key={company.symbole} className="hover:bg-slate-50 transition-colors">
+                                <td className="px-6 py-4">
+                                    <Link href={`/company/${company.symbole}`}>
+                                        <div className="font-bold text-blue-600">{company.symbole}</div>
+                                        <div className="text-[11px] text-slate-400 truncate max-w-[150px]">{company.nom}</div>
+                                    </Link>
+                                </td>
+                                <td className="px-6 py-4 text-right">
+                                    <div className="font-bold">{company.prix?.toFixed(2)} MAD</div>
+                                    <div className={`text-[11px] font-bold ${company.variation >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                                        {company.variation >= 0 ? '+' : ''}{company.variation}%
+                                    </div>
+                                </td>
+                                <td className="px-6 py-4 text-center">
+                                    <span className={`px-2 py-1 rounded-md text-[11px] font-bold flex items-center justify-center gap-1 mx-auto w-20 ${
+                                        company.score > 60 ? 'bg-green-100 text-green-700' : 'bg-orange-100 text-orange-700'
+                                    }`}>
+                                        <ShieldCheck size={12} /> {company.score}/100
+                                    </span>
+                                </td>
+                                <td className="px-6 py-4 text-center">
+                                    <div className={`text-[11px] font-medium ${company.rsi > 70 ? 'text-red-600' : company.rsi < 30 ? 'text-green-600' : 'text-slate-600'}`}>
+                                        {company.rsi > 70 ? 'Suracheté' : company.rsi < 30 ? 'Survendu' : 'Neutre'}
+                                        <div className="text-[9px] text-slate-400">RSI: {company.rsi?.toFixed(1)}</div>
+                                    </div>
+                                </td>
+                                <td className="px-6 py-4 text-right font-mono font-bold text-slate-700">
+                                    {company.perf5j > 0 ? '+' : ''}{company.perf5j?.toFixed(2)}%
+                                </td>
                             </tr>
-                        </thead>
-                        <tbody>
-                            {companies.length > 0 ? (
-                                companies.map((company: any) => {
-                                    // Conversion sécurisée en nombre pour éviter les crashs
-                                    const prix = company.prix_cloture ? Number(company.prix_cloture) : null;
-                                    const variation = company.variation ? Number(company.variation) : 0;
-                                    const volume = company.volume ? Number(company.volume) : 0;
-
-                                    return (
-                                        <tr key={company.symbole} className="border-b hover:bg-slate-50 transition-colors">
-                                            <td className="px-6 py-4 font-mono font-medium text-accent">
-                                                <Link href={`/company/${company.symbole}`}>
-                                                    {company.symbole}
-                                                </Link>
-                                            </td>
-                                            <td className="px-6 py-4 font-medium text-slate-900">
-                                                <Link href={`/company/${company.symbole}`}>
-                                                    {company.nom}
-                                                </Link>
-                                            </td>
-                                            <td className="px-6 py-4 text-slate-500">
-                                                {company.secteur}
-                                            </td>
-                                            <td className="px-6 py-4 text-right font-medium">
-                                                {prix !== null ? `${prix.toFixed(2)} MAD` : '-'}
-                                            </td>
-                                            <td className={`px-6 py-4 text-right font-medium ${
-                                                variation > 0 ? 'text-green-600' : 
-                                                variation < 0 ? 'text-red-600' : 'text-slate-500'
-                                            }`}>
-                                                {variation > 0 ? '+' : ''}{variation.toFixed(2)}%
-                                            </td>
-                                            <td className="px-6 py-4 text-right text-slate-600">
-                                                {volume > 0 ? volume.toLocaleString('fr-FR') : '-'}
-                                            </td>
-                                        </tr>
-                                    );
-                                })
-                            ) : (
-                                <tr>
-                                    <td colSpan={6} className="px-6 py-8 text-center text-slate-500">
-                                        {loading ? 'Chargement...' : 'Aucune société trouvée.'}
-                                    </td>
-                                </tr>
-                            )}
-                        </tbody>
-                    </table>
-                </div>
+                        ))}
+                    </tbody>
+                </table>
             </div>
         </div>
     );

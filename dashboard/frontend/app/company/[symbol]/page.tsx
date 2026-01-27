@@ -1,133 +1,110 @@
-import { fetchCompanyDetails, fetchChartData } from '@/lib/api';
-import PriceChart from '@/components/PriceChart';
-import Link from 'next/link';
-import { ArrowLeft } from 'lucide-react';
+// app/company/[symbol]/page.tsx
+'use client';
+import { useState, useEffect } from 'react';
+import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
+import { Activity, ShieldCheck, TrendingUp, DollarSign } from 'lucide-react';
 
-export default async function CompanyPage({ params }: { params: { symbol: string } }) {
-  const { symbol } = params;
-  console.log(`[Server] Fetching details for symbol: ${symbol}`);
-  const data = await fetchCompanyDetails(symbol);
-  console.log(`[Server] Data received:`, data);
-  const chartData = await fetchChartData(symbol);
+export default function CompanyDetail({ params }: { params: { symbol: string } }) {
+  const [data, setData] = useState<any>(null);
 
-  if (!data) {
-      console.error(`[Server] No data for ${symbol}`);
-      return <div className="p-6 text-red-600">Erreur: Impossible de charger les données pour {symbol}</div>
-  }
-  
-  if (!data.fundamentals) {
-      console.error(`[Server] No fundamentals for ${symbol}`, data);
-      return <div className="p-6 text-red-600">Erreur: Pas de données fondamentales pour {symbol}</div>
-  }
+  useEffect(() => {
+    // On récupère les données fusionnées pour ce symbole
+    fetch(`https://refactored-acorn-wrpww7j7q79jhv996-3000.app.github.dev/api/stocks/prices`)
+      .then(res => res.json())
+      .then(allStocks => {
+        const company = allStocks.find((s: any) => s.symbole === params.symbol);
+        setData(company);
+      });
+  }, [params.symbol]);
 
-  const { fundamentals: f, latest_price: p } = data;
+  if (!data) return <div className="p-10 text-center">Chargement des données de {params.symbol}...</div>;
 
   return (
-    <div className="space-y-6">
-        <Link href="/" className="inline-flex items-center text-sm text-slate-500 hover:text-primary mb-4">
-            <ArrowLeft className="w-4 h-4 mr-1" /> Retour au marché
-        </Link>
-        
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
-            <div className="flex justify-between items-start">
-                <div>
-                    <h1 className="text-3xl font-bold text-slate-900">{f.nom}</h1>
-                    <div className="flex items-center gap-2 mt-2 text-slate-500">
-                        <span className="font-mono bg-slate-100 px-2 py-1 rounded text-xs">{symbol}</span>
-                        <span>•</span>
-                        <span>{f.secteur}</span>
-                        <span>•</span>
-                        <span>{f.sous_secteur}</span>
-                    </div>
-                </div>
-                <div className="text-right">
-                    <div className="text-3xl font-bold">{p?.prix_cloture?.toFixed(2)} MAD</div>
-                    {p?.variation && (
-                        <div className={`font-medium ${p.variation >= 0 ? 'text-success' : 'text-danger'}`}>
-                            {p.variation > 0 ? '+' : ''}{p.variation.toFixed(2)}%
-                        </div>
-                    )}
-                </div>
+    <div className="max-w-7xl mx-auto p-6 space-y-8 bg-slate-50 min-h-screen">
+      
+      {/* HEADER : Identité et Prix Live */}
+      <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex justify-between items-center">
+        <div>
+          <h1 className="text-4xl font-black text-slate-900">{data.nom}</h1>
+          <p className="text-slate-500 font-bold uppercase tracking-widest mt-1">
+            {data.symbole} • {data.secteur || 'Secteur N/A'}
+          </p>
+        </div>
+        <div className="text-right">
+          <div className="text-4xl font-mono font-bold text-slate-900">{data.prix?.toFixed(2)} MAD</div>
+          <div className={`font-bold ${data.variation >= 0 ? 'text-green-500' : 'text-red-500'}`}>
+            {data.variation >= 0 ? '▲' : '▼'} {data.variation}%
+          </div>
+        </div>
+        {/* SECTION DESCRIPTION GEMINI */}
+        <div className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-3xl border border-blue-100 shadow-sm">
+            <div className="flex items-center gap-2 mb-3">
+                <div className="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></div>
+                <h3 className="text-xs font-black text-blue-900 uppercase tracking-widest">Analyse de l'activité (IA)</h3>
             </div>
+            <p className="text-slate-700 leading-relaxed text-lg italic">
+                "{data.description}"
+            </p>
+        </div>
+      </div>
+
+      {/* KPI GRID : Valorisation & Santé */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <StatCard title="EPS (Bénéfice/Action)" value={`${data.eps || '0.00'}`} sub="Dernier annuel" icon={<DollarSign className="text-blue-500" />} />
+        <StatCard title="P/E Ratio" value={data.eps > 0 ? (data.prix / data.eps).toFixed(2) : 'N/A'} sub="Valorisation" icon={<Activity className="text-purple-500" />} />
+        <StatCard title="Score Solidité IA" value={`${data.score}/100`} sub="Analyse Algorithmique" icon={<ShieldCheck className="text-emerald-500" />} />
+        <StatCard title="RSI (Momentum)" value={data.rsi?.toFixed(2)} sub={data.rsi > 70 ? 'Suracheté' : 'Neutre'} icon={<TrendingUp className="text-orange-500" />} />
+      </div>
+
+      {/* GRAPHIQUES : Évolution Financière */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* Graphique du Revenu vs Profit */}
+        <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-100">
+          <h3 className="text-lg font-bold mb-6 text-slate-800">Historique des Revenus & Profits</h3>
+          <div className="h-80">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={data.historique}>
+                <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                <XAxis dataKey="annee" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Bar dataKey="revenu" name="Chiffre d'Affaires" fill="#3b82f6" radius={[4, 4, 0, 0]} />
+                <Bar dataKey="profit" name="Résultat Net" fill="#10b981" radius={[4, 4, 0, 0]} />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <div className="lg:col-span-2 space-y-6">
-                <PriceChart data={chartData} />
-                
-                <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
-                    <h3 className="text-lg font-semibold mb-4">Fondamentaux</h3>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
-                        <div>
-                            <div className="text-xs text-slate-500 uppercase">Revenu Total</div>
-                            <div className="font-semibold">{f.revenu_total && f.revenu_total > 0 ? Number(f.revenu_total).toLocaleString('fr-FR') : 'N/A'} MAD</div>
-                        </div>
-                        <div>
-                            <div className="text-xs text-slate-500 uppercase">Résultat Net</div>
-                            <div className="font-semibold">{f.resultat_net && f.resultat_net > 0 ? Number(f.resultat_net).toLocaleString('fr-FR') : 'N/A'} MAD</div>
-                        </div>
-                         <div>
-                            <div className="text-xs text-slate-500 uppercase">Total Actifs</div>
-                            <div className="font-semibold">{f.total_actifs && f.total_actifs > 0 ? Number(f.total_actifs).toLocaleString('fr-FR') : 'N/A'} MAD</div>
-                        </div>
-                        <div>
-                            <div className="text-xs text-slate-500 uppercase">Marge Nette</div>
-                            <div className="font-semibold">{f.marge_beneficiaire ? (Number(f.marge_beneficiaire) * 100).toFixed(2) : 'N/A'}%</div>
-                        </div>
-                         <div>
-                            <div className="text-xs text-slate-500 uppercase">ROE</div>
-                            <div className="font-semibold">{f.rentabilite_fonds_propres_roe ? (Number(f.rentabilite_fonds_propres_roe) * 100).toFixed(2) : 'N/A'}%</div>
-                        </div>
-                         <div>
-                            <div className="text-xs text-slate-500 uppercase">Ratio Courant</div>
-                            <div className="font-semibold">{f.ratio_courant ? Number(f.ratio_courant).toFixed(2) : 'N/A'}</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="space-y-6">
-                 <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
-                    <h3 className="text-lg font-semibold mb-4">Informations</h3>
-                    <ul className="space-y-2 text-sm">
-                        <li className="flex justify-between">
-                            <span className="text-slate-500">Secteur</span>
-                            <span className="font-medium">{f.secteur || 'N/A'}</span>
-                        </li>
-                        <li className="flex justify-between">
-                            <span className="text-slate-500">Sous-secteur</span>
-                            <span className="font-medium">{f.sous_secteur || 'N/A'}</span>
-                        </li>
-                        {f.siege && (
-                            <li className="flex justify-between">
-                                <span className="text-slate-500">Siège</span>
-                                <span className="font-medium text-right">{f.siege}</span>
-                            </li>
-                        )}
-                        {f.date_introduction && (
-                            <li className="flex justify-between">
-                                <span className="text-slate-500">IPO</span>
-                                <span className="font-medium">{new Date(f.date_introduction).toLocaleDateString('fr-FR')}</span>
-                            </li>
-                        )}
-                    </ul>
-                 </div>
-                 
-                 <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
-                    <h3 className="text-lg font-semibold mb-4">Données du Jour</h3>
-                    <ul className="space-y-3 text-sm">
-                         <li className="flex justify-between">
-                            <span className="text-slate-500">Volume</span>
-                            <span className="font-medium">{p?.volume ? Number(p.volume).toLocaleString('fr-FR') : 'N/A'}</span>
-                        </li>
-                        <li className="flex justify-between">
-                            <span className="text-slate-500">Date</span>
-                            <span className="font-medium">{p?.date ? new Date(p.date).toLocaleDateString('fr-FR') : 'N/A'}</span>
-                        </li>
-                    </ul>
-                 </div>
-            </div>
+        {/* Graphique de la Rentabilité (ROE) */}
+        <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-100">
+          <h3 className="text-lg font-bold mb-6 text-slate-800">Évolution de la Rentabilité (ROE %)</h3>
+          <div className="h-80">
+            <ResponsiveContainer width="100%" height="100%">
+              <LineChart data={data.historique}>
+                <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                <XAxis dataKey="annee" />
+                <YAxis unit="%" />
+                <Tooltip />
+                <Line type="monotone" dataKey="roe" stroke="#f59e0b" strokeWidth={4} dot={{ r: 6 }} />
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
         </div>
+      </div>
     </div>
-  )
+  );
+}
+
+function StatCard({ title, value, sub, icon }: any) {
+  return (
+    <div className="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm">
+      <div className="flex justify-between items-start mb-4">
+        <div className="p-2 bg-slate-50 rounded-xl">{icon}</div>
+      </div>
+      <div className="text-sm font-bold text-slate-400 uppercase tracking-wider">{title}</div>
+      <div className="text-2xl font-black text-slate-900 mt-1">{value}</div>
+      <div className="text-xs font-bold text-slate-500 mt-2">{sub}</div>
+    </div>
+  );
 }

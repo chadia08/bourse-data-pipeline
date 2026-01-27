@@ -1,105 +1,118 @@
-import { fetchMarketStatus, fetchTopMovers } from '@/lib/api';
+// app/page.tsx
 import Link from 'next/link';
+import { ArrowUpRight, ArrowDownRight, Activity } from 'lucide-react';
+
+async function getStocksData() {
+  try {
+    // Utilisation de votre URL Codespaces publique
+    const baseUrl = "https://refactored-acorn-wrpww7j7q79jhv996-3000.app.github.dev";
+    const res = await fetch(`${baseUrl}/api/stocks/prices`, { 
+      cache: 'no-store',
+      headers: { 'Content-Type': 'application/json' }
+    });
+    
+    if (!res.ok) return [];
+    return res.json();
+  } catch (error) {
+    console.error("Erreur lors de la récupération des données:", error);
+    return [];
+  }
+}
 
 export default async function Home() {
-  const status = await fetchMarketStatus();
-  const movers = await fetchTopMovers();
+  // Récupération des données depuis l'API fusionnée
+  const stocks = await getStocksData();
+
+  // Filtrage de sécurité : on ne garde que les objets ayant une clé 'prix'
+  const validStocks = stocks.filter((s: any) => s && s.prix !== undefined);
+
+  // Tri pour les "Tops Performances" basé sur la clé 'variation'
+  const gainers = [...validStocks]
+    .sort((a, b) => (b.variation || 0) - (a.variation || 0))
+    .slice(0, 5);
+
+  // Tri pour les "Alertes Baisses" basé sur la clé 'variation'
+  const losers = [...validStocks]
+    .sort((a, b) => (a.variation || 0) - (b.variation || 0))
+    .slice(0, 5);
+
+  // Calcul de la moyenne du marché
+  const marketAvg = validStocks.length > 0 
+    ? (validStocks.reduce((acc: number, curr: any) => acc + (curr.variation || 0), 0) / validStocks.length).toFixed(2)
+    : "0.00";
 
   return (
-    <div className="space-y-6">
-      <header className="mb-8">
-        <h1 className="text-3xl font-bold text-slate-900">Vue d'ensemble du marché</h1>
-        <p className="text-slate-500">Données en temps réel de ClickHouse</p>
+    <div className="p-8 space-y-8 bg-slate-50 min-h-screen">
+      <header className="flex justify-between items-center">
+        <div>
+          <h1 className="text-3xl font-bold text-slate-900">Tableau de Bord IA</h1>
+          <p className="text-slate-500 font-medium">Données réelles : {validStocks.length} actions détectées</p>
+        </div>
+        <div className="bg-green-100 text-green-700 px-4 py-2 rounded-full flex items-center gap-2 text-sm font-bold shadow-sm">
+          <Activity size={16} /> MARCHÉ OUVERT
+        </div>
       </header>
 
-      {/* KPI Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
-          <h3 className="text-sm font-medium text-slate-500">Volume Quotidien</h3>
-          <p className="text-2xl font-bold text-slate-900 mt-2">
-            {status?.volume ? status.volume.toLocaleString() : '-'}
+      {/* Cartes de synthèse (KPIs) */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+          <h3 className="text-sm font-semibold text-slate-500 uppercase tracking-wider">Actions Suivies</h3>
+          <p className="text-4xl font-black text-slate-900 mt-2">{validStocks.length}</p>
+        </div>
+        <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+          <h3 className="text-sm font-semibold text-slate-500 uppercase tracking-wider">Moyenne du Marché</h3>
+          <p className={`text-4xl font-black mt-2 ${Number(marketAvg) >= 0 ? 'text-green-500' : 'text-red-500'}`}>
+             {marketAvg}%
           </p>
-        </div>
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
-            <h3 className="text-sm font-medium text-slate-500">Valeur Échangée (MAD)</h3>
-            <p className="text-2xl font-bold text-slate-900 mt-2">
-                {status?.value ? new Intl.NumberFormat('fr-MA', { style: 'currency', currency: 'MAD' }).format(status.value) : '-'}
-            </p>
-        </div>
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
-            <h3 className="text-sm font-medium text-slate-500">État du Marché</h3>
-            <span className={`inline-block mt-2 px-3 py-1 rounded-full text-sm font-medium ${status?.status === 'OPEN' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
-                {status?.status || 'Fermé'}
-            </span>
         </div>
       </div>
 
-      {/* Movers */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
-            <div className="p-4 border-b border-slate-100 bg-slate-50/50">
-                <h2 className="font-semibold text-slate-900">Plus Fortes Hausses</h2>
-            </div>
-            <div className="overflow-x-auto">
-                <table className="w-full text-sm text-left">
-                    <thead className="text-xs text-slate-500 uppercase bg-slate-50">
-                        <tr>
-                            <th className="px-4 py-3">Société</th>
-                            <th className="px-4 py-3 text-right">Dernier</th>
-                            <th className="px-4 py-3 text-right">Var %</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {movers?.gainers?.map((item: any) => (
-                            <tr key={item.symbole} className="border-b hover:bg-slate-50">
-                                <td className="px-4 py-3 font-medium text-slate-900">
-                                    <Link href={`/company/${item.symbole}`} className="hover:text-accent">
-                                        {item.nom || item.symbole}
-                                    </Link>
-                                </td>
-                                <td className="px-4 py-3 text-right">{item.prix_cloture?.toFixed(2)}</td>
-                                <td className="px-4 py-3 text-right text-success font-semibold">
-                                    +{item.variation?.toFixed(2)}%
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div>
+      {/* Grille des Movers (Hausses et Baisses) */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* Section Tops Performances */}
+        <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-100">
+          <h2 className="text-xl font-bold mb-6 flex items-center gap-2 text-green-600">
+            <ArrowUpRight strokeWidth={3} /> Tops Performances
+          </h2>
+          <div className="space-y-3">
+            {gainers.map((stock: any) => (
+              <Link href={`/company/${stock.symbole}`} key={stock.symbole} 
+                    className="flex justify-between items-center p-4 hover:bg-slate-50 rounded-2xl transition border border-transparent hover:border-slate-100">
+                <div>
+                  <div className="font-bold text-slate-800 text-lg">{stock.symbole}</div>
+                  <div className="text-xs text-slate-400 font-medium">{stock.nom || 'N/A'}</div>
+                </div>
+                <div className="text-right">
+                  <div className="font-bold text-slate-900">{stock.prix?.toFixed(2)} MAD</div>
+                  <div className="text-green-500 font-black">+{stock.variation}%</div>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
 
-        <div className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
-            <div className="p-4 border-b border-slate-100 bg-slate-50/50">
-                <h2 className="font-semibold text-slate-900">Plus Fortes Baisses</h2>
-            </div>
-             <div className="overflow-x-auto">
-                <table className="w-full text-sm text-left">
-                    <thead className="text-xs text-slate-500 uppercase bg-slate-50">
-                         <tr>
-                            <th className="px-4 py-3">Société</th>
-                            <th className="px-4 py-3 text-right">Dernier</th>
-                            <th className="px-4 py-3 text-right">Var %</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                         {movers?.losers?.map((item: any) => (
-                            <tr key={item.symbole} className="border-b hover:bg-slate-50">
-                                <td className="px-4 py-3 font-medium text-slate-900">
-                                    <Link href={`/company/${item.symbole}`} className="hover:text-accent">
-                                        {item.nom || item.symbole}
-                                    </Link>
-                                </td>
-                                <td className="px-4 py-3 text-right">{item.prix_cloture?.toFixed(2)}</td>
-                                <td className="px-4 py-3 text-right text-danger font-semibold">
-                                    {item.variation?.toFixed(2)}%
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div>
+        {/* Section Alertes Baisses */}
+        <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-100">
+          <h2 className="text-xl font-bold mb-6 flex items-center gap-2 text-red-600">
+            <ArrowDownRight strokeWidth={3} /> Alertes Baisses
+          </h2>
+          <div className="space-y-3">
+            {losers.map((stock: any) => (
+              <Link href={`/company/${stock.symbole}`} key={stock.symbole} 
+                    className="flex justify-between items-center p-4 hover:bg-slate-50 rounded-2xl transition border border-transparent hover:border-slate-100">
+                <div>
+                  <div className="font-bold text-slate-800 text-lg">{stock.symbole}</div>
+                  <div className="text-xs text-slate-400 font-medium">{stock.nom || 'N/A'}</div>
+                </div>
+                <div className="text-right">
+                  <div className="font-bold text-slate-900">{stock.prix?.toFixed(2)} MAD</div>
+                  <div className="text-red-500 font-black">{stock.variation}%</div>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
