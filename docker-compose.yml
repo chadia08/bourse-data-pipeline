@@ -2,7 +2,9 @@ version: "3.9"
 
 networks:
   bourse_network:
+    name: bourse_network  # <--- Force Docker à ignorer le préfixe du dossier
     driver: bridge
+    
 
 volumes:
   zookeeper_data:
@@ -42,7 +44,7 @@ services:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092,PLAINTEXT_INTERNAL://kafka:29092
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_INTERNAL:PLAINTEXT
-      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT_INTERNAL
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
@@ -51,7 +53,6 @@ services:
       ATLAS_CLUSTER_NAME: "bourse_cluster"
     volumes:
       - kafka_data:/var/lib/kafka/data
-      - ./atlas-application.properties:/etc/kafka/config/atlas-application.properties
 
   nifi:
     image: 'apache/nifi:1.20.0'
@@ -104,51 +105,51 @@ services:
 
   
   
-  # Base de données pour Marquez
-  marquez-db:
-    image: postgres:13
-    container_name: marquez-db
-    environment:
-      POSTGRES_USER: marquez
-      POSTGRES_PASSWORD: marquez
-      POSTGRES_DB: marquez
-    ports:
-      - "5432:5432"
-    volumes:
-      - marquez_db:/var/lib/postgresql/data
-    networks:
-      - bourse_network
+  # # Base de données pour Marquez
+  # marquez-db:
+  #   image: postgres:13
+  #   container_name: marquez-db
+  #   environment:
+  #     POSTGRES_USER: marquez
+  #     POSTGRES_PASSWORD: marquez
+  #     POSTGRES_DB: marquez
+  #   ports:
+  #     - "5432:5432"
+  #   volumes:
+  #     - marquez_db:/var/lib/postgresql/data
+  #   networks:
+  #     - bourse_network
 
-  marquez:
-    image: marquezproject/marquez:latest
-    container_name: marquez
-    depends_on:
-      - marquez-db
-    environment:
-      POSTGRES_HOST: marquez-db
-      POSTGRES_PORT: 5432
-      POSTGRES_DB: marquez
-      POSTGRES_USER: marquez
-      POSTGRES_PASSWORD: marquez
-      MARQUEZ_PORT: 5002
-    ports:
-      - "5002:5002"
-    networks:
-      - bourse_network
+  # marquez:
+  #   image: marquezproject/marquez:latest
+  #   container_name: marquez
+  #   depends_on:
+  #     - marquez-db
+  #   environment:
+  #     POSTGRES_HOST: marquez-db
+  #     POSTGRES_PORT: 5432
+  #     POSTGRES_DB: marquez
+  #     POSTGRES_USER: marquez
+  #     POSTGRES_PASSWORD: marquez
+  #     MARQUEZ_PORT: 5002
+  #   ports:
+  #     - "5002:5002"
+  #   networks:
+  #     - bourse_network
 
-  marquez-web:
-    image: marquezproject/marquez-web:latest
-    container_name: marquez-web
-    depends_on:
-      - marquez
-    environment:
-      MARQUEZ_HOST: marquez
-      MARQUEZ_PORT: 5002
-      WEB_PORT: 3000
-    ports:
-      - "3000:3000"
-    networks:
-      - bourse_network
+  # marquez-web:
+  #   image: marquezproject/marquez-web:latest
+  #   container_name: marquez-web
+  #   depends_on:
+  #     - marquez
+  #   environment:
+  #     MARQUEZ_HOST: marquez
+  #     MARQUEZ_PORT: 5002
+  #     WEB_PORT: 3000
+  #   ports:
+  #     - "3000:3000"
+  #   networks:
+  #     - bourse_network
 
 
 

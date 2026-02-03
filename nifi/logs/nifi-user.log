@@ -1,6 +1,13 @@
-2026-01-27 14:06:51,753 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
-2026-01-27 14:06:54,580 INFO [main] o.a.n.a.FileUserGroupProvider Creating new users file at /opt/nifi/nifi-current/./conf/users.xml
-2026-01-27 14:06:54,596 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Tue Jan 27 14:06:54 UTC 2026
-2026-01-27 14:06:54,596 INFO [main] o.a.n.a.FileAccessPolicyProvider Creating new authorizations file at /opt/nifi/nifi-current/./conf/authorizations.xml
-2026-01-27 14:06:54,614 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Tue Jan 27 14:06:54 UTC 2026
-2026-01-27 14:06:54,615 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
+2026-02-03 19:52:46,082 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
+2026-02-03 19:52:48,496 INFO [main] o.a.n.a.FileUserGroupProvider Creating new users file at /opt/nifi/nifi-current/./conf/users.xml
+2026-02-03 19:52:48,513 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Tue Feb 03 19:52:48 UTC 2026
+2026-02-03 19:52:48,513 INFO [main] o.a.n.a.FileAccessPolicyProvider Creating new authorizations file at /opt/nifi/nifi-current/./conf/authorizations.xml
+2026-02-03 19:52:48,529 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Tue Feb 03 19:52:48 UTC 2026
+2026-02-03 19:52:48,530 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
+2026-02-03 20:38:23,039 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
+2026-02-03 20:38:23,280 INFO [main] o.a.n.a.FileUserGroupProvider Creating new users file at /opt/nifi/nifi-current/./conf/users.xml
+2026-02-03 20:38:23,298 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Tue Feb 03 20:38:23 UTC 2026
+2026-02-03 20:38:23,298 INFO [main] o.a.n.a.FileAccessPolicyProvider Creating new authorizations file at /opt/nifi/nifi-current/./conf/authorizations.xml
+2026-02-03 20:38:23,315 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Tue Feb 03 20:38:23 UTC 2026
+2026-02-03 20:38:23,316 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
+2026-02-03 20:42:12,610 INFO [NiFi Web Server-25] o.a.n.w.a.c.ResourceNotFoundExceptionMapper org.apache.nifi.web.ResourceNotFoundException: Unable to locate group with id '2523cc28-019c-1000-ebcc-9365750db4d4'.. Returning Not Found response.

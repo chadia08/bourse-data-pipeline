@@ -1,0 +1,6 @@
+2026-01-27 14:06:51,753 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
+2026-01-27 14:06:54,580 INFO [main] o.a.n.a.FileUserGroupProvider Creating new users file at /opt/nifi/nifi-current/./conf/users.xml
+2026-01-27 14:06:54,596 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Tue Jan 27 14:06:54 UTC 2026
+2026-01-27 14:06:54,596 INFO [main] o.a.n.a.FileAccessPolicyProvider Creating new authorizations file at /opt/nifi/nifi-current/./conf/authorizations.xml
+2026-01-27 14:06:54,614 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Tue Jan 27 14:06:54 UTC 2026
+2026-01-27 14:06:54,615 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer

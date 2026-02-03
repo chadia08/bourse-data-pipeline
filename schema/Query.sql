@@ -131,30 +131,32 @@ LEFT JOIN bourse.company c ON p.symbole = c.symbole;
 
 DROP TABLE IF EXISTS bourse.fundamentals;
 
+-- 1. TABLE FINALE (Stockage)
 CREATE TABLE bourse.fundamentals (
     symbole String,
     annee_fiscale Int32,
     date_fin_periode Date,
-    revenu_total Float64,  -- CHANGÉ DE Int64
-    profit_brut Float64,   -- CHANGÉ DE Int64
-    resultat_net Float64,  -- CHANGÉ DE Int64
-    resultat_exploitation Float64, -- CHANGÉ DE Int64
+    revenu_total Float64,
+    profit_brut Float64,
+    resultat_net Float64,
+    resultat_exploitation Float64,
     marge_exploitation Float32,
     marge_beneficiaire Float32,
-    total_actifs Float64,  -- CHANGÉ DE Int64
-    total_passifs Float64, -- CHANGÉ DE Int64
-    dette_long_terme Float64, -- CHANGÉ DE Int64
-    capitaux_propres Float64, -- CHANGÉ DE Int64
-    goodwill Float64,      -- CHANGÉ DE Int64
+    total_actifs Float64,
+    total_passifs Float64,
+    dette_long_terme Float64,
+    capitaux_propres Float64,
+    goodwill Float64,
     ratio_courant Float32,
     ratio_liquidite_immediate Float32,
     benefice_par_action Float32,
-    rentabilite_fonds_propres_roe Float32
+    rentabilite_fonds_propres_roe Float32,
+    dividendes Float32 -- Ajouté ici
 ) 
 ENGINE = MergeTree()
 ORDER BY (symbole, annee_fiscale);
 
-
+-- 2. QUEUE KAFKA (Réception)
 CREATE TABLE bourse.fundamentals_queue (
     symbole String,
     annee_fiscale String,
@@ -173,23 +175,22 @@ CREATE TABLE bourse.fundamentals_queue (
     ratio_courant String,
     ratio_liquidite_immediate String,
     benefice_par_action String,
-    rentabilite_fonds_propres_roe String
+    rentabilite_fonds_propres_roe String,
+    dividendes String -- Ajouté ici (en String car Kafka reçoit du texte JSON)
 )
 ENGINE = Kafka
 SETTINGS 
     kafka_broker_list = 'kafka:29092', 
     kafka_topic_list = 'send_fundamentals',
-    kafka_group_name = 'group_final_reborn_v1', -- Nouveau nom pour tout relire
+    kafka_group_name = 'group_final_reborn_v2', -- Changé en v2 pour reset l'offset
     kafka_format = 'JSONEachRow';
 
-
+-- 3. MATERIALIZED VIEW (Transformation)
 CREATE MATERIALIZED VIEW bourse.fundamentals_mv TO bourse.fundamentals AS
 SELECT 
     symbole,
-    -- On convertit d'abord en Float pour accepter le ".0", puis en UInt32
     toUInt32(toFloat64OrZero(annee_fiscale)) AS annee_fiscale,
     toDateOrZero(date_fin_periode) AS date_fin_periode,
-    -- On utilise toFloat64 partout car tes données Kafka sont en notation scientifique (ex: 2.48E10)
     toFloat64OrZero(revenu_total) AS revenu_total,
     toFloat64OrZero(profit_brut) AS profit_brut,
     toFloat64OrZero(resultat_net) AS resultat_net,
@@ -204,20 +205,19 @@ SELECT
     toFloat32OrZero(ratio_courant) AS ratio_courant,
     toFloat32OrZero(ratio_liquidite_immediate) AS ratio_liquidite_immediate,
     toFloat32OrZero(benefice_par_action) AS benefice_par_action,
-    toFloat32OrZero(rentabilite_fonds_propres_roe) AS rentabilite_fonds_propres_roe
+    toFloat32OrZero(rentabilite_fonds_propres_roe) AS rentabilite_fonds_propres_roe,
+    toFloat32OrZero(dividendes) AS dividendes -- Ajouté ici
 FROM bourse.fundamentals_queue;
 
---------------------------------------------------------------------------------------------------------
+-- 4. VIEW ANALYTICS (Jointure finale)
+DROP VIEW IF EXISTS bourse.fundamentals_analytics; -- On supprime l'ancienne pour la recréer
 CREATE VIEW bourse.fundamentals_analytics AS
 SELECT 
-    -- Données COMPANY (c)
     c.nom,
     c.secteur,
     c.sous_secteur,
     c.siege,
     c.date_introduction,
-    
-    -- Données FUNDAMENTALS (f)
     f.symbole,
     f.annee_fiscale,
     f.date_fin_periode,
@@ -235,7 +235,7 @@ SELECT
     f.ratio_courant,
     f.ratio_liquidite_immediate,
     f.benefice_par_action,
-    f.rentabilite_fonds_propres_roe
-
+    f.rentabilite_fonds_propres_roe,
+    f.dividendes -- Ajouté ici
 FROM bourse.fundamentals f
 LEFT JOIN bourse.company c ON f.symbole = c.symbole;
