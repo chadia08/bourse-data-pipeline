@@ -152,16 +152,16 @@ services:
 
 
 
-  mongodb:
-    image: mongo:latest
-    container_name: mongodb_cache
-    restart: always
-    ports:
-      - "27017:27017"
-    volumes:
-      - mongo_data:/data/db
-    environment:
-      - MONGO_INITDB_DATABASE=bourse_cache
+  #mongodb:
+    #image: mongo:latest
+    #container_name: mongodb_cache
+    #restart: always
+    #ports:
+    #  - "27017:27017"
+    #volumes:
+    #  - mongo_data:/data/db
+    #environment:
+    #  - MONGO_INITDB_DATABASE=bourse_cache
 
   
 

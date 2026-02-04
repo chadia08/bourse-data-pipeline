@@ -66,7 +66,7 @@ CREATE TABLE bourse.prices (
 ENGINE = MergeTree()
 ORDER BY (symbole, date);
 
-CREATE TABLE bourse.prices_kafka_queue (
+CREATE TABLE bourse.prices_queue (
     id String,
     date String,
     symbole String,
@@ -99,13 +99,13 @@ SELECT
     variation, 
     volatilite, 
     dollar_volume
-FROM bourse_kafka_queue;
+FROM bourse.prices_queue;
 
 
 --------------------------------------------------------------------------------------------------------
 
 -- Table de jointure dans trino
-CREATE TABLE clickhouse.bourse.prices_analytics AS
+CREATE VIEW bourse.prices_analytics AS
 SELECT 
     p.id,
     p.date,
@@ -123,36 +123,40 @@ SELECT
     c.sous_secteur,
     c.siege,
     c.date_introduction
-FROM clickhouse.bourse.prices p
-LEFT JOIN clickhouse.bourse.company c ON p.symbole = c.symbole;
+FROM bourse.prices p
+LEFT JOIN bourse.company c ON p.symbole = c.symbole;
 
 --------------------------------------------------------------------------
 ----fundamentals
 
+DROP TABLE IF EXISTS bourse.fundamentals;
+
+-- 1. TABLE FINALE (Stockage)
 CREATE TABLE bourse.fundamentals (
     symbole String,
     annee_fiscale Int32,
     date_fin_periode Date,
-    revenu_total Int64,
-    profit_brut Int64,
-    resultat_net Int64,
-    resultat_exploitation Int64,
+    revenu_total Float64,
+    profit_brut Float64,
+    resultat_net Float64,
+    resultat_exploitation Float64,
     marge_exploitation Float32,
     marge_beneficiaire Float32,
-    total_actifs Int64,
-    total_passifs Int64,
-    dette_long_terme Int64,
-    capitaux_propres Int64,
-    goodwill Int64,
+    total_actifs Float64,
+    total_passifs Float64,
+    dette_long_terme Float64,
+    capitaux_propres Float64,
+    goodwill Float64,
     ratio_courant Float32,
     ratio_liquidite_immediate Float32,
     benefice_par_action Float32,
-    rentabilite_fonds_propres_roe Float32
+    rentabilite_fonds_propres_roe Float32,
+    dividendes Float32 -- Ajouté ici
 ) 
 ENGINE = MergeTree()
 ORDER BY (symbole, annee_fiscale);
 
-
+-- 2. QUEUE KAFKA (Réception)
 CREATE TABLE bourse.fundamentals_queue (
     symbole String,
     annee_fiscale String,
@@ -171,49 +175,49 @@ CREATE TABLE bourse.fundamentals_queue (
     ratio_courant String,
     ratio_liquidite_immediate String,
     benefice_par_action String,
-    rentabilite_fonds_propres_roe String
+    rentabilite_fonds_propres_roe String,
+    dividendes String -- Ajouté ici (en String car Kafka reçoit du texte JSON)
 )
 ENGINE = Kafka
 SETTINGS 
     kafka_broker_list = 'kafka:29092', 
     kafka_topic_list = 'send_fundamentals',
-    kafka_group_name = 'group_final_reborn_v1', -- Nouveau nom pour tout relire
+    kafka_group_name = 'group_final_reborn_v2', -- Changé en v2 pour reset l'offset
     kafka_format = 'JSONEachRow';
 
-
+-- 3. MATERIALIZED VIEW (Transformation)
 CREATE MATERIALIZED VIEW bourse.fundamentals_mv TO bourse.fundamentals AS
 SELECT 
     symbole,
-    toUInt32OrZero(annee_fiscale) AS annee_fiscale,
+    toUInt32(toFloat64OrZero(annee_fiscale)) AS annee_fiscale,
     toDateOrZero(date_fin_periode) AS date_fin_periode,
-    toInt64OrZero(revenu_total) AS revenu_total,
-    toInt64OrZero(profit_brut) AS profit_brut,
-    toInt64OrZero(resultat_net) AS resultat_net,
-    toInt64OrZero(resultat_exploitation) AS resultat_exploitation,
+    toFloat64OrZero(revenu_total) AS revenu_total,
+    toFloat64OrZero(profit_brut) AS profit_brut,
+    toFloat64OrZero(resultat_net) AS resultat_net,
+    toFloat64OrZero(resultat_exploitation) AS resultat_exploitation,
     toFloat32OrZero(marge_exploitation) AS marge_exploitation,
     toFloat32OrZero(marge_beneficiaire) AS marge_beneficiaire,
-    toInt64OrZero(total_actifs) AS total_actifs,
-    toInt64OrZero(total_passifs) AS total_passifs,
-    toInt64OrZero(dette_long_terme) AS dette_long_terme,
-    toInt64OrZero(capitaux_propres) AS capitaux_propres,
-    toInt64OrZero(goodwill) AS goodwill,
+    toFloat64OrZero(total_actifs) AS total_actifs,
+    toFloat64OrZero(total_passifs) AS total_passifs,
+    toFloat64OrZero(dette_long_terme) AS dette_long_terme,
+    toFloat64OrZero(capitaux_propres) AS capitaux_propres,
+    toFloat64OrZero(goodwill) AS goodwill,
     toFloat32OrZero(ratio_courant) AS ratio_courant,
     toFloat32OrZero(ratio_liquidite_immediate) AS ratio_liquidite_immediate,
     toFloat32OrZero(benefice_par_action) AS benefice_par_action,
-    toFloat32OrZero(rentabilite_fonds_propres_roe) AS rentabilite_fonds_propres_roe
+    toFloat32OrZero(rentabilite_fonds_propres_roe) AS rentabilite_fonds_propres_roe,
+    toFloat32OrZero(dividendes) AS dividendes -- Ajouté ici
 FROM bourse.fundamentals_queue;
 
---------------------------------------------------------------------------------------------------------
-CREATE TABLE bourse.fundamentals_analytics AS
+-- 4. VIEW ANALYTICS (Jointure finale)
+DROP VIEW IF EXISTS bourse.fundamentals_analytics; -- On supprime l'ancienne pour la recréer
+CREATE VIEW bourse.fundamentals_analytics AS
 SELECT 
-    -- Données COMPANY (c)
     c.nom,
     c.secteur,
     c.sous_secteur,
     c.siege,
     c.date_introduction,
-    
-    -- Données FUNDAMENTALS (f)
     f.symbole,
     f.annee_fiscale,
     f.date_fin_periode,
@@ -231,7 +235,72 @@ SELECT
     f.ratio_courant,
     f.ratio_liquidite_immediate,
     f.benefice_par_action,
-    f.rentabilite_fonds_propres_roe
-
+    f.rentabilite_fonds_propres_roe,
+    f.dividendes -- Ajouté ici
 FROM bourse.fundamentals f
 LEFT JOIN bourse.company c ON f.symbole = c.symbole;
+
+
+--data silver tables :----
+
+----------------------------------------------------------
+------ table fundamentals silver----------
+DROP TABLE IF EXISTS bourse.fundamentals_silver;
+CREATE TABLE bourse.fundamentals_silver
+ENGINE = ReplacingMergeTree()
+ORDER BY (symbole, annee_fiscale)
+AS
+SELECT 
+    c.nom,
+    c.secteur,
+    c.sous_secteur,
+    c.siege,
+    c.date_introduction,
+    f.symbole,
+    f.annee_fiscale,
+    f.date_fin_periode,
+    f.revenu_total,
+    f.profit_brut,
+    f.resultat_net,
+    f.resultat_exploitation,
+    f.marge_exploitation,
+    f.marge_beneficiaire,
+    f.total_actifs,
+    f.total_passifs,
+    f.dette_long_terme,
+    f.capitaux_propres,
+    f.goodwill,
+    f.ratio_courant,
+    f.ratio_liquidite_immediate,
+    f.benefice_par_action,
+    f.rentabilite_fonds_propres_roe,
+    f.dividendes
+FROM bourse.fundamentals f
+LEFT JOIN bourse.company c ON f.symbole = c.symbole;
+
+----------------------------------------------------------
+------ table prices silver----------
+DROP TABLE IF EXISTS bourse.prices_silver;
+CREATE TABLE bourse.prices_silver
+ENGINE = ReplacingMergeTree()
+ORDER BY (symbole, date, id)
+AS
+SELECT 
+    p.id,
+    p.date,
+    p.symbole,
+    p.prix_ouverture,
+    p.prix_cloture,
+    p.prix_bas,
+    p.prix_haut,
+    p.volume,
+    p.variation,
+    p.volatilite,
+    p.dollar_volume,
+    c.nom,
+    c.secteur,
+    c.sous_secteur,
+    c.siege,
+    c.date_introduction
+FROM bourse.prices p
+LEFT JOIN bourse.company c ON p.symbole = c.symbole;
