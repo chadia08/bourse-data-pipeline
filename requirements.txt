@@ -11,3 +11,9 @@ fastapi
 uvicorn
 python-dotenv
 pydantic
+numpy
+prophet
+scikit-learn
+joblib
+dotenv
+fastapi

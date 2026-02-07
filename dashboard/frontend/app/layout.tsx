@@ -26,6 +26,9 @@ export default function RootLayout({
                 <div className="space-x-4">
                     <Link href="/" className="hover:text-accent transition">Marché</Link>
                     <Link href="/companies" className="hover:text-accent transition">Sociétés</Link>
+                    <Link href="/trading" className="hover:text-blue-400 transition">Trading</Link>
+                    <Link href="/investment" className="hover:text-blue-400 transition">Investissement</Link>
+                    <Link href="/predictions" className="hover:text-blue-400 transition">Prédictions</Link>
                 </div>
             </div>
         </nav>

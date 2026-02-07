@@ -8,7 +8,7 @@ export default function CompaniesPage() {
 
   useEffect(() => {
     // Appel à ton API de fusion (qui contient maintenant l'historique)
-    fetch('https://refactored-acorn-wrpww7j7q79jhv996-3000.app.github.dev/api/stocks/prices')
+    fetch('http://localhost:3000/api/stocks/prices')
       .then(res => res.json())
       .then(data => {
         setStocks(data);

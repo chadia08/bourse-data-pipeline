@@ -107,7 +107,7 @@ FROM bourse.prices_queue;
 -- Table de jointure dans trino
 CREATE VIEW bourse.prices_analytics AS
 SELECT 
-    p.id,
+    p.id,   
     p.date,
     p.symbole,
     p.prix_ouverture,

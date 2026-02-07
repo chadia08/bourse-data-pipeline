@@ -1,4 +1,4 @@
-// File: /workspaces/bourse-data-pipeline/dashboard/frontend/app/page.tsx
+// File: D:\Jobintech\final_project\bourse-data-pipeline\dashboard\frontend\app\page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
