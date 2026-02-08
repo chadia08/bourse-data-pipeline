@@ -7,6 +7,22 @@ Suivez ces étapes pour configurer l environnement de développement sur votre m
 
 ---
 
+## 📊 Architecture du Pipeline de Données
+
+Le pipeline de données suit l'architecture suivante :
+- **Kafka** (Message Broker) → **ClickHouse** (Data Warehouse) : Streaming de données en temps réel
+- **ClickHouse** → **Power BI** (Analytics) : Rapports et visualisations
+- **ClickHouse** → **MongoDB** (Database) : Export et stockage des données
+
+![Pipeline Architecture](pipeline_architecture.png)
+
+Pour générer le diagramme d'architecture :
+```bash
+python generate_pipeline_diagram.py
+```
+
+---
+
 ### 1. Cloner le dépôt
 Commencez par récupérer le projet localement :
 ```bash
